@@ -1,0 +1,56 @@
+\hypertarget{class_scene}{}\section{Scene Class Reference}
+\label{class_scene}\index{Scene@{Scene}}
+
+
+Collaboration diagram for Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{doxygen/latex/class_scene__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_scene_a39f55da2de994a41500a2c0a3bbc207d}{}\label{class_scene_a39f55da2de994a41500a2c0a3bbc207d} 
+{\bfseries Scene} (double rx\+\_\+x, double rx\+\_\+y, double rx\+\_\+z, double Bandwidth, double rx\+\_\+fc, double tx\+\_\+x, double tx\+\_\+y, double tx\+\_\+fc, double tx\+\_\+power, int num\+\_\+blades, double R\+PM, double altitude, double pitch, double blade\+\_\+length, int num\+\_\+ribs, const std\+::string \&filename)
+\item 
+\hypertarget{class_scene_a59d78e42eebf29106e413275abacf983}{}\label{class_scene_a59d78e42eebf29106e413275abacf983} 
+\hyperlink{class_rotor}{Rotor} {\bfseries get\+\_\+rotor} ()
+\item 
+\hypertarget{class_scene_aeca85b3d6824c3509c94991136fe6a1b}{}\label{class_scene_aeca85b3d6824c3509c94991136fe6a1b} 
+\hyperlink{class_transmitter}{Transmitter} {\bfseries get\+\_\+transmitter} ()
+\item 
+\hypertarget{class_scene_aea609d389de6e5c483d3e7f19a3aff0a}{}\label{class_scene_aea609d389de6e5c483d3e7f19a3aff0a} 
+\hyperlink{class_receiver}{Receiver} {\bfseries get\+\_\+receiver} ()
+\item 
+\hypertarget{class_scene_a2d3012d31a139a597d50f5b84fbec51d}{}\label{class_scene_a2d3012d31a139a597d50f5b84fbec51d} 
+void {\bfseries trace\+\_\+scene} (int num\+\_\+rays)
+\item 
+\hypertarget{class_scene_a26979e16c27d21bdd615c24c1c11902c}{}\label{class_scene_a26979e16c27d21bdd615c24c1c11902c} 
+void {\bfseries trace\+\_\+vect} (\hyperlink{class_ray3_d}{Ray3D} \&test\+\_\+ray, double \&hit\+Distance, \hyperlink{class_vector3_d}{Vector3D} \&hit\+Normal, \hyperlink{class_point3_d}{Point3D} \&hit\+Point)
+\item 
+\hypertarget{class_scene_a9af282cee68bb4748bd15568bda0ecfb}{}\label{class_scene_a9af282cee68bb4748bd15568bda0ecfb} 
+void {\bfseries update} (double angle)
+\item 
+\hypertarget{class_scene_a76fa370d0c210100d4cf8799474faa8d}{}\label{class_scene_a76fa370d0c210100d4cf8799474faa8d} 
+double {\bfseries get\+Distance\+Power} (const double frequency, const double power, const double distance) const
+\item 
+double \hyperlink{class_scene_a969abe0e6022d73ff082d380c59d83f5}{get\+Doppler} (\hyperlink{class_ray3_d}{Ray3D} \&test\+\_\+ray, \hyperlink{class_vector3_d}{Vector3D} \&hit\+Normal, \hyperlink{class_point3_d}{Point3D} \&hit\+Point, double R\+PM) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_scene_a969abe0e6022d73ff082d380c59d83f5}{}\label{class_scene_a969abe0e6022d73ff082d380c59d83f5} 
+\index{Scene@{Scene}!get\+Doppler@{get\+Doppler}}
+\index{get\+Doppler@{get\+Doppler}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{get\+Doppler()}{getDoppler()}}
+{\footnotesize\ttfamily double Scene\+::get\+Doppler (\begin{DoxyParamCaption}\item[{\hyperlink{class_ray3_d}{Ray3D} \&}]{test\+\_\+ray,  }\item[{\hyperlink{class_vector3_d}{Vector3D} \&}]{hit\+Normal,  }\item[{\hyperlink{class_point3_d}{Point3D} \&}]{hit\+Point,  }\item[{double}]{R\+PM }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+!!!! doppler does not get affected by the normal, need to check this. not sure if this is correct. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Raytracer3\+D/\+Raytracer3\+D/Scene.\+hpp\item 
+Raytracer3\+D/\+Raytracer3\+D/Scene.\+cpp\end{DoxyCompactItemize}

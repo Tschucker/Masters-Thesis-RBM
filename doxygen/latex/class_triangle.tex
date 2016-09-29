@@ -1,0 +1,60 @@
+\hypertarget{class_triangle}{}\section{Triangle Class Reference}
+\label{class_triangle}\index{Triangle@{Triangle}}
+
+
+Collaboration diagram for Triangle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{doxygen/latex/class_triangle__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_triangle_a995e961620da6b595053ef5560999244}{}\label{class_triangle_a995e961620da6b595053ef5560999244} 
+{\bfseries Triangle} (\hyperlink{class_point3_d}{Point3D} \&v0, \hyperlink{class_point3_d}{Point3D} \&v1, \hyperlink{class_point3_d}{Point3D} \&v2)
+\item 
+\hypertarget{class_triangle_ab09716ce6c0928ce11fe34091c19a1c4}{}\label{class_triangle_ab09716ce6c0928ce11fe34091c19a1c4} 
+bool {\bfseries hit} (const \hyperlink{class_ray3_d}{Ray3D} \&ray, double \&hit\+Distance, \hyperlink{class_vector3_d}{Vector3D} \&hit\+Normal, \hyperlink{class_point3_d}{Point3D} \&hit\+Point) const
+\item 
+\hypertarget{class_triangle_a7b93ca1524b80830bf8ea07d660ace6a}{}\label{class_triangle_a7b93ca1524b80830bf8ea07d660ace6a} 
+bool {\bfseries hit\+No\+Cull} (const \hyperlink{class_ray3_d}{Ray3D} \&ray, double \&hit\+Distance, \hyperlink{class_vector3_d}{Vector3D} \&hit\+Normal, \hyperlink{class_point3_d}{Point3D} \&hit\+Point) const
+\item 
+\hypertarget{class_triangle_aeeced29a75e5c27db3457804debbb936}{}\label{class_triangle_aeeced29a75e5c27db3457804debbb936} 
+bool {\bfseries operator==} (\hyperlink{class_triangle}{Triangle} \&Tri)
+\item 
+\hypertarget{class_triangle_a7dbe3b94aae0c1966801d50190ab2c25}{}\label{class_triangle_a7dbe3b94aae0c1966801d50190ab2c25} 
+\hyperlink{class_point3_d}{Point3D} {\bfseries get\+Vertex0} ()
+\item 
+\hypertarget{class_triangle_a88c0bdcbda9d290e7ea876714b634b83}{}\label{class_triangle_a88c0bdcbda9d290e7ea876714b634b83} 
+\hyperlink{class_point3_d}{Point3D} {\bfseries get\+Vertex1} ()
+\item 
+\hypertarget{class_triangle_aa29a363ca196b8352c749174cfd0ebd9}{}\label{class_triangle_aa29a363ca196b8352c749174cfd0ebd9} 
+\hyperlink{class_point3_d}{Point3D} {\bfseries get\+Vertex2} ()
+\item 
+\hypertarget{class_triangle_a30e9a577df2eb923fd8c869fc1958cd1}{}\label{class_triangle_a30e9a577df2eb923fd8c869fc1958cd1} 
+\hyperlink{class_vector3_d}{Vector3D} {\bfseries get\+Normal} () const
+\item 
+\hypertarget{class_triangle_a557fd01902542dca2bccb3de38aa1534}{}\label{class_triangle_a557fd01902542dca2bccb3de38aa1534} 
+void {\bfseries set\+Normal} (const \hyperlink{class_vector3_d}{Vector3D} \&normal)
+\item 
+\hypertarget{class_triangle_a1fe02e3810a30dca5e6ddf646f7f31a5}{}\label{class_triangle_a1fe02e3810a30dca5e6ddf646f7f31a5} 
+void {\bfseries flip\+Normal} ()
+\item 
+\hypertarget{class_triangle_a8e187af2dd348e5c51a657ca066221ac}{}\label{class_triangle_a8e187af2dd348e5c51a657ca066221ac} 
+\hyperlink{class_point3_d}{Point3D} {\bfseries centroid} () const
+\item 
+\hypertarget{class_triangle_a0e10ae200b1a7698a800ddfa06d8d00d}{}\label{class_triangle_a0e10ae200b1a7698a800ddfa06d8d00d} 
+\hyperlink{class_point3_d}{Point3D} {\bfseries centroid\+XY} () const
+\item 
+\hypertarget{class_triangle_a0674ff79061f6413e6aa721e1ac5dd06}{}\label{class_triangle_a0674ff79061f6413e6aa721e1ac5dd06} 
+void {\bfseries update\+Normal} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Raytracer3\+D/\+Raytracer3\+D/Triangle.\+hpp\item 
+Raytracer3\+D/\+Raytracer3\+D/Triangle.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,17 @@
+\contentsline {chapter}{\numberline {1}Class Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Class List}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Class Documentation}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Blade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}surface Class Reference}{4}{section.2.1}
+\contentsline {section}{\numberline {2.2}Bounding\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}box Class Reference}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Point3D Class Reference}{6}{section.2.3}
+\contentsline {section}{\numberline {2.4}Ray3D Class Reference}{7}{section.2.4}
+\contentsline {section}{\numberline {2.5}Receiver Class Reference}{9}{section.2.5}
+\contentsline {section}{\numberline {2.6}Rib Class Reference}{10}{section.2.6}
+\contentsline {section}{\numberline {2.7}Rotor Class Reference}{11}{section.2.7}
+\contentsline {section}{\numberline {2.8}Scene Class Reference}{12}{section.2.8}
+\contentsline {subsection}{\numberline {2.8.1}Member Function Documentation}{12}{subsection.2.8.1}
+\contentsline {subsubsection}{\numberline {2.8.1.1}get\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Doppler()}{12}{subsubsection.2.8.1.1}
+\contentsline {section}{\numberline {2.9}Sphere Class Reference}{13}{section.2.9}
+\contentsline {section}{\numberline {2.10}Transmitter Class Reference}{14}{section.2.10}
+\contentsline {section}{\numberline {2.11}Triangle Class Reference}{15}{section.2.11}
+\contentsline {section}{\numberline {2.12}Vector3D Class Reference}{16}{section.2.12}

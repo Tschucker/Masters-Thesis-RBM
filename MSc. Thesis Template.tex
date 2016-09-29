@@ -1,0 +1,270 @@
+%% ----------------------------------------------------------------
+%% Thesis.tex -- MAIN FILE (the one that you compile with LaTeX)
+%% ---------------------------------------------------------------- 
+
+% Set up the document
+\documentclass[a4paper, 14pt, oneside]{Thesis}  % Use the "Thesis" style, based on the ECS Thesis style by Steve Gunn
+\graphicspath{Figures/}  % Location of the graphics files (set up for graphics to be in PDF format)
+
+% Include any extra LaTeX packages required
+%\usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the "Natbib" style for the references in the Bibliography
+\usepackage{verbatim}  % Needed for the "comment" environment to make LaTeX comments
+%\usepackage{vector}  % Allows "\bvec{}" and "\buvec{}" for "blackboard" style bold vectors in maths
+\hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
+\usepackage{lipsum}
+
+\usepackage{doxygen}
+
+
+\newcommand\textbox[1]{%
+  \parbox{.333\textwidth}{#1}%
+}
+
+\usepackage{setspace}
+\doublespacing
+\usepackage{tikz}
+\usetikzlibrary{fit}
+\tikzset{%
+  highlight/.style={rectangle,rounded corners,fill=red!15,draw,
+    fill opacity=0.5,thick,inner sep=0pt}
+}
+\newcommand{\tikzmark}[2]{\tikz[overlay,remember picture,
+  baseline=(#1.base)] \node (#1) {#2};}
+%
+\newcommand{\Highlight}[1][submatrix]{%
+    \tikz[overlay,remember picture]{
+    \node[highlight,fit=(left.north west) (right.south east)] (#1) {};}
+}
+\usepackage{algorithm}
+\usepackage{amsmath, amssymb}
+\usepackage[noend]{algpseudocode}
+\usepackage{graphicx}
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+\usepackage{epstopdf}
+\usepackage{amsfonts}
+\usepackage{siunitx}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{relsize}
+\usepackage{amsmath}
+\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+\usepackage{url,textcomp}
+%\usepackage[style=ieee]{biblatex}
+\usepackage{cite}
+\usepackage{subcaption}
+
+
+% ----------------------------------------------------------------
+\begin{document}
+
+% Set up the Title Page
+\title  {Emitter Source Geolocation from Imparted Rotor Blade Modulation}
+\authors  {\texorpdfstring
+            {\href{your web site or email address}{Thomas Schucker}}
+            {Author Name}
+            }
+\addresses  {\groupname\\\deptname\\\univname}  % Do not change this here, instead these must be set in the "Thesis.cls" file, please look through it instead
+\date       {\today}
+\subject    {}
+\keywords   {}
+\maketitle
+
+%% ----------------------------------------------------------------
+\setstretch{1.3}  % It is better to have smaller font and larger line spacing than the other way round
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{}  % Clears all page headers and footers
+\rhead{\thepage}  % Sets the right side header to show the page number
+\lhead{}  % Clears the left side page header
+\pagestyle{fancy}  % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+%% ----------------------------------------------------------------
+% Declaration Page required for the Thesis, your institution may give you a different text to place here
+\Declaration{
+\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+
+\qquad This thesis has been submitted in partial fulfillment of requirements for an advanced degree at the University of Arizona and is deposited in the University Library to be made available to borrowers under rules of the Library.
+
+\qquad	Brief quotations from this thesis are allowable without special permission, provided that an accurate acknowledgement of the source is made. Requests for permission for extended quotation from or reproduction of this manuscript in whole or in part may be granted by the head of the major department or the Dean of the Graduate College when in his or her judgment the proposed use of the material is in the interests of scholarship.  In all other instances, however, permission must be obtained from the author.
+
+
+
+\center{ SIGNED:  Thomas Schucker}
+
+\vspace{3cm}
+
+
+
+
+APPROVAL BY THESIS DIRECTOR
+
+This thesis has been approved on the date shown below:\\
+ \bigskip
+ \bigskip
+ \bigskip 
+\rule[1em]{15em}{0.5pt} \hfil \rule[1em]{15em}{0.5pt}\\  % This prints a line for 
+Tamal Bose\hspace{10cm}Date\\
+Professor of\hspace{10.5cm}.\\
+Electrical and Computer Engineering\hspace{6.3cm}.\\
+}
+\clearpage  % Declaration ended, now start a new page
+%% ----------------------------------------------------------------
+
+\setstretch{1.3}  % Reset the line-spacing to 1.3 for body text (if it has changed)
+
+% The Acknowledgements page, for thanking everyone
+\acknowledgements{
+\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+I would like to thank my thesis advisor Dr. Tamal Bose for the opportunity to work in his lab, and for the guidance through graduate school. I would also like to thank Matt Kruse and Charlie Cooper for coming up the research topic and support through the process. I would also like to thank the Broadband Wireless Access \& Applications Center and Rincon Research Corporation for supporting my research.
+}
+\clearpage  
+% End of the Acknowledgements
+
+%% ----------------------------------------------------------------
+% Begin the Dedication page
+
+\setstretch{1.3}  % Return the line spacing back to 1.3
+\pagestyle{empty}  % Page style needs to be empty for this page
+\dedicatory{To my Mother and Father, \\my brother Danny, \\and my lovely girlfriend Clarice,\\all with love, \\Thank you for your unconditional support.}
+\addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
+
+%-------------------------------------------------
+\pagestyle{fancy}  
+%The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
+
+%% ----------------------------------------------------------------
+\lhead{\emph{Contents}}  % Set the left side page header to "Contents"
+\tableofcontents  % Write out the Table of Contents
+
+%% ----------------------------------------------------------------
+\lhead{\emph{List of Figures}}  % Set the left side page header to "List if Figures"
+\listoffigures  % Write out the List of Figures
+
+%% ----------------------------------------------------------------
+\lhead{\emph{List of Tables}}  % Set the left side page header to "List of Tables"
+\listoftables  % Write out the List of Tables
+
+%% ----------------------------------------------------------------
+\setstretch{1.5}  % Set the line spacing to 1.5, this makes the following tables easier to read
+%\clearpage  % Start a new page
+%\lhead{\emph{Abbreviations}}  % Set the left side page header to "Abbreviations"
+%\listofsymbols{ll}  % Include a list of Abbreviations (a table of two columns)
+{
+% \textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
+
+}
+
+%% ----------------------------------------------------------------
+%\clearpage  % Start a new page
+%\lhead{\emph{Mathematical Notations}}  % Set the left side page header to "Physical Constants"
+%\listofconstants{ll}  % Include a list of Physical Constants (a four column table)
+{
+% Constant Name & Symbol & = & Constant Value (with units) \\
+
+}
+
+%% ----------------------------------------------------------------
+%\clearpage  %Start a new page
+%\lhead{\emph{Symbols}}  % Set the left side page header to "Symbols"
+%\listofnomenclature{ll}  % Include a list of Symbols (a three column table)
+{
+% symbol & name & unit \\
+
+}
+%% ----------------------------------------------------------------
+% End of the pre-able, contents and lists of things
+% The Abstract Page
+\addtotoc{Abstract}  % Add the "Abstract" page entry to the Contents
+\abstract{
+\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+In RF communications with a rotorcraft, such as a helicopter, the rotor blades can impart a modulation onto the received signal called Rotor Blade Modulation (RBM). This modulation is caused by the reflection of a signal off the rotating blades. The reflected signal is Doppler shifted based on where the signal is reflected along the length of the blade as well as the angle between the axis of rotation and the emitter. RBM is known to degrade the performance of RF communications on rotorcraft and can be used in RADAR applications to detect and classify aircraft, but there is little on its usefulness in other areas.This project will look at the ability to utilize the RBM phenomenon on the rotorcraft itself to geo-locate and track a signal emitter on the ground. To do this a RF ray tracing program was developed in C++ to produce a simulation of the RBM.
+}
+
+\clearpage  % Abstract ended, start a new page
+
+%% ----------------------------------------------------------------
+%\mainmatter	  % Begin normal, numeric (1,2,3...) page numbering
+\pagestyle{fancy}  % Return the page headers back to the "fancy" style
+
+% Include the chapters of the thesis, as separate files
+% Just uncomment the lines as you write the chapters
+
+\clearpage  %Start a new page
+\lhead{\emph{Introduction}}
+\include{Introduction}
+
+
+
+\clearpage  %Start a new page
+\lhead{\emph{Literature Review and Geometric Models}}
+\include{Background}
+
+
+
+\clearpage  %Start a new page
+\lhead{\emph{Radio Propagation Simulation}}
+\include{Radio_Propagation_Simulation}
+
+\clearpage
+\lhead{\emph{Received Signal Simulation}}
+\include{Simulation}
+
+
+\clearpage  %Start a new page
+\lhead{\emph{Results}}
+\include{Results_new}
+
+
+
+\clearpage  %Start a new page
+\lhead{\emph{Conclusion and Future Work}}
+\include{Conclusion}
+
+
+\clearpage  %Start a new page
+
+%% ----------------------------------------------------------------
+% Now begin the Appendices, including them as separate files
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+
+\lhead{\emph{Ray Tracing Software}}
+\include{Ray_Tracing_Software}
+
+\lhead{\emph{Class Documentation}}
+\chapter{Class Documentation}
+\include{doxygen/latex/class_blade__surface}
+\include{doxygen/latex/class_bounding__box}
+\include{doxygen/latex/class_point3_d}
+\include{doxygen/latex/class_ray3_d}
+\include{doxygen/latex/class_receiver}
+\include{doxygen/latex/class_rib}
+\include{doxygen/latex/class_rotor}
+\include{doxygen/latex/class_scene}
+\include{doxygen/latex/class_sphere}
+\include{doxygen/latex/class_transmitter}
+\include{doxygen/latex/class_triangle}
+\include{doxygen/latex/class_vector3_d}
+
+\include{Simulation_Data}
+
+\include{Matlab_Code}
+
+%\input{Appendices/AppendixA} % Appendix Title
+%\input{Appendices/AppendixB} % Appendix Title
+%\input{Appendices/AppendixC} % Appendix Title
+
+\addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
+\backmatter
+
+%% ----------------------------------------------------------------
+\label{Bibliography}
+\lhead{\emph{Bibliography}}  % Change the left side page header to "Bibliography"
+\bibliographystyle{IEEEtran}  % Use the "unsrtnat" BibTeX style for formatting the Bibliography
+%\bibliography{Bibliography}  % The references (bibliography) information are stored in the file named "Bibliography.bib"
+
+\end{document}  % The End
+%% ----------------------------------------------------------------

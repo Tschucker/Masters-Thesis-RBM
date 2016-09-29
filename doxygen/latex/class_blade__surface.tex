@@ -1,0 +1,75 @@
+\hypertarget{class_blade__surface}{}\section{Blade\+\_\+surface Class Reference}
+\label{class_blade__surface}\index{Blade\+\_\+surface@{Blade\+\_\+surface}}
+
+
+Collaboration diagram for Blade\+\_\+surface\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{doxygen/latex/class_blade__surface__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_blade__surface_a0c1a5fa3ea94afa451043ce70d3d7c1e}{}\label{class_blade__surface_a0c1a5fa3ea94afa451043ce70d3d7c1e} 
+{\bfseries Blade\+\_\+surface} (const int id, const double length, const int Rib\+\_\+count, \hyperlink{class_rib}{Rib} \&origin\+\_\+\+Rib)
+\item 
+\hypertarget{class_blade__surface_a160959f632ad73eff846aeea81aa84ae}{}\label{class_blade__surface_a160959f632ad73eff846aeea81aa84ae} 
+void {\bfseries create\+\_\+surface} ()
+\item 
+\hypertarget{class_blade__surface_a34d1f584602a5513960b0647a337232b}{}\label{class_blade__surface_a34d1f584602a5513960b0647a337232b} 
+void {\bfseries update\+\_\+surface} ()
+\item 
+\hypertarget{class_blade__surface_a1eddf9a97aa9c2f4f399d03623e9fb6c}{}\label{class_blade__surface_a1eddf9a97aa9c2f4f399d03623e9fb6c} 
+void {\bfseries update\+\_\+bounding\+\_\+box} ()
+\item 
+\hypertarget{class_blade__surface_a8d08aa093ce9eb861d5061303cc35a3b}{}\label{class_blade__surface_a8d08aa093ce9eb861d5061303cc35a3b} 
+void {\bfseries rotate\+\_\+surface\+\_\+Z} (double angle)
+\item 
+\hypertarget{class_blade__surface_a384b9627c130a436d944264fb001d25b}{}\label{class_blade__surface_a384b9627c130a436d944264fb001d25b} 
+void {\bfseries pitch\+\_\+surface\+\_\+X} (const double angle)
+\item 
+\hypertarget{class_blade__surface_a6823c31d12449828939ddc88ddb23705}{}\label{class_blade__surface_a6823c31d12449828939ddc88ddb23705} 
+void {\bfseries height\+\_\+surface\+\_\+Z} (const double height)
+\item 
+\hypertarget{class_blade__surface_a1d4bc10f18e1ee2002a3fa1b5b0c0cb7}{}\label{class_blade__surface_a1d4bc10f18e1ee2002a3fa1b5b0c0cb7} 
+bool {\bfseries hit} (const \hyperlink{class_ray3_d}{Ray3D} \&ray, double \&hit\+Distance, \hyperlink{class_vector3_d}{Vector3D} \&hit\+Normal, \hyperlink{class_point3_d}{Point3D} \&hit\+Point)
+\item 
+\hypertarget{class_blade__surface_a9d55669ccf429e408ff492cfecf52b6b}{}\label{class_blade__surface_a9d55669ccf429e408ff492cfecf52b6b} 
+std\+::vector$<$ \hyperlink{class_rib}{Rib} $>$ {\bfseries get\+Ribs} ()
+\item 
+\hypertarget{class_blade__surface_a91f5bbe72574182ee6ad9e4014bfebbf}{}\label{class_blade__surface_a91f5bbe72574182ee6ad9e4014bfebbf} 
+std\+::vector$<$ \hyperlink{class_triangle}{Triangle} $>$ {\bfseries get\+Surface} ()
+\item 
+\hypertarget{class_blade__surface_ae2f4aa670e4d320d63c77feffb953ae0}{}\label{class_blade__surface_ae2f4aa670e4d320d63c77feffb953ae0} 
+std\+::vector$<$ \hyperlink{class_point3_d}{Point3D} $>$ {\bfseries get\+Points} ()
+\item 
+\hypertarget{class_blade__surface_a72fcd5b6eeb88c4e18da0ad267b27a93}{}\label{class_blade__surface_a72fcd5b6eeb88c4e18da0ad267b27a93} 
+\hyperlink{class_bounding__box}{Bounding\+\_\+box} {\bfseries get\+Box} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_blade__surface_afd3c87a82f107470cea4d3c8c1f5ee78}{}\label{class_blade__surface_afd3c87a82f107470cea4d3c8c1f5ee78} 
+int {\bfseries id}
+\item 
+\hypertarget{class_blade__surface_a23f1ef284f842b523cb4b44235c0cdd7}{}\label{class_blade__surface_a23f1ef284f842b523cb4b44235c0cdd7} 
+double {\bfseries length}
+\item 
+\hypertarget{class_blade__surface_ab1e364b4402fa787dea7d3b601e33778}{}\label{class_blade__surface_ab1e364b4402fa787dea7d3b601e33778} 
+double {\bfseries delta\+\_\+l}
+\item 
+\hypertarget{class_blade__surface_a9ff7e20545a1fbb7ad84b00adb35f070}{}\label{class_blade__surface_a9ff7e20545a1fbb7ad84b00adb35f070} 
+int {\bfseries Rib\+\_\+count}
+\item 
+\hypertarget{class_blade__surface_af1982ac4bb6460c4bae24868bd93e8d5}{}\label{class_blade__surface_af1982ac4bb6460c4bae24868bd93e8d5} 
+\hyperlink{class_rib}{Rib} {\bfseries origin\+\_\+\+Rib}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Raytracer3\+D/\+Raytracer3\+D/Blade\+\_\+surface.\+hpp\item 
+Raytracer3\+D/\+Raytracer3\+D/Blade\+\_\+surface.\+cpp\end{DoxyCompactItemize}
