@@ -1,4 +1,4 @@
-\chapter{Results}
+\chapter{Results} \label{ch:results}
 
 \section{Introduction}
 %introduce the results section and what processing will be done
@@ -6,7 +6,7 @@ The information gathered from the previous section is used to estimate the azimu
 
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-\section{Transmitter Azimuth Angle Estimation}
+\section{Transmitter Azimuth Angle Estimation} \label{sec:transmitter_azimuth_angle_estimation}
 %formulate the estimation equation and discuss ambiguity considerations
 The azimuth angle estimation technique is based on the data collected by rotating the helicopter platform in a clockwise manner, during which at a set angle a doppler envelope is calculated and subsequent maximum and minimum values are collected. After a complete rotation the doppler maximum and minimum values produce a sinusoidal pattern as shown in figure \ref{fig:tx_azimuth_angle_200} without the assumption of knowing the starting azimuth angle. With this data we need to find an unambiguous angle that will set the coordinate space and provide an estimate of current azimuth angle. To do this the absolute value of the minimum envelope data is superimposed onto the maximum envelope data as shown in figure \ref{fig:azimuth_estimation_max_vs_absMin}.
 
@@ -149,7 +149,7 @@ From table \ref{tab:peaks_and_power} we can see that at the larger elevation ang
 
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-\section{Transmitter Elevation Angle Estimation}
+\section{Transmitter Elevation Angle Estimation} \label{sec:transmitter_elevation_angle_estimation}
 %formulate the estimation equation and discuss ambiguity considerations
 Using the information gathered from the azimuth estimation procedure we can compute the elevation angle of the transmitter. In the process of gathering azimuth information the maximum and minimum envelopes follow a sinusoidal pattern that contains a maximum Doppler information at approximately 180\textdegree \space and 0\textdegree \space azimuth angles. Using that maximum value along with the correct Doppler and the assumption that the maximum will occur near the tip of the rotor blade we can approximate the respected reflection radii off the blade as the azimuth angle changes. This is done through 
 %reflection radius aproximation equation
@@ -201,6 +201,8 @@ where $\theta_{El}$ is the elevation angle of the transmitter. If the elevation 
 	\label{eqn:elevation_angle_only}
 \end{equation}
 
+where $f_{DopplerMax}$ is defined in equation \ref{eqn:fd_max}.
+
 %figure of elevation angle 
 \begin{figure}
 	\begin{center}
@@ -245,7 +247,7 @@ From table \ref{tab:elevation_error_percent} elevation estimation error is extre
 % range limitations of this aproximation
 %-----------------------------------------------------
 
-This error is caused by a limitation on the estimation is that the doppler shift is limited by the maximum amount doppler that the blade rotation can produce shown in equation (-) by replacing $v_r$ with $v_rMax$ which is calculated by
+This error is caused by a limitation on the estimation is that the doppler shift is limited by the maximum amount doppler that the blade rotation can produce shown in equation \ref{eqn:v_radial} by replacing $v_r$ with $v_rMax$ which is calculated by
 
 %radial velocity
 \begin{equation}
@@ -294,9 +296,49 @@ Using the estimation method described above, figure \ref{fig:angle_comparason_18
 
 Figure \ref{fig:percent_error_elevation_180deg} shows the percent error with respect to the elevation angle and it starts to become unusable around 18\textdegree \space or 20\textdegree \space where the percent error starts to shoot past acceptable ranges.
 
+%------------------------------
+%pitch considerations
+%------------------------------
 
+If we now consider a pitched blade the above method for estimating Azimuth and elevation becomes inaccurate due to the increased doppler between 90\textdegree and 270\textdegree and the decreased doppler on the other side. To correct this error we need to correct both the difference calculation and the correct doppler data accordingly. The uncorrected data is shown in figure \ref{fig:diff_pitch_noCorrection} and \ref{fig:dop_pitch_noCorrection} with percent azimuth error of 20\% and percent elevation error of 35\%.
 
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=10cm]{images/results/difference_pitch_noCorrection.eps}
+		\caption{Uncorrected Envelope Difference vs. Transmitter Azimuth and Elevation angle of 45\textdegree with Blade pitch of 7.5\textdegree}
+		\label{fig:diff_pitch_noCorrection}
+	\end{center}
+\end{figure}
 
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=10cm]{images/results/correct_dop_pitch_noCorrection.eps}
+		\caption{Uncorrected Doppler vs. Transmitter Azimuth and Elevation angle of 45\textdegree with Blade pitch of 7.5\textdegree}
+		\label{fig:dop_pitch_noCorrection}
+	\end{center}
+\end{figure}
+
+Comparing the envelope difference of no pitch and pitched blade, in figures \ref{fig:azimuth_estimation_difference} and \ref{fig:diff_pitch_noCorrection} respectively, we can see that the difference calculation of the pitch is a shifted up version of the one with no pitch. Therefore we can first correct this by re-centering the pitch difference to be located around zero. 
+
+\begin{equation}
+	A_{shift} = \frac{Max(EnvelopeDifference) - |Min(EnvelopeDifference)|}{2}
+	\label{eqn:pitch_shift}
+\end{equation}
+
+\begin{equation}
+	EnvelopeDifference = EnvelopeDifference - A_{shift}
+	\label{eqn:diff_shift}
+\end{equation}
+
+Then with this knowledge $f_{DopplerCorrect}$ is recalculated and then is adjusted to the correct frequencies with
+
+%fix correct doppler for pitch
+\begin{equation}
+	f_{DopplerCorrect} = f_{DopplerCorrect} + A_{shift}cos\left(\theta_{Az}\right)
+	\label{eqn:fd_max}
+\end{equation}
+
+Since $\theta_{Az}$ is unknown during the calculation of this equation the correct starting phase can be determined by matching it to the $EnvelopeDifference$ with the a priori information that the cosign should be one period in length. These corrections result in the percent azimuth error of 10\% and 6.5\% elevation angle error. The error in the azimuth is quite large compared to the results when pitch is 0\textdegree but the sample is only comprised of 41 points which turns out to be 9\textdegree per sample in which 10\% error would be off by one sample. Increasing the samples per revolution would most likely decrease this error. The elevation angle percent error is within a useable range but could be decreased with further tuning to the preliminary pitch adjustment algorithm.
 
 
 

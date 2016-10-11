@@ -1,2 +1,72 @@
 \chapter{Ray Tracing Software}
-something for code reuse and the git hub stuff
+
+The ray tracing software developed during the course of the thesis is written in C++ in an XCode environment, but a generic implementation is provided to run on other operating systems. This code is loosely based on the work of Eric Degroot's developed in (Eric's thesis) and implemented some modified base classes developed by him. It is a specific tool for analyzing the affects of rotor blade modulation on a signal tone, it does not provide generic 3D ray tracing in order to optimize the performance for this task. The software is provided without a GUI implementation and is run on different parameters by modifying the main.c file. This is due to the amount of parameters involved but could be easily extended to provide command line arguments in future iterations.
+
+To use the software for performing RBM simulations there are several key parameters that are needed. First a file containing the points that define the 2D section of the airfoil shape, one default file is included in the software package for ease of use and as a template for other airfoil shapes.
+
+the other key parameters that define the simulation are shown in table \ref{tab:key_values}
+
+\begin{table}
+\begin{center}
+    \begin{tabular}{ | l | l | l | l | p{3cm} |}
+    \hline
+    Name & type & Default Value& units & Description\\ \hline
+     rx\_x &  double & 0 & m & receiver position in x  \\ \hline
+     rx\_y & double & 7 & m & receiver position in y \\ \hline 
+     rx\_z & double & 2 & m & receiver position in z below rotor  \\ \hline
+     Bandwidth & double & 2000 & Hz & Bandwidth of the receiver  \\ \hline
+     rx\_fc & double & 1000000000 & Hz & center frequency of the receiver \\ \hline 
+     tx\_x & double & 100 & m & transmitter position in x \\ \hline
+     tx\_y & double & 100 & m & transmitter position in y \\ \hline
+     tx\_fc & double & 1000000000 & Hz & transmitter center frequency \\ \hline
+     tx\_power & double & 4000 & & transmitter power \\ \hline
+     num\_blades & int & 2 & none & number of blades \\ \hline
+     RPM & double & 250 & RPM & Blade revolutions per minuet \\ \hline
+     altitude & double & 200 & m & rotor altitude \\ \hline
+     blade\_length & double & 7.5 & m & length of the one rotor blade \\ \hline
+     pitch & double & 0 & radians & pitch of the rotor use $-\theta_p$  \\ \hline
+     num\_ribs & double & 10 & none & number of ribs that makes up one blade \\ \hline
+     files & double & 10 & none & number of files to produce \\ \hline
+    \end{tabular}
+     \caption{Simulation parameters}
+    \label{tab:key_values}
+\end{center}
+\end{table}
+    
+The output file also needs to be defined with a unique name that changes, this is important because the program will just write over the old file if you do not have a unique naming scheme. this could be just an increasing number or related to one of the variable sweeps.
+
+To run the simulation on a Mac load into XCode the project file and configure the main file to reflect the type of simulation desired, then hit the play button.
+
+On Linux machines the code must first be built using make with the main file configured before hand. Then run the Raytracer3D executable.
+
+The output file contains more than just the signal data the first few data entries are data pertaining to the simulation parameters. it is important to separate this data from the signal data before processing the signal. The template for this data is shown in table 
+\ref{tab:file_values}.
+
+\begin{table}
+\begin{center}
+    \begin{tabular}{| l | l | l | l | l | l | l | l | l | l |}
+    \hline
+    1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ \hline
+      rx\_x & rx\_y & rx\_z & Bandwidth & rx\_fc & tx\_x & tx\_y & tx\_fc & tx\_power & num\_ribs \\ \hline
+    \end{tabular}
+    \begin{tabular}{| p{1cm} | p{1cm} | l | l | l | l | p{1.5cm} | p{1.5cm} |}
+    \hline
+    11 & 12 & 13 & 14 & 15 & 16 & 17 & 18\\ \hline
+     num \_blades & blade \_length & pitch & RPM & altitude & tx\_radius & elevation \_angle & azimuth \_angle \\ \hline
+    \end{tabular}
+     \caption{Output file header with simulation parameter order}
+    \label{tab:file_values}
+\end{center}
+\end{table}
+
+this is all provided in a single string of comma separated values called a .CSV file. MATLAB has a built in function to read CSV data.
+
+%matlab csv read
+\begin{lstlisting}
+data = csvread('file_path/file_name')
+\end{lstlisting}
+
+after all the data is read into MATLAB the data can be split into two vectors, one pertaining to the physical simulation parameters and the other to the received signal.
+
+
+ 

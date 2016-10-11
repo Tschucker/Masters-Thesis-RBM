@@ -4,11 +4,11 @@ clear;
 %--------------------------------------------------------------------------
 %Load Data
 %--------------------------------------------------------------------------
-files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rotate_degs_50m/*.csv');
+files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/pitch7.5deg_rotation_200m2/*.csv');
 num_files = length(files);
-data = zeros(num_files,479000); %959000;
+data = zeros(num_files,959006); %959000;  479000
 for i=1:num_files
-     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rotate_degs_50m/',files(i).name)));
+     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/pitch7.5deg_rotation_200m2/',files(i).name)));
 end
 
 %--------------------------------------------------------------------------
@@ -19,7 +19,8 @@ RPM = 250;
 Altitude = 200;
 fc = 1e9;
 c = 3e8;
-tx_range = 50;
+tx_range = 200;
+pitch_corrected = 0;
 
 %--------------------------------------------------------------------------
 %Find Doppler Envelopes
@@ -29,6 +30,9 @@ tx_range = 50;
 %data = circshift(data,31,1);
 
 data_table = zeros(num_files,3);
+
+location_data = data(:,1:6);
+data = data(:,7:end);
 
 for i=1:num_files
     [s,f,t,p] = spectrogram(data(i,:),5000,500,5000,fs,'yaxis','centered');
@@ -82,7 +86,14 @@ lower = data_table(:,2);
 correct_fd = zeros(1,length(upper));
 
 %difference calc
-difference = data_table(:,1) + data_table(:,2);
+difference = data_table(:,1) - abs(data_table(:,2));
+
+%correct for pitch
+zero_correct = max(difference) - abs(min(difference));
+if(zero_correct > .1*max(difference))
+    difference = difference - ((zero_correct/2));
+    pitch_corrected = 1;
+end
 
 %corrected doppler frequency for processing
 for i = 1:length(upper)
@@ -93,11 +104,17 @@ for i = 1:length(upper)
     end
 end
 
+%for pitch correction
+if(pitch_corrected)
+    w = 0:(2*pi/(num_files-1)):2*pi;
+    correct_fd = correct_fd + (zero_correct/2 + .1*zero_correct)*cos(w);
+end
+
 [Min,Imin] = min(correct_fd);
 [Max,Imax] = max(correct_fd);
 
 %peak prominence calc
-min_peak_prominence = (1/(Max - Min))*.5;
+min_peak_prominence = (1/(Max - Min))*.1;
 [pk,lc] = findpeaks(1./correct_fd,'NPeaks',2,'MinPeakProminence',min_peak_prominence);
 
 %double check average power against peaks to fix 90deg
@@ -182,7 +199,7 @@ ylabel('Frequency (Hz)');
 Altitude
 (atan(Altitude/tx_range)/(2*pi))*360
 AzimuthError = Azimuth(I_90deg) - 90
-PercentAzimuthError = (Azimuth(I_90deg) - 90)/90
+PercentAzimuthError = ((Azimuth(I_90deg) - 90)/90)*100
 
 PercentPeakDifference = ((pk(2) - pk(1))/pk(1))*100
 PowerDifference = -(abs(ave_q(lc(1))) + abs(ave_q(lc(2))))

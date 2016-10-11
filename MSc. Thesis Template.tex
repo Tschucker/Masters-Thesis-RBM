@@ -116,7 +116,7 @@ Electrical and Computer Engineering\hspace{6.3cm}.\\
 % The Acknowledgements page, for thanking everyone
 \acknowledgements{
 \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
-I would like to thank my thesis advisor Dr. Tamal Bose for the opportunity to work in his lab, and for the guidance through graduate school. I would also like to thank Matt Kruse and Charlie Cooper for coming up the research topic and support through the process. I would also like to thank the Broadband Wireless Access \& Applications Center and Rincon Research Corporation for supporting my research.
+I would like to thank my thesis advisor Dr. Tamal Bose for the opportunity to work in his lab, and for the guidance through graduate school. I would also like to thank Matt Kruse and Charlie Cooper for coming up the research topic and support through the process. I would also like to thank the Broadband Wireless Access \& Applications Center and Rincon Research Corporation for supporting this research.
 }
 \clearpage  
 % End of the Acknowledgements
@@ -178,7 +178,9 @@ I would like to thank my thesis advisor Dr. Tamal Bose for the opportunity to wo
 \addtotoc{Abstract}  % Add the "Abstract" page entry to the Contents
 \abstract{
 \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
-In RF communications with a rotorcraft, such as a helicopter, the rotor blades can impart a modulation onto the received signal called Rotor Blade Modulation (RBM). This modulation is caused by the reflection of a signal off the rotating blades. The reflected signal is Doppler shifted based on where the signal is reflected along the length of the blade as well as the angle between the axis of rotation and the emitter. RBM is known to degrade the performance of RF communications on rotorcraft and can be used in RADAR applications to detect and classify aircraft, but there is little on its usefulness in other areas.This project will look at the ability to utilize the RBM phenomenon on the rotorcraft itself to geo-locate and track a signal emitter on the ground. To do this a RF ray tracing program was developed in C++ to produce a simulation of the RBM.
+In RF communications with a rotorcraft, such as a helicopter, the rotor blades can impart a modulation onto the received signal called Rotor Blade Modulation (RBM). This modulation is caused by the reflection of a signal off the rotating blades. The reflected signal is Doppler shifted based on where the signal is reflected along the length of the blade as well as the angle between the axis of rotation and the emitter. RBM is known to degrade the performance of RF communications on rotorcraft and can be used in RADAR applications to detect and classify aircraft, but there is little on its usefulness in other areas. This thesis looks at the ability to utilize the RBM phenomenon on the rotorcraft itself to geo-locate and track a signal emitter on the ground. 
+
+To do this a 3D RF ray tracing program was developed in C++ to produce simulations of RBM signals. The developed program is based on optical ray tracing algorithms with modified physical propagation effects for RF signals, and swapping lights and cameras for RF transmitters and receivers respectively. The ray tracer was then run over a realistic set of physical parameters to determine their effects on the received signal, this includes transmitter azimuth and elevation angle, receiver position, blade pitch, etc. along with their combinations. From the simulations the azimuth and elevation angle, of the transmitter, produce predictable modulations on the received signal.  Based on the trends in the signal's modulation a DSP algorithm was distilled down that accurately determines the azimuth and elevation angle of the transmitter from simulated signal data.
 }
 
 \clearpage  % Abstract ended, start a new page
@@ -249,9 +251,9 @@ In RF communications with a rotorcraft, such as a helicopter, the rotor blades c
 \include{doxygen/latex/class_triangle}
 \include{doxygen/latex/class_vector3_d}
 
-\include{Simulation_Data}
+%\include{Simulation_Data}
 
-\include{Matlab_Code}
+%\include{Matlab_Code}
 
 %\input{Appendices/AppendixA} % Appendix Title
 %\input{Appendices/AppendixB} % Appendix Title

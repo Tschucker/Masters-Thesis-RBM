@@ -1,5 +1,6 @@
 %envelope calculation
 clear;
+
 samples = csvread('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/test_locationdatainfile_4.csv');
 rpm = 250;
 
@@ -60,3 +61,11 @@ ylabel('Doppler Frequency (kHz)');
 colormap(jet);
 colorbar
 view(2)
+
+% f0 = 5/(2*pi);
+% DT = 1/4000;
+% t = 0:DT:(numel(samples)*DT)-DT;
+% scales = helperCWTTimeFreqVector(1,2e3,f0,DT,32);
+% cwtsig = cwtft({samples,DT},'wavelet','bump','scales',scales);
+% helperCWTTimeFreqPlot(cwtsig.cfs,t.*1e6,cwtsig.frequencies./1000,...
+%     'surf','Bat Echolocation (CWT)','Microseconds','kHz')

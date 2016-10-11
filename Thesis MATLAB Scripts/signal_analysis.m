@@ -52,6 +52,7 @@ for i=1:num_files
     upper_envelope = smooth(upper_envelope,.02);
     
     figure;
+    
     hold on
     plot3(t/60,lower_envelope/1000,z,'w','linewidth',4)
     plot3(t/60,upper_envelope/1000,z,'w','linewidth',4)
@@ -62,7 +63,7 @@ for i=1:num_files
     view(2)
     title(files(i).name);
     hold off
-    
+%     
 %     upper_envelope_table(i,:) = upper_envelope;
 %     lower_envelope_table(i,:) = lower_envelope;
     
