@@ -4,11 +4,11 @@ clear;
 %--------------------------------------------------------------------------
 %Load Data
 %--------------------------------------------------------------------------
-files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/pitch7.5deg_rotation_200m2/*.csv');
+files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/pitch7.5deg_rotation_400m2/*.csv');
 num_files = length(files);
 data = zeros(num_files,959006); %959000;  479000
 for i=1:num_files
-     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/pitch7.5deg_rotation_200m2/',files(i).name)));
+     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/pitch7.5deg_rotation_400m2/',files(i).name)));
 end
 
 %--------------------------------------------------------------------------
@@ -19,7 +19,7 @@ RPM = 250;
 Altitude = 200;
 fc = 1e9;
 c = 3e8;
-tx_range = 200;
+tx_range = 400;
 pitch_corrected = 0;
 
 %--------------------------------------------------------------------------
@@ -89,9 +89,9 @@ correct_fd = zeros(1,length(upper));
 difference = data_table(:,1) - abs(data_table(:,2));
 
 %correct for pitch
-zero_correct = max(difference) - abs(min(difference));
+zero_correct = max(data_table(:,1)) - abs(min(data_table(:,2)));
 if(zero_correct > .1*max(difference))
-    difference = difference - ((zero_correct/2));
+    difference = difference - (zero_correct/1);
     pitch_corrected = 1;
 end
 
@@ -107,7 +107,7 @@ end
 %for pitch correction
 if(pitch_corrected)
     w = 0:(2*pi/(num_files-1)):2*pi;
-    correct_fd = correct_fd + (zero_correct/2 + .1*zero_correct)*cos(w);
+    correct_fd = correct_fd + (zero_correct/2)*cos(w);
 end
 
 [Min,Imin] = min(correct_fd);

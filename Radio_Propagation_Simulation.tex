@@ -6,7 +6,7 @@ The simulation software is broken down into three main components, the radio wav
 
 \section{Radio Propagation Model}
 %define the math behind the physical laws that are simulated within the simulation
-The propagation model defined in this project is based on the following physical phenomena, free-space path loss, reflection, and the doppler effect. They are all formally established models described in full in (Bertoni, 2000; Blaunstein, 2000; Griffiths, 1987)(FIND OTHERS). Although several effects are described within the model several were left out to simplify the computation due to the overhead of implementation in three dimensional space and because of the assumptions made about the scene model.
+The propagation model defined in this project is based on the following physical phenomena, free-space path loss, reflection, and the doppler effect. They are all formally established models described in full in (Bertoni, 2000; Parsons, 2000; Willis, 1991)(OK). Although several effects are described within the model several were left out to simplify the computation due to the overhead of implementation in three dimensional space and because of the assumptions made about the scene model.
 
 \subsection{Free-Space Path Loss}
 %describe path loss
@@ -63,8 +63,13 @@ The final reflected power is
 %reflection power loss description
 where $P_i$ is the incident power before reflection losses.
 
+\subsubsection{Diffuse Reflection}
+A perfect diffuse reflection, also known as Lambertian reflection, will reflect rays in all directions in a uniform hemisphere (J. Lambert, "Photometria Sive de Mensura et Gradibus Luminus Colorum et Umbrae", 1760). The hemisphere is located at the point of the ray hit, producing rays away from the surface. To approximate a particular type of surface the rays power is attenuated by the surface's bi-directional reflectance distribution function (BRDF) (Suffern, 2007; Pharr, 2010; Glassner, 1995)(OK). There are several ways of calculating the BRDF, but the simplest is the Phong BRDF which will be used in this ray tracing implementation(Phong, 1998)(OK). This method for the BRDF is regularly used in the rendering of computer graphics to simulate the reflection of light off surfaces. Since is was not designed for longer wavelengths used in RF communications an assumption is made that small scale features of the surface, relevant to light waves,  produce a reflectance distribution similar for larger wavelengths. 
+
+%The BRDF parameters were then selected to be frequency independent to form a plausible reflectance distribution for the physical effects.
+
 %multipath fading
-\subsection{Frequency-selective Fading}
+\subsection{Fading}
 The transmitted signal power experiences fading described by
 
 \begin{equation}
@@ -81,15 +86,9 @@ where $F$ is the fading coefficient, $d$ is the total distance the particular ra
 
 where $P_{faded}$ is the adjusted power due to fading and $P$ is the signal power. The superposition of each ray's faded power becomes the received signal.
 
-\subsubsection{Diffuse Reflection}
-A perfect diffuse reflection, also known as Lambertian reflection, will reflect rays in all directions in a uniform hemisphere (J. Lambert, "Photometria Sive de Mensura et Gradibus Luminus Colorum et Umbrae", 1760). The hemisphere is located at the point of the ray hit, producing rays away from the surface. To approximate a particular type of surface the rays power is attenuated by the surface's bi-directional reflectance distribution function (BRDF) (Suffern, 2007; Pharr, 2010; Glassner, 1995)(OK). There are several ways of calculating the BRDF, but the simplest is the Phong BRDF which will be used in this ray tracing implementation(Phong, 1998)(OK). This method for the BRDF is regularly used in the rendering of computer graphics to simulate the reflection of light off surfaces. Since is was not designed for longer wavelengths used in RF communications an assumption is made that small scale features of the surface, relevant to light waves,  produce a reflectance distribution similar for larger wavelengths. 
-
-%The BRDF parameters were then selected to be frequency independent to form a plausible reflectance distribution for the physical effects.
-
-
 \subsection{Doppler Effect}
 %define doppler effect
-The Doppler effect is characterized by
+The Doppler effect is characterized by (FIX Update to Bistatic Doppler)
 
 %Doppler formula
 \begin{equation}

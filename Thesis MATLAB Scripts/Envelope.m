@@ -1,10 +1,11 @@
 %envelope calculation
 clear;
-
-samples = csvread('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/test_locationdatainfile_4.csv');
+%test_locationdatainfile_4
+%Altitude_200m/rx_test_Bistatic_dop0.000000rad2
+samples = csvread('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rx_test_Bistatic_dop0.000000rad3.csv');
 rpm = 250;
 
-B = horzcat(samples,samples)';
+%B = horzcat(samples,samples)';
 
 % altitude = samples(1);
 % tx_x = samples(2);
@@ -62,10 +63,5 @@ colormap(jet);
 colorbar
 view(2)
 
-% f0 = 5/(2*pi);
-% DT = 1/4000;
-% t = 0:DT:(numel(samples)*DT)-DT;
-% scales = helperCWTTimeFreqVector(1,2e3,f0,DT,32);
-% cwtsig = cwtft({samples,DT},'wavelet','bump','scales',scales);
-% helperCWTTimeFreqPlot(cwtsig.cfs,t.*1e6,cwtsig.frequencies./1000,...
-%     'surf','Bat Echolocation (CWT)','Microseconds','kHz')
+figure;
+periodogram(samples,rectwin(length(samples)),length(samples),fs,'centered')

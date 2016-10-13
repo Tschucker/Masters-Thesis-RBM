@@ -318,12 +318,14 @@ If we now consider a pitched blade the above method for estimating Azimuth and e
 	\end{center}
 \end{figure}
 
-Comparing the envelope difference of no pitch and pitched blade, in figures \ref{fig:azimuth_estimation_difference} and \ref{fig:diff_pitch_noCorrection} respectively, we can see that the difference calculation of the pitch is a shifted up version of the one with no pitch. Therefore we can first correct this by re-centering the pitch difference to be located around zero. 
+Comparing the envelope difference of no pitch and pitched blade, in figures \ref{fig:azimuth_estimation_difference} and \ref{fig:diff_pitch_noCorrection} respectively, we can see that the difference calculation of the pitch is a shifted up version of the one with no pitch. Therefore we can first correct this by re-centering the pitch difference according to 
 
 \begin{equation}
-	A_{shift} = \frac{Max(EnvelopeDifference) - |Min(EnvelopeDifference)|}{2}
+	A_{shift} = \frac{Max(Max Uppe rEnvelope) - |Min(Min Lower Envelope)|}{2}
 	\label{eqn:pitch_shift}
 \end{equation}
+
+where $A_{shift}$ is the amount that the difference calculation will be shifted down
 
 \begin{equation}
 	EnvelopeDifference = EnvelopeDifference - A_{shift}
@@ -338,7 +340,7 @@ Then with this knowledge $f_{DopplerCorrect}$ is recalculated and then is adjust
 	\label{eqn:fd_max}
 \end{equation}
 
-Since $\theta_{Az}$ is unknown during the calculation of this equation the correct starting phase can be determined by matching it to the $EnvelopeDifference$ with the a priori information that the cosign should be one period in length. These corrections result in the percent azimuth error of 10\% and 6.5\% elevation angle error. The error in the azimuth is quite large compared to the results when pitch is 0\textdegree but the sample is only comprised of 41 points which turns out to be 9\textdegree per sample in which 10\% error would be off by one sample. Increasing the samples per revolution would most likely decrease this error. The elevation angle percent error is within a useable range but could be decreased with further tuning to the preliminary pitch adjustment algorithm.
+Since $\theta_{Az}$ is unknown during the calculation of this equation the correct starting phase can be determined by matching it to the $EnvelopeDifference$ with the a priori information that the cosign should be one period in length. These corrections result in the percent azimuth error of 0\% and 7\% elevation angle error. The elevation angle percent error is within a useable range but could be decreased with further tuning to the preliminary pitch adjustment algorithm. When the pitch corrections are applied to a transmitter elevation angle of 26.56\textdegree \space the correction achieves better performance than the unpitched calculation with percent azimuth error of 0\% and percent elevation error of 0.114\%. This is still a preliminary correction method that requires more in depth analysis but from the initial results shows merit. The increased accuracy as the elevation angle decreases relates back to figure \ref{fig:pitch_tx_elevation_angle} where as the elevation angle decreases the effect of pitch on the signal converges back to unpitched results.
 
 
 
