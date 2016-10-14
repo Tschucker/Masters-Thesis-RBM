@@ -1,14 +1,14 @@
 %test alg for elevation angle only sweep
 clear;
-
+%data_rangeFar_180deg
 %--------------------------------------------------------------------------
 %Load Data
 %--------------------------------------------------------------------------
-files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/data_rangeFar_180deg/*.csv');
+files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m//*.csv');
 num_files = length(files);
 data = zeros(num_files,959006); %479000;
 for i=1:num_files
-     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/data_rangeFar_180deg/',files(i).name)));
+     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m//',files(i).name)));
 end
 
 %--------------------------------------------------------------------------

@@ -1,61 +1,61 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces 2D Geometric model with Rx at the Axis of Rotation\relax }}{14}{figure.caption.18}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Doppler Frequency vs. Rotor Position with varying Elevation Angle\relax }}{15}{figure.caption.19}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces 3D Geometric model with Tx at Azimuth angle of 90\textdegree \relax }}{16}{figure.caption.22}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Doppler profile of Tx at Azimuth angle of 90\textdegree \relax }}{17}{figure.caption.23}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces 3D Geometric model with Tx at Azimuth angle of 270\textdegree \relax }}{18}{figure.caption.24}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Doppler profile of Tx at Azimuth angle of 270\textdegree \relax }}{18}{figure.caption.25}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces 3D Geometric model with Tx at Azimuth angle of 180\textdegree \relax }}{19}{figure.caption.27}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Doppler profile of Tx at Azimuth angle of 180\textdegree \relax }}{20}{figure.caption.28}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces 3D Geometric model with Tx at Azimuth angle of 0\textdegree \relax }}{21}{figure.caption.30}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Doppler profile of Tx at Azimuth angle of 0\textdegree \relax }}{21}{figure.caption.31}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces 2D Geometric model with Rx at the Axis of Rotation\relax }}{15}{figure.caption.18}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Doppler Frequency vs. Rotor Position with varying Elevation Angle\relax }}{16}{figure.caption.19}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces 3D Geometric model with Tx at Azimuth angle of 90\textdegree \relax }}{18}{figure.caption.22}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Doppler profile of Tx at Azimuth angle of 90\textdegree \relax }}{18}{figure.caption.23}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces 3D Geometric model with Tx at Azimuth angle of 270\textdegree \relax }}{19}{figure.caption.24}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Doppler profile of Tx at Azimuth angle of 270\textdegree \relax }}{19}{figure.caption.25}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces 3D Geometric model with Tx at Azimuth angle of 180\textdegree \relax }}{20}{figure.caption.27}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Doppler profile of Tx at Azimuth angle of 180\textdegree \relax }}{21}{figure.caption.28}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces 3D Geometric model with Tx at Azimuth angle of 0\textdegree \relax }}{22}{figure.caption.30}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Doppler profile of Tx at Azimuth angle of 0\textdegree \relax }}{22}{figure.caption.31}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Airfoil Cross-Section\relax }}{27}{figure.caption.55}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Blade Surface Tessilation\relax }}{27}{figure.caption.56}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Transmitter Rays\relax }}{29}{figure.caption.58}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Disk Sampling Method\relax }}{31}{figure.caption.64}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Airfoil Cross-Section\relax }}{28}{figure.caption.56}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Blade Surface Tessilation\relax }}{28}{figure.caption.57}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Transmitter Rays\relax }}{30}{figure.caption.59}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Disk Sampling Method\relax }}{32}{figure.caption.65}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Example Spectrum for one Blade revolution with transmitter at Azimuth of 45\textdegree and Elevation of 35\textdegree \relax }}{33}{figure.caption.69}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Example Spectrum with Doppler Profile for one Blade revolution with transmitter at Azimuth of 45\textdegree and Elevation of 35\textdegree \relax }}{34}{figure.caption.70}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Position of the Receiver in Relation to the Rotor Blades\relax }}{35}{figure.caption.72}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Max and Min Doppler vs. Receiver Position with Tx Azimuth at 135\textdegree and Elevation at 54\textdegree \relax }}{35}{figure.caption.73}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Doppler Envelope with receiver at 0m\relax }}{36}{figure.caption.74}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Doppler Envelope with receiver at 7m\relax }}{36}{figure.caption.75}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Rotor Pitch\relax }}{37}{figure.caption.77}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Max and Min Envelope Frequencies vs Rotor Pitch with Tx Azimuth at 135\textdegree and Elevation at 54\textdegree \relax }}{38}{figure.caption.78}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Max and Min Envelope Frequencies vs Rotor Pitch Transmitter Underneath the Helicopter\relax }}{38}{figure.caption.79}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Max Envelope Frequencies vs Transmitter Elevation Angle\relax }}{39}{figure.caption.80}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Frequency Difference vs Transmitter Elevation Angle\relax }}{40}{figure.caption.81}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Transmitter Azimuth Angle Relationship\relax }}{40}{figure.caption.83}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Max and Min Envelope Frequencies vs Transmitter Azimuth Angle with Tx Elevation at 45\textdegree \relax }}{41}{figure.caption.84}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Max and Min Envelope Frequencies vs Transmitter Azimuth Angle with Tx Elevation at 76\textdegree \relax }}{42}{figure.caption.85}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Max and Min Envelope Frequencies vs Transmitter Azimuth Angle with Tx Elevation at 26.5\textdegree \relax }}{42}{figure.caption.86}
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Max and Min Envelope Frequencies vs Transmitter Azimuth Angle with Rx at Axis of Rotation\relax }}{43}{figure.caption.87}
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Max and Min Envelope Frequencies vs Transmitter Elevation Angle with 7.5deg Pitch\relax }}{44}{figure.caption.88}
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Transmitter Elevation Angle\relax }}{44}{figure.caption.90}
-\contentsline {figure}{\numberline {4.19}{\ignorespaces Transmitter Range vs Elevation Angle at an Altitude of 200m\relax }}{45}{figure.caption.91}
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Max and Min Envelope Frequencies vs Transmitter Elevation Angle with Tx Azimuth of 135deg\relax }}{46}{figure.caption.92}
-\contentsline {figure}{\numberline {4.21}{\ignorespaces Doppler Profile vs. Transmitter Elevation angle for various Azimuth angles.\relax }}{47}{figure.caption.93}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {0\textdegree }}}{47}{subfigure.21.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {90\textdegree }}}{47}{subfigure.21.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {180\textdegree }}}{47}{subfigure.21.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {270\textdegree }}}{47}{subfigure.21.4}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Example Spectrum for one Blade revolution with transmitter at Azimuth of 45\textdegree and Elevation of 35\textdegree \relax }}{34}{figure.caption.70}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Example Spectrum with Doppler Profile for one Blade revolution with transmitter at Azimuth of 45\textdegree and Elevation of 35\textdegree \relax }}{35}{figure.caption.71}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Position of the Receiver in Relation to the Rotor Blades\relax }}{36}{figure.caption.73}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Max and Min Doppler vs. Receiver Position with Tx Azimuth at 135\textdegree and Elevation at 54\textdegree \relax }}{36}{figure.caption.74}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Doppler Envelope with receiver at 0m\relax }}{37}{figure.caption.75}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Doppler Envelope with receiver at 7m\relax }}{37}{figure.caption.76}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Rotor Pitch\relax }}{38}{figure.caption.78}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Max and Min Envelope Frequencies vs Rotor Pitch with Tx Azimuth at 135\textdegree and Elevation at 54\textdegree \relax }}{39}{figure.caption.79}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Max and Min Envelope Frequencies vs Rotor Pitch Transmitter Underneath the Helicopter\relax }}{39}{figure.caption.80}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Max Envelope Frequencies vs Transmitter Elevation Angle\relax }}{40}{figure.caption.81}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Frequency Difference vs Transmitter Elevation Angle\relax }}{41}{figure.caption.82}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Transmitter Azimuth Angle Relationship\relax }}{41}{figure.caption.84}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Max and Min Envelope Frequencies vs Transmitter Azimuth Angle with Tx Elevation at 45\textdegree \relax }}{42}{figure.caption.85}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Max and Min Envelope Frequencies vs Transmitter Azimuth Angle with Tx Elevation at 76\textdegree \relax }}{43}{figure.caption.86}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Max and Min Envelope Frequencies vs Transmitter Azimuth Angle with Tx Elevation at 26.5\textdegree \relax }}{43}{figure.caption.87}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Max and Min Envelope Frequencies vs Transmitter Azimuth Angle with Rx at Axis of Rotation\relax }}{44}{figure.caption.88}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Max and Min Envelope Frequencies vs Transmitter Elevation Angle with 7.5deg Pitch\relax }}{45}{figure.caption.89}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Transmitter Elevation Angle\relax }}{45}{figure.caption.91}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Transmitter Range vs Elevation Angle at an Altitude of 200m\relax }}{46}{figure.caption.92}
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Max and Min Envelope Frequencies vs Transmitter Elevation Angle with Tx Azimuth of 135deg\relax }}{47}{figure.caption.93}
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Doppler Profile vs. Transmitter Elevation angle for various Azimuth angles.\relax }}{48}{figure.caption.94}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {0\textdegree }}}{48}{subfigure.21.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {90\textdegree }}}{48}{subfigure.21.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {180\textdegree }}}{48}{subfigure.21.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {270\textdegree }}}{48}{subfigure.21.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Max and Absolute value of Min Envelope Frequencies vs Transmitter Azimuth Angle at an Elevation Angle of 45\textdegree \relax }}{49}{figure.caption.101}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Difference between Max and Min Envelope Calculations vs Transmitter Azimuth Angle at an Elevation Angle of 45\textdegree \relax }}{50}{figure.caption.103}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Correct Doppler Frequencies vs Transmitter Azimuth Angle at an Elevation Angle of 45\textdegree \relax }}{50}{figure.caption.113}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Correct Doppler Frequencies with Minimum vs Transmitter Azimuth Angle at an Elevation Angle of 45\textdegree \relax }}{51}{figure.caption.117}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Peaks of inverted Correct Doppler vs Transmitter Azimuth Angle at an Elevation Angle of 45\textdegree \relax }}{52}{figure.caption.122}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Average Power vs Transmitter Azimuth Angle at an Elevation Angle of 45\textdegree \relax }}{52}{figure.caption.123}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Estimated Reflection Radius at an Elevation Angle of 45\textdegree \relax }}{55}{figure.caption.128}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Actual Elevation Angle and Estimated Elevation Angle vs Azimuth Angle\relax }}{56}{figure.caption.133}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Elevation Angle Percent Error vsTransmitter Azimuth Angle\relax }}{56}{figure.caption.134}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Max and Min Envelope Frequencies vs Elevation Angle with Transmitter Azimuth Angle of 180\textdegree \relax }}{58}{figure.caption.138}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Elevation Estimate and Actual Angle with Transmitter Azimuth Angle of 180\textdegree \relax }}{58}{figure.caption.139}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Elevation Angle Percent Error with Transmitter Azimuth Angle of 180\textdegree \relax }}{59}{figure.caption.140}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Uncorrected Envelope Difference vs. Transmitter Azimuth and Elevation angle of 45\textdegree with Blade pitch of 7.5\textdegree \relax }}{60}{figure.caption.141}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Uncorrected Doppler vs. Transmitter Azimuth and Elevation angle of 45\textdegree with Blade pitch of 7.5\textdegree \relax }}{60}{figure.caption.142}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Max and Absolute value of Min Envelope Frequencies vs Transmitter Azimuth Angle at an Elevation Angle of 45\textdegree \relax }}{50}{figure.caption.102}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Difference between Max and Min Envelope Calculations vs Transmitter Azimuth Angle at an Elevation Angle of 45\textdegree \relax }}{51}{figure.caption.104}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Correct Doppler Frequencies vs Transmitter Azimuth Angle at an Elevation Angle of 45\textdegree \relax }}{51}{figure.caption.114}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Correct Doppler Frequencies with Minimum vs Transmitter Azimuth Angle at an Elevation Angle of 45\textdegree \relax }}{52}{figure.caption.118}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Peaks of inverted Correct Doppler vs Transmitter Azimuth Angle at an Elevation Angle of 45\textdegree \relax }}{53}{figure.caption.123}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Average Power vs Transmitter Azimuth Angle at an Elevation Angle of 45\textdegree \relax }}{53}{figure.caption.124}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Estimated Reflection Radius at an Elevation Angle of 45\textdegree \relax }}{56}{figure.caption.129}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Actual Elevation Angle and Estimated Elevation Angle vs Azimuth Angle\relax }}{57}{figure.caption.134}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Elevation Angle Percent Error vsTransmitter Azimuth Angle\relax }}{57}{figure.caption.135}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Max and Min Envelope Frequencies vs Elevation Angle with Transmitter Azimuth Angle of 180\textdegree \relax }}{59}{figure.caption.139}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Elevation Estimate and Actual Angle with Transmitter Azimuth Angle of 180\textdegree \relax }}{59}{figure.caption.140}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Elevation Angle Percent Error with Transmitter Azimuth Angle of 180\textdegree \relax }}{60}{figure.caption.141}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Uncorrected Envelope Difference vs. Transmitter Azimuth and Elevation angle of 45\textdegree with Blade pitch of 7.5\textdegree \relax }}{61}{figure.caption.142}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Uncorrected Doppler vs. Transmitter Azimuth and Elevation angle of 45\textdegree with Blade pitch of 7.5\textdegree \relax }}{61}{figure.caption.143}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

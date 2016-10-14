@@ -4,11 +4,11 @@ clear;
 %--------------------------------------------------------------------------
 %Load Data
 %--------------------------------------------------------------------------
-files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/pitch7.5deg_rotation_400m2/*.csv');
+files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/bistatic_azimuth_45/*.csv');
 num_files = length(files);
 data = zeros(num_files,959006); %959000;  479000
 for i=1:num_files
-     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/pitch7.5deg_rotation_400m2/',files(i).name)));
+     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/bistatic_azimuth_45/',files(i).name)));
 end
 
 %--------------------------------------------------------------------------
@@ -19,7 +19,7 @@ RPM = 250;
 Altitude = 200;
 fc = 1e9;
 c = 3e8;
-tx_range = 400;
+tx_range = 200;
 pitch_corrected = 0;
 
 %--------------------------------------------------------------------------
@@ -70,6 +70,17 @@ for i=1:num_files
    
     data_table(i,1) = max(upper_envelope); 
     data_table(i,2) = min(lower_envelope);
+    
+%     figure;
+%     hold on
+%     plot3(t/60,lower_envelope/1000,z,'b','linewidth',4)
+%     plot3(t/60,upper_envelope/1000,z,'r','linewidth',4)
+%     spectrogram(signal_data(i,:),5000,500,5000,fs,'yaxis','centered')
+%     colormap(jet);
+%     colorbar
+%     view(2)
+%     title(num2str(location_data(i,4)));
+%     hold off
 end
 
 %fix estimation error on first envelope -----
@@ -114,7 +125,7 @@ end
 [Max,Imax] = max(correct_fd);
 
 %peak prominence calc
-min_peak_prominence = (1/(Max - Min))*.1;
+min_peak_prominence = (1/(Max - Min))*.001;
 [pk,lc] = findpeaks(1./correct_fd,'NPeaks',2,'MinPeakProminence',min_peak_prominence);
 
 %double check average power against peaks to fix 90deg

@@ -1,0 +1,79 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: MSc. Thesis Template.aux
+A level-1 auxiliary file: Introduction.aux
+A level-1 auxiliary file: Background.aux
+A level-1 auxiliary file: Radio_Propagation_Simulation.aux
+A level-1 auxiliary file: Simulation.aux
+A level-1 auxiliary file: Results_new.aux
+A level-1 auxiliary file: Conclusion.aux
+A level-1 auxiliary file: Ray_Tracing_Software.aux
+A level-1 auxiliary file: doxygen/latex/class_blade__surface.aux
+A level-1 auxiliary file: doxygen/latex/class_bounding__box.aux
+A level-1 auxiliary file: doxygen/latex/class_point3_d.aux
+A level-1 auxiliary file: doxygen/latex/class_ray3_d.aux
+A level-1 auxiliary file: doxygen/latex/class_receiver.aux
+A level-1 auxiliary file: doxygen/latex/class_rib.aux
+A level-1 auxiliary file: doxygen/latex/class_rotor.aux
+A level-1 auxiliary file: doxygen/latex/class_scene.aux
+A level-1 auxiliary file: doxygen/latex/class_sphere.aux
+A level-1 auxiliary file: doxygen/latex/class_transmitter.aux
+A level-1 auxiliary file: doxygen/latex/class_triangle.aux
+A level-1 auxiliary file: doxygen/latex/class_vector3_d.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Bibliography.bib
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--missing publisher in NavalAirSystemsCommand1999
+Warning--empty journal in Glassner1995
+Warning--empty booktitle in Phong:1998:ICG:280811.280980
+
+Done.
+You've used 15 entries,
+            4039 wiz_defined-function locations,
+            947 strings with 10918 characters,
+and the built_in function-call counts, 9089 in all, are:
+= -- 749
+> -- 137
+< -- 56
++ -- 75
+- -- 24
+* -- 432
+:= -- 1512
+add.period$ -- 33
+call.type$ -- 15
+change.case$ -- 11
+chr.to.int$ -- 111
+cite$ -- 18
+duplicate$ -- 676
+empty$ -- 837
+format.name$ -- 28
+if$ -- 2063
+int.to.chr$ -- 0
+int.to.str$ -- 15
+missing$ -- 116
+newline$ -- 86
+num.names$ -- 15
+pop$ -- 275
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 734
+stack$ -- 0
+substring$ -- 292
+swap$ -- 497
+text.length$ -- 19
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 15
+warning$ -- 3
+while$ -- 39
+width$ -- 17
+write$ -- 181
+(There were 3 warnings)

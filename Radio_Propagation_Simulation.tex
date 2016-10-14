@@ -2,11 +2,11 @@
 
 \section{Introduction}
 %introduce the section and what will be discussed here
-The simulation software is broken down into three main components, the radio wave propagation model, the scene model, and the ray tracing engine. The wave propagation model is a collection of equations that describe the physical phenomena that affect the propagation when represented by rays. The model used is based upon classical geometric optics to work with the ray tracing engine. The scene model is comprised of a three dimensional environment in order to define the physical rotor blade surface. The receiver and transmitter will also be defined in the same environment with simulated characteristics to match real life conditions. The ray tracing engine uses recursive execution described in (Whitted, 1979), replacing cameras and lights for receivers and transmitters respectively in a three dimensional environment.
+The simulation software is broken down into three main components, the radio wave propagation model, the scene model, and the ray tracing engine. The wave propagation model is a collection of equations that describe the physical phenomena that affect the propagation when represented by rays. The model used is based upon classical geometric optics to work with the ray tracing engine. The scene model is comprised of a three dimensional environment in order to define the physical rotor blade surface. The receiver and transmitter will also be defined in the same environment with simulated characteristics to match real life conditions. The ray tracing engine uses recursive execution described in \cite{Whitted1979}(Whitted, 1979), replacing cameras and lights for receivers and transmitters respectively in a three dimensional environment.
 
 \section{Radio Propagation Model}
 %define the math behind the physical laws that are simulated within the simulation
-The propagation model defined in this project is based on the following physical phenomena, free-space path loss, reflection, and the doppler effect. They are all formally established models described in full in (Bertoni, 2000; Parsons, 2000; Willis, 1991)(OK). Although several effects are described within the model several were left out to simplify the computation due to the overhead of implementation in three dimensional space and because of the assumptions made about the scene model.
+The propagation model defined in this project is based on the following physical phenomena, free-space path loss, reflection, and the doppler effect. They are all formally established models described in full in \cite{Bertoni1999}, \cite{Parsons2000}, and \cite{Willis2005} (Bertoni, 2000; Parsons, 2000; Willis, 1991)(OK). Although several effects are described within the model several were left out to simplify the computation due to the overhead of implementation in three dimensional space and because of the assumptions made about the scene model.
 
 \subsection{Free-Space Path Loss}
 %describe path loss
@@ -64,7 +64,7 @@ The final reflected power is
 where $P_i$ is the incident power before reflection losses.
 
 \subsubsection{Diffuse Reflection}
-A perfect diffuse reflection, also known as Lambertian reflection, will reflect rays in all directions in a uniform hemisphere (J. Lambert, "Photometria Sive de Mensura et Gradibus Luminus Colorum et Umbrae", 1760). The hemisphere is located at the point of the ray hit, producing rays away from the surface. To approximate a particular type of surface the rays power is attenuated by the surface's bi-directional reflectance distribution function (BRDF) (Suffern, 2007; Pharr, 2010; Glassner, 1995)(OK). There are several ways of calculating the BRDF, but the simplest is the Phong BRDF which will be used in this ray tracing implementation(Phong, 1998)(OK). This method for the BRDF is regularly used in the rendering of computer graphics to simulate the reflection of light off surfaces. Since is was not designed for longer wavelengths used in RF communications an assumption is made that small scale features of the surface, relevant to light waves,  produce a reflectance distribution similar for larger wavelengths. 
+A perfect diffuse reflection, also known as Lambertian reflection, will reflect rays in all directions in a uniform hemisphere (J. Lambert, "Photometria Sive de Mensura et Gradibus Luminus Colorum et Umbrae", 1760). The hemisphere is located at the point of the ray hit, producing rays away from the surface. To approximate a particular type of surface the rays power is attenuated by the surface's bi-directional reflectance distribution function (BRDF) \cite{Suffern2007}, \cite{Pharr2010}, \cite{Glassner1995} (Suffern, 2007; Pharr, 2010; Glassner, 1995)(OK). There are several ways of calculating the BRDF, but the simplest is the Phong BRDF which will be used in this ray tracing implementation \cite{Phong:1998:ICG:280811.280980} (Phong, 1998)(OK). This method for the BRDF is regularly used in the rendering of computer graphics to simulate the reflection of light off surfaces. Since is was not designed for longer wavelengths used in RF communications an assumption is made that small scale features of the surface, relevant to light waves,  produce a reflectance distribution similar for larger wavelengths. 
 
 %The BRDF parameters were then selected to be frequency independent to form a plausible reflectance distribution for the physical effects.
 
@@ -88,7 +88,7 @@ where $P_{faded}$ is the adjusted power due to fading and $P$ is the signal powe
 
 \subsection{Doppler Effect}
 %define doppler effect
-The Doppler effect is characterized by (FIX Update to Bistatic Doppler)
+The Doppler effect is characterized by
 
 %Doppler formula
 \begin{equation}
@@ -100,11 +100,11 @@ It is assumed that both the receiver and the transmitter are not moving, therefo
 
 %formula for doppler on the rotor blade.
 \begin{equation}
-	f = f_0 + \frac{2\Delta v}{\lambda} %reradiated after reflection...
+	f = f_0 + \frac{v_t + v_r}{\lambda} %reradiated after reflection
 	\label{eqn:observedShift}	
 \end{equation}
 
-where $f_0$ is the initial transmitted frequency, $lambda$ is the wavelength, and $\Delta v$ is the difference in velocity.
+where $f_0$ is the initial transmitted frequency, $lambda$ is the wavelength, $v_t$ is the velocity in the direction of the transmitter, and $v_r$ is the velocity in the direction of the reflection. This is similar to the Bistatic RADAR equation for doppler, but since the reflection is not guaranteed to be toward the receiver we calculate the doppler as it makes contact with the surface and as it is re-radiated according the blades direction of travel.
 
 \begin{equation}
 	\lambda = \frac{c}{f_0}
@@ -114,13 +114,19 @@ where $f_0$ is the initial transmitted frequency, $lambda$ is the wavelength, an
 where $\lambda$ is the wavelength of the transmitted signal based off of the speed of light $c$ and its initial frequency $f_0$
 
 \begin{equation}
-	\Delta v = r \omega_r (\vec{d_p} \bullet \vec{d_r})
-	\label{eqn:deltav}
+	v_t = r \omega_r (\vec{d_p} \bullet \vec{d_t})
+	\label{eqn:v_t}
 \end{equation}
 
 %formula description
-where $\Delta v$ is the difference in velocity between the point of reflection along the length of the rotor blade in the direction of the reflection characterized by equation \ref{eqn:deltav}. Where $r$ is the radius along the length of the blade where the reflection occurs. $\omega_r$ is the angular velocity of the rotor. $\vec{d_p}$ is the normalized vector that is perpendicular to the rotor in its direction of travel and $\vec{d_r}$ is the normalized vector that is in the direction of the resulting reflected ray.
+where $r$ is the radius along the length of the blade where the reflection occurs. $\omega_r$ is the angular velocity of the rotor. $\vec{d_p}$ is the normalized vector that is perpendicular to the rotor in its direction of travel and $\vec{d_t}$ is the normalized vector that is in the direction of the transmitted ray.
 
+\begin{equation}
+	v_r = r \omega_r (\vec{d_p} \bullet \vec{d_r})
+	\label{eqn:v_r}
+\end{equation}
+
+where $\vec{d_r}$ is the normalized vector that is in the direction of the reflected ray.
 
 \section{Scene Model}
 % describe what the scene model is and how it will fit in to the ray tracer and the 3d setting
@@ -180,7 +186,7 @@ The receiver is configurable allowing the user to set a desired center frequency
 
 \section{Ray Tracing}
 %describe the core tracing engine and describe the flow of the program
-The ray tracing simulation is conducted in the Monte Carlo fashion acting on the scene and propagation models. This method of raytracing is established for creating realistic images in (Suffern, 2007; Pharr, 2010). The simulation is performed over successive iterations. Each iteration is a discrete element called a frame. Where each frame will be updated to represent the change in the position of the rotor blade.
+The ray tracing simulation is conducted in the Monte Carlo fashion acting on the scene and propagation models. This method of raytracing is established for creating realistic images in \cite{Suffern2007}, \cite{Pharr2010} (Suffern, 2007; Pharr, 2010). The simulation is performed over successive iterations. Each iteration is a discrete element called a frame. Where each frame will be updated to represent the change in the position of the rotor blade.
 
 \subsection{Computation}
 %flow of the program
