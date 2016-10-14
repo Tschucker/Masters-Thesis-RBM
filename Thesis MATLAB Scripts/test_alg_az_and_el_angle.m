@@ -71,16 +71,16 @@ for i=1:num_files
     data_table(i,1) = max(upper_envelope); 
     data_table(i,2) = min(lower_envelope);
     
-%     figure;
-%     hold on
-%     plot3(t/60,lower_envelope/1000,z,'b','linewidth',4)
-%     plot3(t/60,upper_envelope/1000,z,'r','linewidth',4)
-%     spectrogram(signal_data(i,:),5000,500,5000,fs,'yaxis','centered')
-%     colormap(jet);
-%     colorbar
-%     view(2)
-%     title(num2str(location_data(i,4)));
-%     hold off
+    figure;
+    hold on
+    plot3(t/60,lower_envelope/1000,z,'b','linewidth',4)
+    plot3(t/60,upper_envelope/1000,z,'r','linewidth',4)
+    spectrogram(data(i,:),5000,500,5000,fs,'yaxis','centered')
+    colormap(jet);
+    colorbar
+    view(2)
+    title(num2str(location_data(i,4)));
+    hold off
 end
 
 %fix estimation error on first envelope -----

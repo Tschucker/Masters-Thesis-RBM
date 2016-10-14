@@ -35,45 +35,45 @@ Warning--empty journal in Glassner1995
 Warning--empty booktitle in Phong:1998:ICG:280811.280980
 
 Done.
-You've used 15 entries,
+You've used 16 entries,
             4039 wiz_defined-function locations,
-            947 strings with 10918 characters,
-and the built_in function-call counts, 9089 in all, are:
-= -- 749
-> -- 137
+            956 strings with 11118 characters,
+and the built_in function-call counts, 9500 in all, are:
+= -- 783
+> -- 141
 < -- 56
-+ -- 75
-- -- 24
-* -- 432
-:= -- 1512
-add.period$ -- 33
-call.type$ -- 15
++ -- 77
+- -- 25
+* -- 451
+:= -- 1593
+add.period$ -- 35
+call.type$ -- 16
 change.case$ -- 11
 chr.to.int$ -- 111
-cite$ -- 18
-duplicate$ -- 676
-empty$ -- 837
-format.name$ -- 28
-if$ -- 2063
+cite$ -- 19
+duplicate$ -- 706
+empty$ -- 885
+format.name$ -- 29
+if$ -- 2155
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 116
-newline$ -- 86
-num.names$ -- 15
-pop$ -- 275
+int.to.str$ -- 16
+missing$ -- 122
+newline$ -- 91
+num.names$ -- 16
+pop$ -- 290
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 734
+skip$ -- 769
 stack$ -- 0
 substring$ -- 292
-swap$ -- 497
+swap$ -- 515
 text.length$ -- 19
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 15
+type$ -- 16
 warning$ -- 3
-while$ -- 39
-width$ -- 17
-write$ -- 181
+while$ -- 40
+width$ -- 18
+write$ -- 192
 (There were 3 warnings)

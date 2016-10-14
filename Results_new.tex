@@ -8,7 +8,7 @@ The information gathered from the previous section is used to estimate the azimu
 
 \section{Transmitter Azimuth Angle Estimation} \label{sec:transmitter_azimuth_angle_estimation}
 %formulate the estimation equation and discuss ambiguity considerations
-The azimuth angle estimation technique is based on the data collected by rotating the helicopter platform in a clockwise manner, during which at a set angle a doppler envelope is calculated and subsequent maximum and minimum values are collected. After a complete rotation the doppler maximum and minimum values produce a sinusoidal pattern as shown in figure \ref{fig:tx_azimuth_angle_200} without the assumption of knowing the starting azimuth angle. With this data we need to find an unambiguous angle that will set the coordinate space and provide an estimate of current azimuth angle. To do this the absolute value of the minimum envelope data is superimposed onto the maximum envelope data as shown in figure \ref{fig:azimuth_estimation_max_vs_absMin}.
+The azimuth angle estimation technique is based on the data collected by rotating the helicopter platform in a clockwise manner, during which a Doppler envelope and subsequent maximum and minimum values are calculated. After a complete rotation the Doppler maximum and minimum values produce a sinusoidal pattern as shown in Figure \ref{fig:tx_azimuth_angle_200} without the assumption of knowing the starting azimuth angle. With this data we need to find an unambiguous angle that will set the coordinate space and provide an estimate of current azimuth angle. To do this the absolute value of the minimum envelope data is superimposed onto the maximum envelope data as shown in Figure \ref{fig:azimuth_estimation_max_vs_absMin}.
 
 \begin{figure}
 	\begin{center}
@@ -18,7 +18,7 @@ The azimuth angle estimation technique is based on the data collected by rotatin
 	\end{center}
 \end{figure}
 
-From figure \ref{fig:azimuth_estimation_max_vs_absMin} there are two points at which the maximums and the absolute value of the minimums cross. By computing the difference \ref{eqn:difference}
+From Figure \ref{fig:azimuth_estimation_max_vs_absMin} there are two points at which the maximums and the absolute value of the minimums cross. By computing the difference
 
 %formula for difference
 \begin{equation}
@@ -26,7 +26,7 @@ From figure \ref{fig:azimuth_estimation_max_vs_absMin} there are two points at w
 	 \label{eqn:difference}
 \end{equation}
 
-we produce an almost exact sinusoid centered around zero, shown in figure \ref{fig:azimuth_estimation_difference}.
+where $Max Upper Envelope$ is an array of the maximum value of each upper envelope calculation, and $Min Lower Envelope$ is an array of the minimum value of each lower envelope calculation. $Envelope Difference$ is an almost exact sinusoid centered around zero, shown in Figure \ref{fig:azimuth_estimation_difference}.
 
  \begin{figure}[b]
 	\begin{center}
@@ -36,7 +36,7 @@ we produce an almost exact sinusoid centered around zero, shown in figure \ref{f
 	\end{center}
 \end{figure}
 
-While figure \ref{fig:azimuth_estimation_difference} provides information about the angle of the transmitter it does not contain enough to locate an unambiguous azimuth angle in itself, therefore by computing the correct doppler to use from the $Max Upper Envelope$ and the $| Min Lower Envelope |$. This is done by evaluating the difference at each angle and if the difference is negative the $| Min Lower Envelope |$ is used and if positive the $Max Upper Envelope$.
+While Figure \ref{fig:azimuth_estimation_difference} provides information about the angle of the transmitter it does not contain enough to locate an unambiguous azimuth angle in itself, therefore by computing the correct Doppler using the $Max Upper Envelope$ and the $| Min Lower Envelope |$. This is done by evaluating the difference at each angle and if the difference is negative the $| Min Lower Envelope |$ is used and if positive the $Max Upper Envelope$.
 
 %matlab for corrected doppler
 \begin{lstlisting}
@@ -58,7 +58,7 @@ end
 	\end{center}
 \end{figure}
 
-The correct Doppler is shown in figure \ref{fig:correct_fd} which displays the amount of doppler that is currently acting on the signal for that specific azimuth angle. The data gathered contains a global minimum at 90\textdegree \space and a second local minimum at 270\textdegree. The 90\textdegree \space can be found easily by taking the minimum of the correct Doppler signal
+The correct Doppler is shown in Figure \ref{fig:correct_fd} which displays the amount of Doppler that is currently acting on the signal for that specific azimuth angle. The data gathered contains a global minimum at 90\textdegree \space and a second local minimum at 270\textdegree. The 90\textdegree \space can be found easily by taking the minimum of the correct Doppler signal
 
 %matlab minimum code
 \begin{lstlisting}
@@ -75,7 +75,7 @@ The correct Doppler is shown in figure \ref{fig:correct_fd} which displays the a
 	\end{center}
 \end{figure}
 
-But in order to find the local minimum at 270\textdegree \space we need to use a different method. To do this we can use the peak detection function within Matlab to locate both the 90\textdegree and 270\textdegree point. By taking the inverse of the correct Doppler and tuning the peak detection function with the maximum and minimum values to determine accurate prominence.
+But in order to find the local minimum at 270\textdegree \space we need to use a different method. To do this we can use the peak detection function within MATLAB to locate both the 90\textdegree \space and 270\textdegree \space point. By taking the inverse of the correct Doppler and tuning the peak detection function with the maximum and minimum values to determine accurate prominence.
 
 %matlab peak detection code with tuning params
 \begin{lstlisting}
@@ -93,7 +93,7 @@ min_peak_prominence = (1/(Max - Min))*.5;
 	\end{center}
 \end{figure}
 
-From figure \ref{fig:peaks}  we see the two peaks denoted by the red x's, one at 90\textdegree \space and the other at  270\textdegree. Now we have a minimum value that should denote the 90\textdegree \space location and the two peak locations that denote the 90\textdegree \space 270\textdegree locations. Because it is possible that the minimum could find the wrong peak for the 90\textdegree \space location we can compare the peak locations on the average power data, that was used to find the successive average during data collection, to determine which location is actually 90\textdegree.
+From Figure \ref{fig:peaks}  we see the two peaks denoted by the red x's, one at 90\textdegree \space and the other at  270\textdegree. Now we have a minimum value that should denote the 90\textdegree \space location and the two peak locations that denote the 90\textdegree \space and 270\textdegree \space locations. Because it is possible that the minimum could find the wrong peak for the 90\textdegree \space location we can compare the peak locations on the average power data, that was used to find the successive average during data collection, to determine which location is actually 90\textdegree.
 
 %figure with power plot with 90 and 270 denoted
 \begin{figure}
@@ -104,7 +104,7 @@ From figure \ref{fig:peaks}  we see the two peaks denoted by the red x's, one at
 	\end{center}
 \end{figure}
 
-Figure \ref{fig:ave_power}  shows the average power at each angle sample with the angles 90\textdegree \space and 270\textdegree denoted. From the plot we can see that the average power at 90\textdegree \space is much smaller than the the power at 270\textdegree, so this inequality will be used to resolve ambiguity in the azimuth angle. 
+Figure \ref{fig:ave_power}  shows the average power at each angle sample with the angles 90\textdegree \space and 270\textdegree \space denoted as red x's. From the plot we can see that the average power at 90\textdegree \space is much smaller than the the power at 270\textdegree, so this inequality will be used to resolve ambiguity in the azimuth angle. 
 
 From there the Minimum method and the peak method can be compared to see if they agree on the 90\textdegree \space location. If this is not the case one will be chosen and the helicopter can fly in that direction and measure based on the physical movement of the helicopter or if the resulting envelope got larger or smaller because of the change in elevation angle.
 
@@ -126,7 +126,7 @@ From there the Minimum method and the peak method can be compared to see if they
 \end{center}
 \end{table}
 
-From table \ref{tab:az_error_and_percent} we can see that there is no error in the estimation of the 90\textdegree \space point over a variety of Altitude and elevation angles that were tested. But because of the algorithm could potentially pick the 270\textdegree we will analyze the difference in peak heights and the power difference to evaluate the estimation further.
+From Table \ref{tab:az_error_and_percent} we can see that there is no error in the estimation of the 90\textdegree \space point over a variety of Altitude and elevation angles that were tested. But because of the algorithm could potentially pick the 270\textdegree \space we will analyze the difference in peak heights and the power difference to evaluate the estimation further.
 
 \begin{table}
 \begin{center}
@@ -145,7 +145,7 @@ From table \ref{tab:az_error_and_percent} we can see that there is no error in t
 \end{center}
 \end{table}
 
-From table \ref{tab:peaks_and_power} we can see that at the larger elevation angles the peak percent difference are significant to determine which is correctly the 90\textdegree value, but from the Peak frequency difference at the large elevation angles the difference is in the tens of Hz so in practical applications it is possible to confuse the estimation by just taking the minimum frequency so other values need to play a role such as the power.
+From Table \ref{tab:peaks_and_power} we can see that at the larger elevation angles the peak percent difference are significant to determine which is correctly the 90\textdegree \space value, but from the Peak frequency difference at the large elevation angles the difference is in the tens of Hz so in practical applications it is possible to confuse the estimation by just taking the minimum frequency so other values need to play a role such as the power.
 
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -158,7 +158,7 @@ Using the information gathered from the azimuth estimation procedure we can comp
 	\label{eqn:r_estimate}
 \end{equation}
 
-where $R_{Estimate}$ is the estimated reflection radius at a particular azimuth, $BladeLength$ is the length of a single blade or radius of the rotor, and $f_{DopplerCorrect}$ is the correct doppler frequency for each azimuth angle $\theta_{Az}$.
+where $R_{Estimate}$ is the estimated reflection radius at a particular azimuth, $BladeLength$ is the length of a single blade or radius of the rotor, and $f_{DopplerCorrect}$ is the correct Doppler frequency for each azimuth angle $\theta_{Az}$.
 
 %figure of radius estimation 
 \begin{figure}
@@ -178,7 +178,7 @@ Now we find the maximum amount of Doppler that could be induced at that reflecti
 	\label{eqn:max_doppler}
 \end{equation}
 
-where $f_{Doppler_{R Estimate Max}}$ is the maximum amount of doppler that could happen at that location if the signal was reflected parallel to the direction of motion. $f_c$ is the center frequency of the signal, $c$ is the speed of light and $v_r$ is the radial velocity based of the $RPM$ defined by
+where $f_{Doppler_{R Estimate Max}}$ is the maximum amount of Doppler that could happen at that location if the signal was reflected parallel to the direction of motion. $f_c$ is the center frequency of the signal, $c$ is the speed of light and $v_r$ is the radial velocity based of the $RPM$ defined by
 
 %radial velocity
 \begin{equation}
@@ -186,7 +186,8 @@ where $f_{Doppler_{R Estimate Max}}$ is the maximum amount of doppler that could
 	\label{eqn:v_radial}
 \end{equation}
 
-Then to find the elevation angle we look back at equation (-) where we then solve for the elevation angle 
+Then to find the elevation angle we look back at equation \ref{eq:theory_180_upper} swapping $MaxUpperEnvelope$ with $f_{DopplerCorrect(\theta_{Az})}$ because this is now over the azimuth range and swap $f_{DopplerMax}$ for $f_{Doppler_{R Estimate Max}}$ because we need the maximum doppler for the current reflection estimate. we then solve for the elevation angle
+
 %Elevation angle
 \begin{equation}
 	\theta_{El} = acos\left(\frac{f_{DopplerCorrect(\theta_{Az})}}{f_{Doppler_{R Estimate Max}}}\right)
@@ -212,7 +213,7 @@ where $f_{DopplerMax}$ is defined in equation \ref{eqn:fd_max}.
 	\end{center}
 \end{figure}
 
-Figure \ref{fig:elevation_comparason_azimuth_range} shows the estimation of the elevation angle $\theta_{El}$ with respect to the azimuth angle, what it shows is that the elevation angle remains constant with respect to azimuth angle. which means that the estimation in the reflection radius is correctly compensating for the azimuth angle. The percent error off the actual elevation angle is shown in figure \ref{fig:percent_error_elevation_azimuth_range} which is very small and consistent over the azimuth range.
+Figure \ref{fig:elevation_comparason_azimuth_range} shows the estimation of the elevation angle $\theta_{El}$ with respect to the azimuth angle, what it shows is that the elevation angle remains constant with respect to azimuth angle. which means that the estimation in the reflection radius is correctly compensating for the azimuth angle. The percent error off the actual elevation angle is shown in Figure \ref{fig:percent_error_elevation_azimuth_range} which is very small and consistent over the azimuth range.
 
 %figure of percent error
 \begin{figure}
@@ -241,13 +242,13 @@ Figure \ref{fig:elevation_comparason_azimuth_range} shows the estimation of the 
 \end{center}
 \end{table}
 
-From table \ref{tab:elevation_error_percent} elevation estimation error is extremely small for the given actual elevation angles. But there is a trend that is evident in the data that as the elevation angle decreases the amount of error is increasing.
+From Table \ref{tab:elevation_error_percent} elevation estimation error is extremely small for the given actual elevation angles. But there is a trend that is evident in the data that as the elevation angle decreases the amount of error is increasing.
 
 %-----------------------------------------------------
 % range limitations of this aproximation
 %-----------------------------------------------------
 
-This error is caused by a limitation on the estimation is that the doppler shift is limited by the maximum amount doppler that the blade rotation can produce shown in equation \ref{eqn:v_radial} by replacing $v_r$ with $v_rMax$ which is calculated by
+This error is caused by a limitation on the estimation is that the Doppler shift is limited by the maximum amount Doppler that the blade rotation can produce shown in equation \ref{eqn:v_radial} by replacing $v_r$ with $v_rMax$ which is calculated by
 
 %radial velocity
 \begin{equation}
@@ -255,7 +256,7 @@ This error is caused by a limitation on the estimation is that the doppler shift
 	\label{eqn:v_radial_max}
 \end{equation}
 
-then using that to find the maximum available doppler through
+then using that to find the maximum available Doppler through
 
 %maximum available doppler
 \begin{equation}
@@ -263,7 +264,7 @@ then using that to find the maximum available doppler through
 	\label{eqn:fd_max}
 \end{equation}
 
-This limitation is shown by varying the elevation angle at the azimuth angle that provides the maximum Doppler shift, which is 180\textdegree \space. The maximum and minimum envelope data is shown in figure \ref{fig:envelope_180deg}
+This limitation is shown by varying the elevation angle at the azimuth angle that provides the maximum Doppler shift, which is 180\textdegree \space. The maximum and minimum envelope data is shown in Figure \ref{fig:envelope_180deg}
 
 %figure of 180 deg elevation sweep of envelope
 \begin{figure}
@@ -283,7 +284,7 @@ This limitation is shown by varying the elevation angle at the azimuth angle tha
 	\end{center}
 \end{figure}
 
-Using the estimation method described above, figure \ref{fig:angle_comparason_180deg} shows the elevation angle estimated versus the actual angle. The estimation method is accurate till about 18\textdegree \space or 20\textdegree \space where it becomes noisy. This is due to the inability of the envelope estimation to resolve the correct maximum doppler for that range. By going back to figure (anglerangerelation) we can see that as the transmitter moves farther and farther away the elevation angle is still decreasing but at a much smaller and smaller rate. So the difference between elevation angles closer to zero are more difficult to resolve. 
+Using the estimation method described above, Figure \ref{fig:angle_comparason_180deg} shows the elevation angle estimated versus the actual angle. The estimation method is accurate till about 18\textdegree \space or 20\textdegree \space where it becomes noisy. This is due to the inability of the envelope estimation to resolve the correct maximum Doppler for that range. By going back to Figure \ref{fig:tx_range_elevation_rel} we can see that as the transmitter moves farther and farther away the elevation angle is still decreasing but at a much smaller and smaller rate. So the difference between elevation angles closer to zero are more difficult to resolve. 
 
 %figure percent error of increasing error and variability
 \begin{figure}
@@ -300,7 +301,7 @@ Figure \ref{fig:percent_error_elevation_180deg} shows the percent error with res
 %pitch considerations
 %------------------------------
 
-If we now consider a pitched blade the above method for estimating Azimuth and elevation becomes inaccurate due to the increased doppler between 90\textdegree and 270\textdegree and the decreased doppler on the other side. To correct this error we need to correct both the difference calculation and the correct doppler data accordingly. The uncorrected data is shown in figure \ref{fig:diff_pitch_noCorrection} and \ref{fig:dop_pitch_noCorrection} with percent azimuth error of 20\% and percent elevation error of 35\%.
+If we now consider a pitched blade the above method for estimating Azimuth and elevation becomes inaccurate due to the increased Doppler between 90\textdegree \space and 270\textdegree \space and the decreased Doppler on the other side. To correct this error we need to correct both the difference calculation and the correct Doppler data accordingly. The uncorrected data is shown in Figure \ref{fig:diff_pitch_noCorrection} and \ref{fig:dop_pitch_noCorrection} with percent azimuth error of 20\% and percent elevation error of 35\%.
 
 \begin{figure}
 	\begin{center}
@@ -318,10 +319,10 @@ If we now consider a pitched blade the above method for estimating Azimuth and e
 	\end{center}
 \end{figure}
 
-Comparing the envelope difference of no pitch and pitched blade, in figures \ref{fig:azimuth_estimation_difference} and \ref{fig:diff_pitch_noCorrection} respectively, we can see that the difference calculation of the pitch is a shifted up version of the one with no pitch. Therefore we can first correct this by re-centering the pitch difference according to 
+Comparing the envelope difference of no pitch and pitched blade, in Figures \ref{fig:azimuth_estimation_difference} and \ref{fig:diff_pitch_noCorrection} respectively, we can see that the difference calculation of the pitch is a shifted up version of the one with no pitch. Therefore we can first correct this by re-centering the pitch difference according to 
 
 \begin{equation}
-	A_{shift} = \frac{Max(Max Uppe rEnvelope) - |Min(Min Lower Envelope)|}{2}
+	A_{shift} = \frac{Max(Max Upper Envelope) - |Min(Min Lower Envelope)|}{2}
 	\label{eqn:pitch_shift}
 \end{equation}
 
@@ -337,10 +338,10 @@ Then with this knowledge $f_{DopplerCorrect}$ is recalculated and then is adjust
 %fix correct doppler for pitch
 \begin{equation}
 	f_{DopplerCorrect} = f_{DopplerCorrect} + A_{shift}cos\left(\theta_{Az}\right)
-	\label{eqn:fd_max}
+	\label{eqn:fd_pitch_correct}
 \end{equation}
 
-Since $\theta_{Az}$ is unknown during the calculation of this equation the correct starting phase can be determined by matching it to the $EnvelopeDifference$ with the a priori information that the cosign should be one period in length. These corrections result in the percent azimuth error of 0\% and 7\% elevation angle error. The elevation angle percent error is within a useable range but could be decreased with further tuning to the preliminary pitch adjustment algorithm. When the pitch corrections are applied to a transmitter elevation angle of 26.56\textdegree \space the correction achieves better performance than the unpitched calculation with percent azimuth error of 0\% and percent elevation error of 0.114\%. This is still a preliminary correction method that requires more in depth analysis but from the initial results shows merit. The increased accuracy as the elevation angle decreases relates back to figure \ref{fig:pitch_tx_elevation_angle} where as the elevation angle decreases the effect of pitch on the signal converges back to unpitched results.
+Since $\theta_{Az}$ is unknown during the calculation of this equation the correct starting phase can be determined by matching it to the $EnvelopeDifference$ with a priori information that the cosign should be one period in length. These corrections result in the percent azimuth error of 0\% and 7\% elevation angle error. The elevation angle percent error is within a useable range but could be decreased with further tuning to the preliminary pitch adjustment algorithm. When the pitch corrections are applied to a transmitter elevation angle of 26.56\textdegree \space the correction achieves better performance than the unpitched calculation with percent azimuth error of 0\% and percent elevation error of 0.114\%. This is still a preliminary correction method that requires more in depth analysis but from the initial results shows merit. The increased accuracy as the elevation angle decreases relates back to Figure \ref{fig:pitch_tx_elevation_angle} where as the elevation angle decreases the effect of pitch on the signal converges back to the unpitched results.
 
 
 

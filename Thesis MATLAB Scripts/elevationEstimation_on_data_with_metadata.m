@@ -4,11 +4,11 @@ clear;
 %--------------------------------------------------------------------------
 %Load Data
 %--------------------------------------------------------------------------
-files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m//*.csv');
+files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/data_rangeFar_180deg/*.csv');
 num_files = length(files);
 data = zeros(num_files,959006); %479000;
 for i=1:num_files
-     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m//',files(i).name)));
+     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/data_rangeFar_180deg/',files(i).name)));
 end
 
 %--------------------------------------------------------------------------
@@ -85,8 +85,8 @@ end
 
 figure;
 hold on
-plot((location_data(:,5)/(2*pi))*360,data_table(:,1))
-plot((location_data(:,5)/(2*pi))*360,data_table(:,2))
+plot((location_data(:,5)/(2*pi))*360,-data_table(:,2))
+plot((location_data(:,5)/(2*pi))*360,-data_table(:,1))
 hold off
 legend('Max Upper Envelope', 'Min Lower Envelope');
 title('Max and Min Envelope Frequencies vs Transmitter Elevation Angle');

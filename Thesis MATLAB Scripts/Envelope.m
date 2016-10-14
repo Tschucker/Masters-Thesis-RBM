@@ -2,7 +2,7 @@
 clear;
 %test_locationdatainfile_4
 %Altitude_200m/rx_test_Bistatic_dop0.000000rad2
-samples = csvread('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rx_test_Bistatic_dop0.000000rad2.csv');
+samples = csvread('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/bistatic_range_270deg/rx_-600.000000m_270deg.csv');
 rpm = 250;
 
 %B = horzcat(samples,samples)';

@@ -148,10 +148,28 @@ I would like to thank my thesis advisor Dr. Tamal Bose for the opportunity to wo
 %% ----------------------------------------------------------------
 \setstretch{1.5}  % Set the line spacing to 1.5, this makes the following tables easier to read
 %\clearpage  % Start a new page
-%\lhead{\emph{Abbreviations}}  % Set the left side page header to "Abbreviations"
-%\listofsymbols{ll}  % Include a list of Abbreviations (a table of two columns)
+\lhead{\emph{Abbreviations}}  % Set the left side page header to "Abbreviations"
+\listofsymbols{ll}  % Include a list of Abbreviations (a table of two columns)
 {
-% \textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
+ %\textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
+ \textbf{2D} & 2-\textbf{D}imensional \\
+ \textbf{3D} & 3-\textbf{D}imensional \\
+ \textbf{BER} & \textbf{B}it \textbf{E}error \textbf{R}ate \\
+ \textbf{BRDF} & \textbf{B}i-directional \textbf{R}eflection  \textbf{D}istrobution \textbf{F}unction \\
+ \textbf{CSV} & \textbf{C}omma \textbf{S}eparated \textbf{V}alue \\
+ \textbf{DSP} & \textbf{D}igital \textbf{S}ignal \textbf{P}rocessing \\
+ \textbf{GPS} & \textbf{G}lobal \textbf{P}ositioning \textbf{S}ystem \\
+ \textbf{GPU} & \textbf{G}raphics \textbf{P}rocessing \textbf{U}nit \\
+ \textbf{GUI} & \textbf{G}raphical \textbf{U}ser \textbf{I}nterface \\
+ \textbf{IQ} & \textbf{I}n-phase and \textbf{Q}uadrature \\
+ \textbf{JEM} & \textbf{J}et \textbf{E}ngine \textbf{M}odulation \\
+ \textbf{LOS} & \textbf{L}ine \textbf{O}f \textbf{S}ight \\
+ \textbf{RBM} & \textbf{R}otor \textbf{B}lade \textbf{M}odulation \\
+ \textbf{RF} & \textbf{R}adio \textbf{F}requency \\
+ \textbf{RPM} & \textbf{R}otations \textbf{P}er \textbf{M}inute \\
+ \textbf{Rx} & \textbf{R}eceiver \\
+ \textbf{STFT} & \textbf{S}hort \textbf{T}ime \textbf{F}ourier \textbf{T}ransform \\ 
+ \textbf{Tx} & \textbf{T}ransmitter \\
 
 }
 
@@ -178,7 +196,7 @@ I would like to thank my thesis advisor Dr. Tamal Bose for the opportunity to wo
 \addtotoc{Abstract}  % Add the "Abstract" page entry to the Contents
 \abstract{
 \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
-In RF communications with a rotorcraft, such as a helicopter, the rotor blades can impart a modulation onto the received signal called Rotor Blade Modulation (RBM). This modulation is caused by the reflection of a signal off the rotating blades. The reflected signal is Doppler shifted based on where the signal is reflected along the length of the blade as well as the angle between the axis of rotation and the emitter. RBM is known to degrade the performance of RF communications on rotorcraft and can be used in RADAR applications to detect and classify aircraft, but there is little on its usefulness in other areas. This thesis looks at the ability to utilize the RBM phenomenon on the rotorcraft itself to geo-locate and track a signal emitter on the ground. 
+In RF communications with a rotorcraft, such as a helicopter, the rotor blades can impart a modulation onto the received signal called Rotor Blade Modulation (RBM). This modulation is caused by the reflection of a signal off the rotating blades. The reflected signal is Doppler shifted based on where the signal is reflected along the length of the blade as well as the angle between the axis of rotation and the emitter. RBM is known to degrade the performance of RF communications on rotorcraft and can be used in radar applications to detect and classify aircraft, but there is little on its usefulness in other areas. This thesis looks at the ability to utilize the RBM phenomenon on the rotorcraft itself to geo-locate and track a signal emitter on the ground. 
 
 To do this a 3D RF ray tracing program was developed in C++ to produce simulations of RBM signals. The developed program is based on optical ray tracing algorithms with modified physical propagation effects for RF signals, and swapping lights and cameras for RF transmitters and receivers respectively. The ray tracer was then run over a realistic set of physical parameters to determine their effects on the received signal, this includes transmitter azimuth and elevation angle, receiver position, blade pitch, etc. along with their combinations. From the simulations the azimuth and elevation angle, of the transmitter, produce predictable modulations on the received signal.  Based on the trends in the signal's modulation a DSP algorithm was distilled down that accurately determines the azimuth and elevation angle of the transmitter from simulated signal data.
 }

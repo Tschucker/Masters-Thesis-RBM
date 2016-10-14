@@ -28,12 +28,12 @@ xlabel('Elevation Angle (deg)');
 ylabel('Doppler Frequency (Hz)');
 title('Doppler Frequency vs. Elevation angle for 270deg Transmitter Azimuth');
 
- i = 0.01:.01:7;
- el = fliplr(atan(2./i));
- v = ((2*pi)/60)*RPM*2;
+ i = 0.01:.01:2;
+ el = (atan(2./i));
+ v = ((2*pi)/60)*RPM*i;%? i or 2 .....
  max_fd = 2*(v*fc)/c;
- doppler_plus = max_fd.*cos(el);
- doppler_minus = -max_fd.*cos(el);
+ doppler_plus = max_fd.*(cos(el)+ cos(fliplr(el)));
+ doppler_minus = -max_fd.*(cos(el) + cos(fliplr(el)));
  figure;
  hold on
  plot(360*el/(2*pi),doppler_plus)
@@ -41,4 +41,4 @@ title('Doppler Frequency vs. Elevation angle for 270deg Transmitter Azimuth');
  hold off
  xlabel('Elevation Angle (deg)');
  ylabel('Doppler Frequency (Hz)');
- title('Doppler Frequency vs. Elevation angle for 270deg Transmitter Azimuth new');
+ title('Doppler Frequency vs. Elevation angle for 270deg Transmitter Azimuth');
