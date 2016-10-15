@@ -147,7 +147,7 @@ I would like to thank my thesis advisor Dr. Tamal Bose for the opportunity to wo
 
 %% ----------------------------------------------------------------
 \setstretch{1.5}  % Set the line spacing to 1.5, this makes the following tables easier to read
-%\clearpage  % Start a new page
+\clearpage  % Start a new page
 \lhead{\emph{Abbreviations}}  % Set the left side page header to "Abbreviations"
 \listofsymbols{ll}  % Include a list of Abbreviations (a table of two columns)
 {
@@ -177,18 +177,50 @@ I would like to thank my thesis advisor Dr. Tamal Bose for the opportunity to wo
 %\clearpage  % Start a new page
 %\lhead{\emph{Mathematical Notations}}  % Set the left side page header to "Physical Constants"
 %\listofconstants{ll}  % Include a list of Physical Constants (a four column table)
-{
+%{
 % Constant Name & Symbol & = & Constant Value (with units) \\
 
-}
+%}
 
 %% ----------------------------------------------------------------
-%\clearpage  %Start a new page
-%\lhead{\emph{Symbols}}  % Set the left side page header to "Symbols"
-%\listofnomenclature{ll}  % Include a list of Symbols (a three column table)
+\clearpage  %Start a new page
+\lhead{\emph{Symbols}}  % Set the left side page header to "Symbols"
+\listofnomenclature{l p{5cm} l}  % Include a list of Symbols (a three column table)
 {
-% symbol & name & unit \\
-
+ \textbf{Symbol} & \textbf{Name} & \textbf{Units} \\
+ $\theta_{El}$ & Transmitter Elevation angle & degrees \\
+ $\theta_{r}$ & Ray Reflection angle & degrees \\
+ $\theta_{Az}$ & Transmitter Azimuth angle & degrees \\
+ $f_d$ & Doppler Frequency shift & Hz \\
+ $\theta_b$ & Rotor Blade angle & degrees \\
+ $Rx_x$ & Receiver position in X axis & meters \\
+ $Rx_y$ & Receiver position in Y axis & meters \\
+ $Rx_z$ & Receiver position in Z axis & meters \\
+ $G_r$ & & \\
+ $G_t$ & & \\
+ $R$ & & \\
+ $n$ & & \\
+ $d_i$ & & \\
+ $\theta_i$ & Angle of incedence with an objects normal & radians \\
+ $d$ & Total distance traveled by a ray & meters \\ 
+ $t_0$ & Starting time in a frame & seconds \\
+ $r$ & A radius along the length of the blade & meters \\
+ $\omega_r$ & Rotational velocity of the blade & rad/second \\
+ $F$ & Fading coefficient & \\
+ $\lambda$ & Wavelength & meters \\
+ $c$ & Speed of Light & meters/seconds \\
+ $f$ & frequency & Hz \\
+ $f_0$ & initial frequency & Hz \\
+ $f_s$ & sampling frequency & samples/seconds \\
+ $EnvelopeDifference$ & difference between two doppler envelopes & Hz \\
+ $MaxUpperEnvelope$ & Array of values corresponding to the maximum of each azimuth or elevation upper envelope calculation & Hz \\
+ $MinLowerEnvelope$ & Array of values corresponding to the minimum of each azimuth or elevation lower envelope calculation & Hz \\
+ $BladeLength$ & Length of single rotor blade (radius of rotor) & meters \\
+ $f_c$ & Center Frequency & Hz \\
+ $R_{Estimate}$ & Estimated reflection radius & meters \\
+ $f_{DopplerMax}$ & The maximum amount of doppler for a particular blade length and RPM & Hz \\
+ $f_{DopplerCorrect}$ & The corrected doppler per $\theta_{Az}$ to be processed & Hz \\
+ $A_{shift}$ & The amount of shift needed to correct for Blade pitch & Hz \\
 }
 %% ----------------------------------------------------------------
 % End of the pre-able, contents and lists of things
