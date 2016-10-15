@@ -4,11 +4,11 @@ clear;
 %--------------------------------------------------------------------------
 %Load Data
 %--------------------------------------------------------------------------
-files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/bistatic_azimuth_45/*.csv');
+files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/bistatic_azimuth_45_pitch/*.csv');
 num_files = length(files);
 data = zeros(num_files,959006); %959000;  479000
 for i=1:num_files
-     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/bistatic_azimuth_45/',files(i).name)));
+     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/bistatic_azimuth_45_pitch/',files(i).name)));
 end
 
 %--------------------------------------------------------------------------
@@ -71,16 +71,16 @@ for i=1:num_files
     data_table(i,1) = max(upper_envelope); 
     data_table(i,2) = min(lower_envelope);
     
-    figure;
-    hold on
-    plot3(t/60,lower_envelope/1000,z,'b','linewidth',4)
-    plot3(t/60,upper_envelope/1000,z,'r','linewidth',4)
-    spectrogram(data(i,:),5000,500,5000,fs,'yaxis','centered')
-    colormap(jet);
-    colorbar
-    view(2)
-    title(num2str(location_data(i,4)));
-    hold off
+%     figure;
+%     hold on
+%     plot3(t/60,lower_envelope/1000,z,'b','linewidth',4)
+%     plot3(t/60,upper_envelope/1000,z,'r','linewidth',4)
+%     spectrogram(data(i,:),5000,500,5000,fs,'yaxis','centered')
+%     colormap(jet);
+%     colorbar
+%     view(2)
+%     title(num2str(location_data(i,4)));
+%     hold off
 end
 
 %fix estimation error on first envelope -----
@@ -102,7 +102,7 @@ difference = data_table(:,1) - abs(data_table(:,2));
 %correct for pitch
 zero_correct = max(data_table(:,1)) - abs(min(data_table(:,2)));
 if(zero_correct > .1*max(difference))
-    difference = difference - (zero_correct/1);
+    difference = difference - (zero_correct/2);
     pitch_corrected = 1;
 end
 

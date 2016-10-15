@@ -50,7 +50,7 @@ The position of the receiver is determined ultimately by its location on the phy
 	\end{center}
 \end{figure}
 
-The rotor blade length from Figure \ref{fig:rx_position_image} is 7.5m so the receiver will be varied from 0m to 9m in 1m increments. The resulting signal is analyzed by calculating its Doppler envelope. Then the maximum and minimum of that envelope will then be used to determined the overall effect of the position of the receiver.
+The rotor blade length from Figure \ref{fig:rx_position_image} is 7.5 m so the receiver will be varied from 0 m to 9 m in 1 m increments. The resulting signal is analyzed by calculating its Doppler envelope. Then the maximum and minimum of that envelope will then be used to determined the overall effect of the position of the receiver.
 
 %figure of maximum doppler vs rx position
 \begin{figure}
@@ -62,7 +62,7 @@ The rotor blade length from Figure \ref{fig:rx_position_image} is 7.5m so the re
 \end{figure}
 %azimuth = 135, elevation = 54deg
 
-Figure \ref{fig:rx_position} shows maximum Doppler vs the position of the receiver. From this graph the maximum Doppler frequency changes significantly as the receiver is moved from directly under neath the rotor to past the tip of the rotor at 9m.The position of the receiver also effects the resulting signal envelope shapes shown in Figures \ref{fig:rx_position_0m} and \ref{fig:rx_position_7m}.
+Figure \ref{fig:rx_position} shows maximum Doppler versus the position of the receiver. From this graph, the maximum Doppler frequency changes significantly as the receiver is moved from directly underneath the rotor to past the tip of the rotor at 9 m.The position of the receiver also effects the resulting signal envelope shapes shown in Figures \ref{fig:rx_position_0m} and \ref{fig:rx_position_7m}.
 
 %figure of spectrogram at 0m -- figure of spectrogram at 7m side by side
 \begin{figure}
@@ -81,7 +81,7 @@ Figure \ref{fig:rx_position} shows maximum Doppler vs the position of the receiv
 	\end{center}
 \end{figure}
 
-Comparing Figure \ref{fig:rx_position_0m} with \ref{fig:rx_position_7m} the max Doppler reflects the information in Figure \ref{fig:rx_position} and the overall envelope is afected. The envelope in Figure \ref{fig:rx_position_0m} is much noiser than the envelope of Figure \ref{fig:rx_position_7m} and the envelope of this second figure has a more distinct shape with less variation between its two peaks. The position of the receiver will also determine whether the azimuth angle can be derived from the resulting signal shown later in section \ref{taa}. Therefore the receiver will be offset from the center of rotation by 7m for the subsequent simulations.
+Comparing Figure \ref{fig:rx_position_0m} with \ref{fig:rx_position_7m} the max Doppler reflects the information in Figure \ref{fig:rx_position} and the overall envelope is affected. The envelope in Figure \ref{fig:rx_position_0m} is much noisier than the envelope of Figure \ref{fig:rx_position_7m} and the envelope of this second figure has a more distinct shape with less variation between its two peaks. The position of the receiver will also determine whether the azimuth angle can be derived from the resulting signal shown later in section \ref{taa}. Therefore, the receiver will be offset from the center of rotation by 7 m for the subsequent simulations.
 
 
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -111,7 +111,7 @@ The resulting signal is analyzed by calculating its Doppler envelope. Then the m
 \end{figure}
 %azimuth = 135deg, elevation = 54deg
 
-From Figure \ref{fig:pitch_15_135deg} the effect of pitch on the maximum Doppler frequency is a linear increase between a pitch from 0 \textdegree \space to 15\textdegree. Due to the linear increase the pitch of the rotor blade can be accounted for when making measurements on subsequent simulation analysis. One issue does arise in when the transmitter is located underneath the helicopter which is shown in Figure \ref{fig:pitch_tx0}.
+From Figure \ref{fig:pitch_15_135deg} the effect of pitch on the maximum Doppler frequency is a linear increase between a pitch from 0\textdegree \space to 15\textdegree. Due to the linear increase, the pitch of the rotor blade can be accounted for when making measurements on subsequent simulation analysis. One issue does arise in when the transmitter is located underneath the helicopter which is shown in Figure \ref{fig:pitch_tx0}.
 
 %figure of tx_0 and increasing pitch slope?
 \begin{figure}
@@ -123,7 +123,7 @@ From Figure \ref{fig:pitch_15_135deg} the effect of pitch on the maximum Doppler
 \end{figure}
 %azimuth undefined, elevation 90deg
 
-The pitch increases linearly at first then climbs at a much faster rate. This offset when the transmitter is directly underneath is caused by the pitch of the blade reflecting rays into the receiver which would be reflected back at the ground if the pitch was 0\textdegree. If the assumption is that the helicopter is hovering when these measurements take place the pitch of the rotor will be much less than the maximum pitch available. This assumption will adjust the maximum pitch to 15\textdegree \space which will allow for the linear assumption to be fulfilled even when the transmitter is directly underneath the helicopter.
+The pitch increases linearly at first then climbs at a much faster rate. This offset is caused by the pitch of the blade reflecting rays into the receiver which would be reflected back at the ground if the pitch was 0\textdegree. If the assumption is that the helicopter is hovering when these measurements take place, the pitch of the rotor will be much less than the maximum pitch available. This assumption will adjust the maximum pitch to 15\textdegree \space which will allow for the linear assumption to be fulfilled even when the transmitter is directly underneath the helicopter.
 
 %figure max doppler vs range of 15 and 7.5 pitch and 0 pitch side by side
 \begin{figure}
@@ -135,7 +135,7 @@ The pitch increases linearly at first then climbs at a much faster rate. This of
 \end{figure}
 %azimuth = 135deg
 
-In Figure \ref{fig:pitch_tx_elevation_angle} the max Doppler vs elevation angles are initially shifted up in frequency from a pitch of 0\textdegree \space and has changed in slope. This is because the rays hitting the blades from below are reflecting into the receiver at an angle that is closer to the direction of blade travel. The interesting thing about this plot is that the pitch envelopes actually become closer to the 0\textdegree \space envelope as the elevation angle becomes smaller. Figure \ref{fig:pitch_tx_elevation_angle_difference} shows the difference plotted over elevation angle.
+In Figure \ref{fig:pitch_tx_elevation_angle} the max Doppler versus elevation angles are initially shifted up in frequency from a pitch of 0\textdegree \space and, consequently, have changed in slope. This is because the rays hitting the blades from below are reflecting into the receiver at an angle that is closer to the direction of blade travel. The interesting thing about this plot is that the pitch envelopes actually become closer to the 0\textdegree \space envelope as the elevation angle becomes smaller. Figure \ref{fig:pitch_tx_elevation_angle_difference} shows the difference plotted over elevation angle.
 
 \begin{figure}
 	\begin{center}
@@ -161,7 +161,7 @@ The transmitter azimuth angle corresponds to the cardinal direction of the trans
 	\end{center}
 \end{figure}
 
-Where $\theta_{Az}$ is the azimuth angle. The azimuth angle of the transmitter in the simulation will effect the amount of Doppler added to the signal. This is due to the direction of the rotor blade rotation as it approaches both the receiver and the transmitter and how the rays reflect off the blade as it moves. From the model we see the amount of Doppler form a sinusoidal pattern as the azimuth angle goes from $0$ to $2\pi$. This is mirrored in the simulation shown in Figure \ref{fig:tx_azimuth_angle_200}.
+Where $\theta_{Az}$ is the azimuth angle. The azimuth angle of the transmitter in the simulation will effect the amount of Doppler added to the signal. This is due to the direction of the rotor blade rotation as it approaches both the receiver and the transmitter and how the rays reflect off the blade as it moves. From the model we see the amount of Doppler form a sinusoidal pattern as the azimuth angle goes from 0\textdegree \space to 360\textdegree. This is mirrored in the simulation shown in Figure \ref{fig:tx_azimuth_angle_200}.
 
 %figure of doppler vs azimuth angle
 \begin{figure}
@@ -173,7 +173,7 @@ Where $\theta_{Az}$ is the azimuth angle. The azimuth angle of the transmitter i
 \end{figure}
 %azimuth variable, elevation = 45deg
 
-The graph in Figure \ref{fig:tx_azimuth_angle_200} shows both the max and the minimum measured Doppler as the azimuth angle completes a full rotation. The Doppler frequency follows the azimuth angle in a sinusoidal fashion. The sinusoidal pattern is held as the elevation angle changes shown in Figures \ref{fig:tx_azimuth_angle_50} and \ref{fig:tx_azimuth_angle_400}.
+The graph in Figure \ref{fig:tx_azimuth_angle_200} shows both the maximum and the minimum measured Doppler as the azimuth angle completes a full rotation. The Doppler frequency follows the azimuth angle in a sinusoidal fashion. The sinusoidal pattern is held as the elevation angle changes shown in Figures \ref{fig:tx_azimuth_angle_50} and \ref{fig:tx_azimuth_angle_400}.
 
 %figure of doppler and azimuth angle for different elevation angles.
 \begin{figure}
@@ -195,7 +195,7 @@ The graph in Figure \ref{fig:tx_azimuth_angle_200} shows both the max and the mi
 %azimuth variable, elevation = 26.5deg
 
 %description
-The sinusoidal pattern of min and max Doppler frequencies are only present when the receiver is located away from the axis of rotation. This is shown in Figure \ref{fig:tx_azimuth_rx0} which is devoid of any sinusoidal pattern and remains constant as the transmitter azimuth angle is changed. 
+The sinusoidal pattern of minimum and maximum Doppler frequencies are only present when the receiver is located away from the axis of rotation. This is shown in Figure \ref{fig:tx_azimuth_rx0} which is devoid of any sinusoidal pattern and remains constant as the transmitter azimuth angle is changed. 
 
 %figure of 0 rx position
 \begin{figure}
@@ -208,7 +208,7 @@ The sinusoidal pattern of min and max Doppler frequencies are only present when 
 
 Therefore all future simulations will set the receiver near the tip of the rotor which would simulate the receiver being in the nose of the helicopter.
 
-Pitching the blade modifies the results of the azimuth sweep when compared to Figure \ref{fig:tx_azimuth_angle_200}. The resulting min and max envelope frequencies vs azimuth angle for pitch are shown in \ref{fig:pitch_azimuth_rev}. This occurs because the pitch of the blade angles RF reflections differently according to transmitter azimuth. When the transmitter is located between 90\textdegree \space and 270\textdegree \space pitch causes an increase in Doppler but elsewhere decreases the amount of Doppler shift. The decrease is caused by the blade surface top reflecting receding Doppler away from the receiver at those angles.
+Pitching the blade modifies the results of the azimuth sweep when compared to Figure \ref{fig:tx_azimuth_angle_200}. The resulting minimum and maximum envelope frequencies versus azimuth angle for pitch are shown in Figure \ref{fig:pitch_azimuth_rev}. This occurs because the pitch of the blade angles RF reflections differently according to transmitter azimuth. When the transmitter is located between 90\textdegree \space and 270\textdegree \space pitch causes an increase in Doppler but elsewhere it decreases the amount of Doppler shift. The decrease is caused by the blade surface top reflecting receding Doppler away from the receiver at those angles.
 
 %azimuth pitch effect
 \begin{figure}
@@ -219,7 +219,7 @@ Pitching the blade modifies the results of the azimuth sweep when compared to Fi
 	\end{center}
 \end{figure}
 
-The effect of azimuth angle on the maximum measured Doppler is characterized in section \ref{sec:transmitter_azimuth_angle_estimation}
+The effect of the azimuth angle on the maximum measured Doppler is characterized in section \ref{sec:transmitter_azimuth_angle_estimation}
 
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \section{Transmitter Elevation Angle} \label{sec:tea}
@@ -246,7 +246,7 @@ The smaller elevation angles mean that the transmitter is farther away from the 
 	\end{center}
 \end{figure}
 
-The elevation angle of the transmitter in the simulation will effect the amount of Doppler added to the signal. This is due to the rays having a vector component in the direction of the travel of the rotor. When the transmitter is directly underneath the rotor and receiver there is no vector component in the direction of rotor travel so the reflected signal is not Doppler shifted. From the model we see the amount of Doppler increase as the elevation angle decreases. This is mirrored in the simulation shown in Figure \ref{fig:tx_elevation_135deg} where the maximum measured Doppler as the elevation angle increases.
+The elevation angle of the transmitter in the simulation will effect the amount of Doppler added to the signal. This is due to the rays having a vector component in the direction of the travel of the rotor. When the transmitter is directly underneath the rotor and receiver, there is no vector component in the direction of rotor travel so the reflected signal is not Doppler shifted. From the model we see the amount of Doppler increase as the elevation angle decreases. This is mirrored in the simulation shown in Figure \ref{fig:tx_elevation_135deg} where the maximum measured Doppler as the elevation angle increases.
 
 %figure of doppler vs (elevation angle)
  \begin{figure}

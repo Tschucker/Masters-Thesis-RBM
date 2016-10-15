@@ -33,7 +33,7 @@ the other key parameters that define the simulation are shown in Table \ref{tab:
 \end{center}
 \end{table}
     
-The output file also needs to be defined with a unique name that changes, this is important because the program will just write over the old file if you do not have a unique naming scheme. this could be just an increasing number or related to one of the variable sweeps.
+The output file also needs to be defined with a unique name that changes, this is important because the program will just write over the old file if you do not have a unique naming scheme. This could be just an increasing number or related to one of the variable sweeps.
 
 To run the simulation on a Mac load into XCode the project file and configure the main file to reflect the type of simulation desired, then hit the play button.
 
@@ -59,14 +59,14 @@ The output file contains more than just the signal data the first few data entri
 \end{center}
 \end{table}
 
-this is all provided in a single string of comma separated values called a .CSV file. MATLAB has a built in function to read CSV data.
+This data is all provided in a single string of comma separated values called a .CSV file. MATLAB has a built in function to read CSV data.
 
 %matlab csv read
 \begin{lstlisting}
 data = csvread('file_path/file_name')
 \end{lstlisting}
 
-after all the data is read into MATLAB the data can be split into two vectors, one pertaining to the physical simulation parameters and the other to the received signal.
+After all the data is read into MATLAB the data can be split into two vectors, one pertaining to the physical simulation parameters and the other to the received signal.
 
 There are several templates for simulation execution in the main.c file that are commented out to help get started, depending on the execution environment the generation of a single file can take anywhere from a few minuets to several days. Under the defaults provided a single file can be generated in approximately 15min.
  
