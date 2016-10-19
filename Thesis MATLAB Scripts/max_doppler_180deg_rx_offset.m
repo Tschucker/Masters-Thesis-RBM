@@ -14,16 +14,18 @@ max_fd = 2*(v*fc)/c;
 Tx_radius = 0:1:450;
 elevation_angle = atan(Altitude./(Tx_radius));
 
-doppler_plus = -ones(1,length(Tx_radius));
 doppler_minus = max_fd*cos(elevation_angle);
+doppler_plus = -ones(1,length(Tx_radius));
+
 
 hold on
-plot(360*elevation_angle/(2*pi),doppler_plus)
 plot(360*elevation_angle/(2*pi),doppler_minus)
+plot(360*elevation_angle/(2*pi),doppler_plus)
 hold off
 xlabel('Elevation Angle (deg)');
 ylabel('Doppler Frequency (Hz)');
-title('Doppler Frequency vs. Elevation angle for 180deg Transmitter Azimuth');
+legend('Max Upper Envelope', 'Min Lower Envelope');
+title('Theoretical Doppler Frequency vs. Elevation angle for 180deg Transmitter Azimuth');
 
 % %Rx position (might not be needed)
 % Rx_z = Altitude - 2;

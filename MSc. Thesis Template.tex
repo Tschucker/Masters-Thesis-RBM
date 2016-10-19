@@ -116,7 +116,7 @@ Electrical and Computer Engineering\hspace{6.3cm}.\\
 % The Acknowledgements page, for thanking everyone
 \acknowledgements{
 \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
-I would like to thank my thesis advisor Dr. Tamal Bose for the opportunity to work in his lab, and for the guidance through graduate school. I would also like to thank Matt Kruse and Charlie Cooper for coming up the research topic and support through the process. I would also like to thank the Broadband Wireless Access \& Applications Center and Rincon Research Corporation for supporting this research.
+I would like to thank my thesis advisor Dr. Tamal Bose for the opportunity to work in his lab and for the guidance through graduate school. I would also like to thank Matt Kruse and Charlie Cooper for coming up the research topic and support through the process. I would also like to thank the Broadband Wireless Access \& Applications Center and Rincon Research Corporation for supporting this research.
 }
 \clearpage  
 % End of the Acknowledgements
@@ -126,7 +126,7 @@ I would like to thank my thesis advisor Dr. Tamal Bose for the opportunity to wo
 
 \setstretch{1.3}  % Return the line spacing back to 1.3
 \pagestyle{empty}  % Page style needs to be empty for this page
-\dedicatory{To my Mother and Father, \\my brother Danny, \\and my lovely girlfriend Clarice,\\all with love, \\Thank you for your unconditional support.}
+\dedicatory{To my Mother and Father, \\my brother Danny, \\and my lovely girlfriend Clarice,\\all with love, \\thank you for your unconditional support.}
 \addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
 
 %-------------------------------------------------
@@ -154,8 +154,8 @@ I would like to thank my thesis advisor Dr. Tamal Bose for the opportunity to wo
  %\textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
  \textbf{2D} & 2-\textbf{D}imensional \\
  \textbf{3D} & 3-\textbf{D}imensional \\
- \textbf{BER} & \textbf{B}it \textbf{E}error \textbf{R}ate \\
- \textbf{BRDF} & \textbf{B}i-directional \textbf{R}eflection  \textbf{D}istrobution \textbf{F}unction \\
+ \textbf{BER} & \textbf{B}it \textbf{E}rror \textbf{R}ate \\
+ \textbf{BRDF} & \textbf{B}i-directional \textbf{R}eflection  \textbf{D}istribution \textbf{F}unction \\
  \textbf{CSV} & \textbf{C}omma \textbf{S}eparated \textbf{V}alue \\
  \textbf{DSP} & \textbf{D}igital \textbf{S}ignal \textbf{P}rocessing \\
  \textbf{GPS} & \textbf{G}lobal \textbf{P}ositioning \textbf{S}ystem \\
@@ -185,7 +185,7 @@ I would like to thank my thesis advisor Dr. Tamal Bose for the opportunity to wo
 %% ----------------------------------------------------------------
 \clearpage  %Start a new page
 \lhead{\emph{Symbols}}  % Set the left side page header to "Symbols"
-\listofnomenclature{l p{5cm} l}  % Include a list of Symbols (a three column table)
+\listofnomenclature{l p{5cm}| l}  % Include a list of Symbols (a three column table)
 {
  \textbf{Symbol} & \textbf{Name} & \textbf{Units} \\
  $\theta_{El}$ & Transmitter Elevation angle & degrees \\
@@ -196,12 +196,13 @@ I would like to thank my thesis advisor Dr. Tamal Bose for the opportunity to wo
  $Rx_x$ & Receiver position in X axis & meters \\
  $Rx_y$ & Receiver position in Y axis & meters \\
  $Rx_z$ & Receiver position in Z axis & meters \\
- $G_r$ & & \\
- $G_t$ & & \\
- $R$ & & \\
- $n$ & & \\
- $d_i$ & & \\
- $\theta_i$ & Angle of incedence with an objects normal & radians \\
+ $G_r$ & Receiver antenna gain & \\
+ $G_t$ & Transmitter antenna gain& \\
+ $R$ & Distance & meters\\
+ $\vec{n}$ & Surface normal vector & \\
+ $\vec{d_i}$ & Direction vector of incident ray & \\
+ $\Gamma$ & Reflection loss coefficient & \\
+ $\theta_i$ & Angle of incidence with an objects normal & radians \\
  $d$ & Total distance traveled by a ray & meters \\ 
  $t_0$ & Starting time in a frame & seconds \\
  $r$ & A radius along the length of the blade & meters \\
@@ -228,9 +229,9 @@ I would like to thank my thesis advisor Dr. Tamal Bose for the opportunity to wo
 \addtotoc{Abstract}  % Add the "Abstract" page entry to the Contents
 \abstract{
 \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
-In RF communications with a rotorcraft, such as a helicopter, the rotor blades can impart a modulation onto the received signal called Rotor Blade Modulation (RBM). This modulation is caused by the reflection of a signal off the rotating blades. The reflected signal is Doppler shifted based on where the signal is reflected along the length of the blade as well as the angle between the axis of rotation and the emitter. RBM is known to degrade the performance of RF communications on rotorcraft and can be used in radar applications to detect and classify aircraft, but there is little on its usefulness in other areas. This thesis looks at the ability to utilize the RBM phenomenon on the rotorcraft itself to geo-locate and track a signal emitter on the ground. 
+In RF communications with a rotorcraft such as a helicopter, the rotor blades can impart a modulation onto the received signal called Rotor Blade Modulation (RBM). This modulation is caused by the reflection of a signal off the rotating blades. The reflected signal is Doppler shifted based on where the signal is reflected along the length of the blade as well as the angle between the axis of rotation and the emitter. RBM is known to degrade the performance of RF communications on rotorcraft and can be used in radar applications to detect and classify aircraft, but there is little on its usefulness in other areas. This thesis looks at the ability to utilize the RBM phenomenon on the rotorcraft itself to geo-locate and track a signal emitter on the ground. 
 
-To do this a 3D RF ray tracing program was developed in C++ to produce simulations of RBM signals. The developed program is based on optical ray tracing algorithms with modified physical propagation effects for RF signals, and swapping lights and cameras for RF transmitters and receivers respectively. The ray tracer was then run over a realistic set of physical parameters to determine their effects on the received signal, this includes transmitter azimuth and elevation angle, receiver position, blade pitch, etc. along with their combinations. From the simulations the azimuth and elevation angle, of the transmitter, produce predictable modulations on the received signal.  Based on the trends in the signal's modulation a DSP algorithm was distilled down that accurately determines the azimuth and elevation angle of the transmitter from simulated signal data.
+To do this a 3D RF ray tracing program was developed in C++ to produce simulations of RBM signals. The developed program is based on optical ray tracing algorithms with modified physical propagation effects for RF signals, and swapping lights and cameras for RF transmitters and receivers respectively. The ray tracer was then run over a realistic set of physical parameters to determine their effects on the received signal; this includes transmitter azimuth and elevation angle, receiver position, blade pitch, etc. along with their combinations. The simulations of the azimuth and elevation angle produce predictable modulations on the received signal. Based on the trends in the signal's modulation, a DSP algorithm was distilled down that accurately determines the azimuth and elevation angle of the transmitter from simulated signal data.
 }
 
 \clearpage  % Abstract ended, start a new page

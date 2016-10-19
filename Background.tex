@@ -8,9 +8,9 @@ This section details the the basic phenomenon behind rotor blade modulation alon
 %this is the literature review section on what rbm is and current research in the area
 The rotating blades of the helicopter modulate signals that hit the blades by reflecting them. The reflected signal, through the Doppler effect, become shifted in frequency in relationship to the velocity of the reflection point \cite{YiminZhang2000}. The RBM has a complex form and is influenced by several object parameters. These parameters range from the positioning of a signal source to the physical dimensions of the rotor blades. 
 
-The resulting modulated signal has been used in several radar applications. First to determine the specific characteristics of a noncooperative helicopter using time frequency analysis in \cite{Bullard1991} that defines a specific signature for physical parameters of a helicopter. The ability to detect a hovering helicopter based on the blade flashes caused by reflected radar pulses off the blades is examined in \cite{Misiurewicz1997} where they used information the time domain to determine if a helicopter was hovering. The micro-Doppler produced by the radar reflection in \cite{Thayaparan2007} is used to determine the rotation rate of both the main and tail rotor blades using the wavelet transform. Other types of aircraft produce modulations on a returned radar pulse, one type known as Jet Engine Modulation (JEM) is the product of a radar pulse reflecting off the jet engine blades \cite{NavalAirSystemsCommand1999}. The information can similarly be used to quantify physical aspects of the aircraft when present in order to perform classification.
+The resulting modulated signal has been used in several radar applications. One radar application of RBM was to determine the specific characteristics of a noncooperative helicopter using time frequency analysis by Bullard and Dowdy in \cite{Bullard1991}. Where they define specific signatures for physical parameters of a helicopter. The ability to detect a hovering helicopter based on the blade flashes caused by reflected radar pulses off the blades is examined by Misiurewicz, Kulpa, and Czekala in \cite{Misiurewicz1997}, where they used information the time domain to determine if a helicopter was hovering. The micro-Doppler produced by the radar reflection was used by Thayaparan et. al. in \cite{Thayaparan2007} to determine the rotation rate of both the main and tail rotor blades using the Wavelet transform. Other types of aircraft produce modulations on a returned radar pulse; one type known as Jet Engine Modulation (JEM) is the product of a radar pulse reflecting off the jet engine blades \cite{NavalAirSystemsCommand1999}. The information can similarly be used to quantify physical aspects of the aircraft when present in order to perform classification.
 
-The Doppler shifted signal caused by RBM is shown in \cite{F.BarbieroF.VincentT.Deloues2014} to effect the performance of common adaptive Global Positioning System (GPS) anti-jamming algorithms located on helicopter platforms. They were able to mitigate the effects by estimating the covariance within a few milliseconds but this comes at an extreme computation overhead. And for iterative based anti-jamming approaches the non-stationary signal characteristics cause degradation as well. The affect of RBM on the Bit Error Rate (BER) of communications is examined in \cite{YiminZhang2000} where effects of multipath and Doppler cause large BER values at small elevation angles and large scattering coefficients described in the model.
+The Doppler shifted signal, caused by RBM, is shown by Barbiero, Vincent, and Deloues in \cite{F.BarbieroF.VincentT.Deloues2014} to effect the performance of common adaptive Global Positioning System (GPS) anti-jamming algorithms located on helicopter platforms. They were able to mitigate the effects by estimating the covariance within a few milliseconds but this comes at an extreme computation overhead. And for iterative based anti-jamming approaches the non-stationary signal characteristics cause degradation as well. The affect of RBM on the Bit Error Rate (BER) of communications is examined by Zhang, Amin, and Mancuso in \cite{YiminZhang2000}, where effects of multipath and Doppler cause large BER values at small elevation angles and large scattering coefficients described in the model.
 
 The role of RBM in this thesis is based on specific Doppler shifts associated with where a dominant reflection occurs along the length of the blade, and the associated elevation angle of the transmitter. The received signal is then used to create a mapping between the amount of Doppler present and the position of the transmitter on the ground.
 
@@ -31,7 +31,9 @@ The 2D geometric mode is based on a few assumptions, first that the receiver is 
 \end{figure}
 
 %describe the situation and the position of the objects
-There are three physical objects within this scene. The first being the rotor blade, which is the dark green bar depicted in the figure. Next is the transmitter $Tx$, in green, and the receiver $Rx$ in blue. The measurements, depicted as black bars with denoting start and stop points, reference the various distances used in the following equations. The dashed green line shows at which altitude the helicopter is hovering at, and the red dashed line transverses the transmitter and the center of rotation for the blades. $\theta_{El}$ is the elevation angle of the transmitter with respect to the rotor blades and $\theta_r$ denotes the specular reflection of the casted and reflected rays in orange. Lastly the line of sight (LOS) ray shows that the transmitter and receiver are in visual line of sight of each other.
+There are three physical objects within this scene. The first being the rotor blade, which is the dark green bar depicted in the figure. Next is the transmitter $Tx$, in green, and the receiver $Rx$ in blue. The measurements, depicted as black bars with denoted start and stop points, reference the various distances used in the following equations. The dashed green line shows at which altitude the helicopter is hovering at, and the red dashed line transverses the transmitter and the center of rotation for the blades. $\theta_{El}$ is the elevation angle of the transmitter with respect to the rotor blades and $\theta_r$ denotes the specular reflection of the casted and reflected rays in orange. Lastly the line of sight (LOS) ray shows that the transmitter and receiver are in visual line of sight of each other.
+
+The resulting Doppler equation is described by
 
 %formulate the geometric equations
 \begin{equation}
@@ -39,7 +41,7 @@ There are three physical objects within this scene. The first being the rotor bl
 	\label{eq:dop_theory_blade}
 \end{equation}
 
-where $f_d$ is the Doppler frequency shift, $f_{DopplerMax}$ is described by equation \ref{eqn:fd_max} as the maximum amount of Doppler shift possible, $\theta_{El}$ is the elevation angle of the transmitter with respect to the rotor blades, and $\theta_{b}$ is the current angle of the rotor blade.
+where $f_d$ is the Doppler frequency shift, $f_{DopplerMax}$ is defined later by equation \ref{eqn:fd_max} as the maximum amount of Doppler shift possible, $\theta_{El}$ is the elevation angle of the transmitter with respect to the rotor blades, and $\theta_{b}$ is the current angle of the rotor blade.
 
 %doppler profile result
 \begin{figure}
@@ -53,7 +55,7 @@ where $f_d$ is the Doppler frequency shift, $f_{DopplerMax}$ is described by equ
 Figure \ref{fig:2D_theoretical_doppler} shows the varying Doppler frequency caused by the RBM at various elevation angles of the transmitter. The results of this is a sinusoidal Doppler profile in which the amplitude increases as the elevation angle decreases. 
 
 %validation consideration
-Since this model has the receiver located at the axis of rotation this model can be seen as a special case of the next 3D models, this is because it is symmetric around the axis of rotation. Therefore, any placement of the transmitter in 3D space can be distilled down to a 2D profile as such. This symmetry should then be mirrored in the ray tracing simulation as verification.
+Since this model has the receiver located at the axis of rotation this model can be seen as a special case of the next 3D models, because it is symmetric around the axis of rotation. Therefore, any placement of the transmitter in 3D space can be distilled down to a 2D profile as such. This symmetry should then be mirrored in the ray tracing simulation as verification.
 
 \subsection{3D Geometric Model}
 The 3D geometric model is categorized by the position of the rotor blade and the position of the signal source. Since the rotor blade has a specific airfoil shape, the models will take that into account through an approximation of that surface. The first model will be representative of having the transmitter in-line with both the receiver and the blade, with the transmitter in both fore and aft positions. The next model will have the rotor approaching both the receiver and transmitter, and lastly the rotor will be receding from both the receiver and transmitter. All of the 3D models will have the receiver positioned offset from the axis of rotation.
@@ -65,7 +67,7 @@ The first two models as mentioned above fall under the criteria of the transmitt
 Figure \ref{fig:3D_model_90az} depicts the transmitter at a 90\textdegree \space azimuth angle, which places it in-line with the position of the receiver and the current location of the rotating blades. 
 
 %describe the situation and the position of the objects
-The objects in \ref{fig:3D_model_90az}  are similar to the ones previously stated in the 2D case. The X and Y axis are specifically drawn in blue and red respectfully, with the Z axis now the green dashed line and altitude is now denoted with a measurement bar. The receiver offset in the +Y direction is now stated. and the Blades are now colored gray. All other variables and colors denote their objects as previously stated in the 2D case. 
+The objects in \ref{fig:3D_model_90az}  are similar to the ones previously stated in the 2D case. The X and Y axis are specifically drawn in blue and red respectfully, with the Z axis now the green dashed line and altitude is now denoted with a measurement bar. The receiver offset in the +Y direction is now stated and the blades are now colored gray. All other variables and colors denote their objects as previously stated in the 2D case. 
 
 %3d pictures
 \begin{figure}
@@ -91,10 +93,10 @@ and
 	\label{eq:theory_90_lower}
 \end{equation}
 
-where $MaxUpperEnvelope$ is an array of the maximum upper envelope values for each elevation sample, $MinLowerEnvelope$ is an array of minimum lower envelope values for each elevation sample, and $\theta_{Limited}$ is the limited elevation angle range due to 
+where $MaxUpperEnvelope$ is an array of the maximum upper envelope values for each elevation sample, $MinLowerEnvelope$ is an array of minimum lower envelope values for each elevation sample, and $\theta_{Limited}$ is the limited elevation angle range
 
 \begin{equation}
-	\theta_{Limited} = atan\left(\frac{Rx_z}{([0,\dots, (BladeLength - Rx_y)])}\right)
+	\theta_{Limited} = atan\left(\frac{Rx_z}{[0,\dots, (BladeLength - Rx_y)]}\right)
 	\label{eq:theory_90_limited}
 \end{equation}
 
@@ -125,7 +127,7 @@ Figure \ref{fig:3D_model_270az} depicts the transmitter at a 270\textdegree \spa
 The equation for modeling the scenario for a transmitter located at 270\textdegree \space azimuth is similar to the equations for calculating the 90\textdegree \space scenario where $f_{DopplerMax}$ is now calculated with a smaller reflection radius of 2m and $\theta_{Limited}$ is now calculated by
 
 \begin{equation}
-	\theta_{Limited} = atan\left(\frac{Rx_z}{([0, \dots, BladeLength)}\right)
+	\theta_{Limited} = atan\left(\frac{Rx_z}{[0, \dots, BladeLength]}\right)
 	\label{eq:theory_270_limited}
 \end{equation}
 
@@ -166,7 +168,7 @@ The equation for modeling the scenario for a transmitter located at 180\textdegr
 	\label{eq:theory_180_upper}
 \end{equation}
 
-and the MinLowerEnvelope is set to 0 for the range.
+and the $MinLowerEnvelope$ is set to 0 for the range.
 
 %doppler profile result
 \begin{figure}
@@ -181,7 +183,7 @@ Figure \ref{fig:3D_model_180az_doppler} shows the maximum and minimum Doppler en
 
 \subsubsection{Receding Model}
 %go over the 3d model for the receding blade
-The receding model shown in Figure \ref{fig:3D_model_0az} depicts the transmitter at an azimuth of 0\textdegree \space where the axis positions back to their original places and the direction of the rotor blade is now depicted in red.
+The receding model shown in Figure \ref{fig:3D_model_0az} depicts the transmitter at an azimuth of 0\textdegree \space where the axis positions are back to their original places and the direction of the rotor blade is now depicted in red.
 
 %describe the situation and the position of the objects
 This case of the 3D model places the transmitter at 0\textdegree \space so that the receding blades move away from both the receiver and the transmitter at the same time. This particular placement should provide a negative Doppler profile because the blades will be moving in the opposite direction of both objects, stretching the reflected wave accordingly.
@@ -199,11 +201,11 @@ The equation for modeling the scenario for a transmitter located at 0\textdegree
 
 %formulate the geometric equations
 \begin{equation}
-	MinLowerEnvelope = f_{DopplerMax}cos(\theta_{El})
+	MinLowerEnvelope = -f_{DopplerMax}cos(\theta_{El})
 	\label{eq:theory_0_lower}
 \end{equation}
 
-and the MaxUpperEnvelope is set to 0 for the range.
+and the $MaxUpperEnvelope$ is set to 0 for the range.
 
 %doppler profile result
 \begin{figure}

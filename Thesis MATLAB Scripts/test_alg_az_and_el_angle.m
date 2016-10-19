@@ -4,11 +4,11 @@ clear;
 %--------------------------------------------------------------------------
 %Load Data
 %--------------------------------------------------------------------------
-files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/bistatic_azimuth_45_pitch/*.csv');
+files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/pitch7.5deg_rotation_200m2/*.csv');
 num_files = length(files);
 data = zeros(num_files,959006); %959000;  479000
 for i=1:num_files
-     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/bistatic_azimuth_45_pitch/',files(i).name)));
+     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/pitch7.5deg_rotation_200m2/',files(i).name)));
 end
 
 %--------------------------------------------------------------------------
@@ -27,7 +27,7 @@ pitch_corrected = 0;
 %--------------------------------------------------------------------------
 
 %shift data for different start sections
-%data = circshift(data,31,1);
+%data = circshift(data,11,1);
 
 data_table = zeros(num_files,3);
 
@@ -102,7 +102,7 @@ difference = data_table(:,1) - abs(data_table(:,2));
 %correct for pitch
 zero_correct = max(data_table(:,1)) - abs(min(data_table(:,2)));
 if(zero_correct > .1*max(difference))
-    difference = difference - (zero_correct/2);
+    difference = difference - (zero_correct/1);
     pitch_corrected = 1;
 end
 
@@ -117,22 +117,28 @@ end
 
 %for pitch correction
 if(pitch_corrected)
-    w = 0:(2*pi/(num_files-1)):2*pi;
-    correct_fd = correct_fd + (zero_correct/2)*cos(w);
+    %w = 0:(2*pi/(num_files-1)):2*pi;
+    %correct_fd = correct_fd + (zero_correct/2)*cos(w);
+    difference = difference + (zero_correct/2);
+    correct_fd = correct_fd-((difference'./max(difference)).*(zero_correct/2));
 end
 
 [Min,Imin] = min(correct_fd);
 [Max,Imax] = max(correct_fd);
 
 %peak prominence calc
-min_peak_prominence = (1/(Max - Min))*.001;
+min_peak_prominence = (1/(Max - Min))*.01;
 [pk,lc] = findpeaks(1./correct_fd,'NPeaks',2,'MinPeakProminence',min_peak_prominence);
 
 %double check average power against peaks to fix 90deg
-if(ave_q(lc(1)) < ave_q(lc(2)))
-    I_90deg = lc(1);
+if(length(lc) > 1)
+    if(ave_q(lc(1)) < ave_q(lc(2)))
+        I_90deg = lc(1);
+    else
+        I_90deg = lc(2);
+    end
 else
-    I_90deg = lc(2);
+    I_90deg = lc;
 end
 Azimuth = 0:(360)/(num_files - 1):360;
 
@@ -164,7 +170,7 @@ figure;
 hold on
 plot(Azimuth,difference)
 hold off
-title('Difference between Max and Min Envelope Calculations');
+title('Pitch Adjusted Difference between Max and Min Envelope Calculations');
 xlabel('Transmitter Azimuth Angle (deg)');
 ylabel('Frequency Difference(Hz)');
 
@@ -201,7 +207,7 @@ plot(Azimuth,correct_fd)
 plot(Azimuth(Imin),correct_fd(Imin),'o','MarkerSize',12)
 %plot(Azimuth(I_90deg),correct_fd(I_90deg),'x')
 hold off
-title('Correct Doppler Frequency with Minimum');
+title('Pitch Adjusted Correct Doppler Frequency with Minimum');
 legend('Correct Doppler Frequency','Minimum');%,'90deg Estimate');
 xlabel('Transmitter Azimuth Angle (deg)');
 ylabel('Frequency (Hz)');
@@ -212,11 +218,12 @@ Altitude
 AzimuthError = Azimuth(I_90deg) - 90
 PercentAzimuthError = ((Azimuth(I_90deg) - 90)/90)*100
 
-PercentPeakDifference = ((pk(2) - pk(1))/pk(1))*100
-PowerDifference = -(abs(ave_q(lc(1))) + abs(ave_q(lc(2))))
+if(length(lc) > 1)
+    PercentPeakDifference = ((pk(2) - pk(1))/pk(1))*100
+    PowerDifference = -(abs(ave_q(lc(1))) + abs(ave_q(lc(2))))
 
-FrequencyDifference = correct_fd(lc(2)) - correct_fd(lc(1))
-
+    FrequencyDifference = correct_fd(lc(2)) - correct_fd(lc(1))
+end
 %--------------------------------------------------------------------------
 %Elevation angle find
 %--------------------------------------------------------------------------

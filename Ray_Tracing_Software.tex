@@ -1,10 +1,8 @@
 \chapter{Ray Tracing Software}
 
-The ray tracing software developed during the course of the thesis is written in C++ in an XCode environment, but a generic implementation is provided to run on other operating systems. This code is loosely based on the work of Eric Degroot's developed for \cite{Groot2015} and implemented some modified base classes developed by him. It is a specific tool for analyzing the affects of rotor blade modulation on a signal tone, it does not provide generic 3D ray tracing in order to optimize the performance for this task. The software is provided without a GUI implementation and is run on different parameters by modifying the main.c file. This is due to the amount of parameters involved but could be easily extended to provide command line arguments in future iterations.
+The ray tracing software developed during the course of the thesis is written in C++ in an XCode environment, but a generic implementation is provided to run on other operating systems. This code is loosely based on the work Eric Degroot developed for \cite{Groot2015} and implemented some modified base classes developed by him. It is a specific tool for analyzing the affects of rotor blade modulation on a signal tone, it does not provide generic 3D ray tracing in order to optimize the performance for this task. The software is provided without a GUI implementation and is run on different parameters by modifying the main.c file. This is due to the amount of parameters involved but could be easily extended to provide command line arguments in future iterations.
 
-To use the software for performing RBM simulations there are several key parameters that are needed. First a file containing the points that define the 2D section of the airfoil shape, one default file is included in the software package for ease of use and as a template for other airfoil shapes.
-
-the other key parameters that define the simulation are shown in Table \ref{tab:key_values}
+To use the software for performing RBM simulations there are several key parameters that are needed. First a file containing the points that define the 2D section of the airfoil shape, one default file is included in the software package for ease of use and as a template for other airfoil shapes. The other key parameters that define the simulation are shown in Table \ref{tab:key_values}
 
 \begin{table}
 \begin{center}
@@ -37,7 +35,7 @@ The output file also needs to be defined with a unique name that changes, this i
 
 To run the simulation on a Mac load into XCode the project file and configure the main file to reflect the type of simulation desired, then hit the play button.
 
-On Linux machines the code must first be built using make with the main file configured before hand. Then run the Raytracer3D executable.
+On Linux machines the code must first be built using Make with the main file configured before hand. Then run the Raytracer3D executable.
 
 The output file contains more than just the signal data the first few data entries are data pertaining to the simulation parameters. it is important to separate this data from the signal data before processing the signal. The template for this data is shown in Table 
 \ref{tab:file_values}.

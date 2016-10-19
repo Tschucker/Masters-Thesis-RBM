@@ -36,7 +36,7 @@ for r = Tx_radius
 end
 hold on
 for j = 1:5
-    plot(360*Rotor_angle/(2*pi),data(j,:))
+    plot(360*Rotor_angle/(2*pi),data(j,:),'linewidth',4)
 end
 hold off
 axis([0 360 -600 600]);

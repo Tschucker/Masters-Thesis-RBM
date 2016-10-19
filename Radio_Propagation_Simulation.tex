@@ -2,15 +2,15 @@
 
 \section{Introduction}
 %introduce the section and what will be discussed here
-The simulation software is broken down into three main components, the radio wave propagation model, the scene model, and the ray tracing engine. The wave propagation model is a collection of equations that describe the physical phenomena that affect the propagation when represented by rays. The model used is based upon classical geometric optics to work with the ray tracing engine. The scene model is comprised of a 3D environment in order to define the physical rotor blade surface. The receiver and transmitter will also be defined in the same environment with simulated characteristics to match real life conditions. The ray tracing engine uses recursive execution described in \cite{Whitted1979}, replacing cameras and lights for receivers and transmitters respectively in a three dimensional environment.
+The simulation software is broken down into three main components; the radio wave propagation model, the scene model, and the ray tracing engine. The wave propagation model is a collection of equations that describe the physical phenomena that affect the propagation when represented by rays. The model used is based upon classical geometric optics to work with the ray tracing engine. The scene model is comprised of a 3D environment in order to define the physical rotor blade surface. The receiver and transmitter will also be defined in the same environment with simulated characteristics to match real life conditions. The ray tracing engine uses recursive execution described by Whitted in \cite{Whitted1979}, replacing cameras and lights for receivers and transmitters respectively in a three dimensional environment.
 
 \section{Radio Propagation Model}
 %define the math behind the physical laws that are simulated within the simulation
-The propagation model defined in this project is based on the following physical phenomena; free-space path loss, reflection, and the doppler effect. They are all formally established models described in full in \cite{Bertoni1999}, \cite{Parsons2000}, and \cite{Willis2005}. Although several effects are described within the model several were left out to simplify the computation due to the overhead of implementation in 3D space and because of the assumptions made about the scene model.
+The propagation model defined in this project is based on the following physical phenomena; free-space path loss, reflection, fading, and the doppler effect. Which are all formally established models described in \cite{Bertoni1999, Parsons2000, Willis2005}. Although several effects are described within the model several were left out to simplify the computation due to the overhead of implementation in 3D space and because of the assumptions made about the scene model.
 
 \subsection{Free-Space Path Loss}
 %describe path loss
-Free-Space path loss is calculated using the Friis transmission and is incorporated into the model by keeping track of the distance a ray travels and adjusting its power is
+Free-Space Path Loss is calculated using the Friis transmission and is incorporated into the model by keeping track of the distance a ray travels and adjusting its power by
 
 %FSPL formula
 \begin{equation}
@@ -64,7 +64,7 @@ The final reflected power is then
 where $P_i$ is the incident power before reflection loss.
 
 \subsubsection{Diffuse Reflection}
-A perfect diffuse reflection, also known as Lambertian reflection, will reflect rays in all directions in a uniform hemisphere \cite{Sizun2005}. The hemisphere is centered at the point the ray hits, producing rays away from the surface. To approximate a particular type of surface the rays power is attenuated by the surface's bi-directional reflectance distribution function (BRDF) \cite{Suffern2007}, \cite{Pharr2010}, \cite{Glassner1995}. There are several ways of calculating the BRDF, but the simplest is the Phong BRDF which will be used in this ray tracing implementation \cite{Phong:1998:ICG:280811.280980}. This method for the BRDF is regularly used in the rendering of computer graphics to simulate the reflection of light off surfaces and combines the diffuse and specular components. Since this was not designed for the longer wavelengths used in RF communications, an assumption is made about surface features. Where features relevant to light waves,  produce a reflectance distribution similar for this application. 
+A perfect diffuse reflection, also known as Lambertian reflection, will reflect rays in all directions in a uniform hemisphere \cite{Sizun2005}. The hemisphere is centered at the point the ray hits, producing rays away from the surface. To approximate a particular type of surface the rays power is attenuated by the surface's bi-directional reflectance distribution function (BRDF) \cite{Suffern2007, Pharr2010, Glassner1995}. There are several ways of calculating the BRDF, but the simplest is the Phong BRDF which will be used in this ray tracing implementation \cite{Phong:1998:ICG:280811.280980}. This method for the BRDF is regularly used in the rendering of computer graphics to simulate the reflection of light off surfaces and combines the diffuse and specular components. Since this was not designed for the longer wavelengths used in RF communications, an assumption is made about surface features. Where surface features, relevant to light waves,  produce a reflectance distribution similar for this application. 
 
 %The BRDF parameters were then selected to be frequency independent to form a plausible reflectance distribution for the physical effects.
 
@@ -104,14 +104,14 @@ It is assumed that both the receiver and the transmitter are not moving therefor
 	\label{eqn:observedShift}	
 \end{equation}
 
-where $f_0$ is the initial transmitted frequency, $\lambda$ is the wavelength, $v_t$ is the velocity in the direction of the transmitter, and $v_r$ is the velocity in the direction of the reflection. This is similar to the Bistatic radar equation for Doppler, but since the reflection is not guaranteed to be toward the receiver we calculate the doppler as it makes contact with the surface and as it is re-radiated according the blades direction of travel.
+where $f_0$ is the initial transmitted frequency, $\lambda$ is the wavelength, $v_t$ is the velocity in the direction of the transmitter, and $v_r$ is the velocity in the direction of the reflection. This is similar to the Bistatic radar equation for Doppler, but since the reflection is not guaranteed to be toward the receiver we calculate the Doppler as it makes contact with the surface and as it is re-radiated according the blades direction of travel.
 
 \begin{equation}
 	\lambda = \frac{c}{f_0}
 	\label{eqn:wavelength}
 \end{equation}
 
-where $\lambda$ is the wavelength of the transmitted signal based off of the speed of light $c$ and its initial frequency $f_0$
+where $\lambda$ is the wavelength of the transmitted signal based off of the speed of light $c$ and its initial frequency $f_0$. The velocity in the direction of the transmitter is given by
 
 \begin{equation}
 	v_t = r \omega_r (\vec{d_p} \bullet \vec{d_t})
@@ -119,7 +119,7 @@ where $\lambda$ is the wavelength of the transmitted signal based off of the spe
 \end{equation}
 
 %formula description
-where $r$ is the radius along the length of the blade where the reflection occurs. $\omega_r$ is the angular velocity of the rotor. $\vec{d_p}$ is the normalized vector that is perpendicular to the rotor in its direction of travel and $\vec{d_t}$ is the normalized vector that is in the direction of the transmitted ray.
+where $r$ is the radius along the length of the blade where the reflection occurs. $\omega_r$ is the angular velocity of the rotor. $\vec{d_p}$ is the normalized vector that is perpendicular to the rotor in its direction of travel and $\vec{d_t}$ is the normalized vector that is in the direction of the transmitted ray. The velocity in the direction of the reflection is given by
 
 \begin{equation}
 	v_r = r \omega_r (\vec{d_p} \bullet \vec{d_r})
@@ -135,7 +135,7 @@ The model is comprised of three types of objects; the rotor blades, transmitter 
 
 \subsection{Rotor Blade}
 %go over the shape of the blade
-The rotor blade is the most complex object within the scene, due to its airfoil shape. The airfoil shape is designed to produce lift for the helicopter, and designing one is outside the scope of this project. Fortunately, there are databases that provide real helicopter airfoil designs in x,y coordinates. This data forms a 2D cross-section of the airfoil shape that will be extruded into the length of the rotor blade. Figure \ref{fig:airfoil} shows the airfoil cross-section that will be used to create the rotor surface. 
+The airfoil shape is designed to produce lift for the helicopter, and designing one is outside the scope of this project. Fortunately, there are databases that provide real helicopter airfoil designs in x,y coordinates. This data forms a 2D cross-section of the airfoil shape that will be extruded into the length of the rotor blade. Figure \ref{fig:airfoil} shows the airfoil cross-section that will be used to create the rotor surface. 
 
 %figure of 2D airfoil
 \begin{figure}
@@ -147,7 +147,7 @@ The rotor blade is the most complex object within the scene, due to its airfoil 
 \end{figure}
 
 %go over how it is formed and the tessellation code
-The 2D airfoil sections will form the ribs of the rotor blade but the surface of the blade will be made up of primitive surfaces to approximate the curved airfoil shape. The primitive shapes are triangles that span between the ribs and go around to cover the surface. This was done using a lightweight mesh generation method using a priori knowledge of the blade's shape. The designed algorithm, located in \ref{class_blade__surface_a160959f632ad73eff846aeea81aa84ae} $create\_surface()$ method, takes advantage of the object's uniform structure in 2D. The surface normals are then adjusted to match the correct directionality. Figure \ref{fig:tessilation} shows the created surface for the rotor blade that will be used in the scene.
+The 2D airfoil sections will form the ribs of the rotor blade but the surface of the blade will be made up of primitive surfaces to approximate the curved airfoil shape. The primitive shapes are triangles that span between the ribs and go around to cover the surface. This was done using a lightweight mesh generation method using knowledge of the blade's finished shape. The designed algorithm, located in \ref{class_blade__surface_a160959f632ad73eff846aeea81aa84ae} $create\_surface()$ method, takes advantage of the object's uniform structure in 2D. The surface normals are then adjusted to match the correct directionality. Figure \ref{fig:tessilation} shows the created surface for the rotor blade that will be used in the scene.
 
 %figure of tessilation
 \begin{figure}
@@ -159,13 +159,13 @@ The 2D airfoil sections will form the ribs of the rotor blade but the surface of
 \end{figure}
 
 %modular parameters
-All aspects of the rotor blade are parameterized. Starting with the airfoil shape, which is defined by a set of 2D coordinates. The length and the number of rib sections can be configured along with the number of blades and corresponding altitude. As well as the RPM. This allows the scene to replicate any type of rotor configuration and position it at a specific altitude.
+All aspects of the rotor blade are parameterized. Starting with the airfoil shape, which is defined by a set of 2D coordinates. The length and the number of rib sections can be configured along with the number of blades and corresponding altitude, as well as the RPM. This allows the scene to replicate any type of rotor configuration and position it at a specific altitude.
 
 \subsection{Transmitter}
 %point source transmitter casting rays in specific direction
-The transmitter is modeled as a point source, this means that all the radio waves are projected from this point into the scene. It is assumed that the transmitter is located on the ground within the x,y plane in relationship to the rotor blades. The transmitter is configured with a center frequency and is assumed to produce a tone at that frequency. Therefor, the signal produced has no inherent modulation applied to it.
+The transmitter is modeled as a point source, this means that all the radio waves are projected from this point into the scene. It is assumed that the transmitter is located on the ground within the x,y plane in relation to the rotor blades. The transmitter is configured with a center frequency and is assumed to produce a tone at that frequency. Therefor, the signal produced has no inherent modulation applied to it.
 %direction creation
-Being that the transmitter is emitting radio waves into a 3D space, it is assumed to be transmitting in an omnidirectional fashion. But because the rotor and the receiver are the only two other objects within the scene, radio waves will only be propagated in their direction. This limitation allows for a higher concentration of rays to be casted, resulting in a higher resolution picture that eliminates computational overhead for the tracing engine. Figure \ref{fig:transmitter_direction} shows the rays, in blue, casted only in the vicinity of the rotor blade and receiver.
+Being that the transmitter is emitting radio waves into a 3D space, it is assumed to be transmitting in an omnidirectional fashion. The rotor and the receiver are the only two other objects within the scene, radio waves will only be propagated in their direction. This limitation allows for a higher concentration of rays to be casted, resulting in a higher resolution picture that eliminates computational overhead for the tracing engine. Figure \ref{fig:transmitter_direction} shows the rays, in blue, casted only in the vicinity of the rotor blade and receiver.
 
 %figure of transmitter direction
 \begin{figure}
@@ -180,9 +180,9 @@ Being that the transmitter is emitting radio waves into a 3D space, it is assume
 %physical receiver dimensions and antenna chars
 The receiver object is modeled as a point in 3D space with a surrounding boundary layer in the shape of a sphere. This is because the receiver is assumed to have an omnidirectional antenna which will receive radio waves from all directions uniformly. The receiver will record any ray that hits the boundary layer within each frame of the simulation to create a sample of data at that instance in time.
 %processing in each frame
-The sample is produced using superposition of all the rays that are acting on the receiver at that instance in time which are then extrapolated to produce a clear result.
+The sample is produced using superposition of all the rays that are acting on the receiver at that instance, which are then extrapolated to produce a clear result.
 %realism
-The receiver is configurable allowing the user to set a desired center frequency along with the sampling rate of the simulated hardware. The sampling rate will determine several simulation parameters in the ray tracer due to the need to associate this rate with the change in the rotor position for the next frame. The consequence of this is that increasing the sample rate will produce higher resolution results but, will increase the computational overhead of the simulation.
+The receiver is configurable which allows the user to set a desired center frequency along with the sampling rate of the simulated hardware. The sampling rate will determine several simulation parameters in the ray tracer due to the need to associate this rate with the change in the rotor position for the next frame. The consequence of this is that increasing the sample rate will produce higher resolution results but, will increase the computational overhead of the simulation.
 
 \section{Ray Tracing}
 %describe the core tracing engine and describe the flow of the program
@@ -190,7 +190,7 @@ The ray tracing simulation is conducted in the Monte Carlo fashion acting on the
 
 \subsection{Computation}
 %flow of the program
-The ray tracing engine first sets up the environment, creating the surfaces and placing the objects in the scene. Then the number of frames that will be computed. The number of frames is determined by the number of rotations that the rotor makes within the simulation, the speed of the rotor in RPM and the sampling frequency of the receiver defined before the beginning of the simulation. This is described by
+The ray tracing engine first sets up the environment, creating the surfaces and placing the objects in the scene, then the number of frames that will be computed. The number of frames is determined by the number of rotations that the rotor makes within the simulation, the speed of the rotor in RPM and the sampling frequency of the receiver defined before the beginning of the simulation. This is described by
 
 %frame rates equation
 \begin{equation}
@@ -210,14 +210,16 @@ In each frame a set number of rays are casted into the scene in a uniformly dist
 			z \\
 	\end{bmatrix}
 	= \begin{pmatrix}
-			\sqrt{r} \cos{\theta_u}  + d_x\\
-			\sqrt{r} \sin{\theta_u}  + d_y \\
+			\sqrt{r_u} \cos{\theta_u}  + d_x\\
+			\sqrt{r_u} \sin{\theta_u}  + d_y \\
 			d_z \\
 	\end{pmatrix}
 	\label{eqn:disk}
 \end{equation}
 
-The casting technique reduces the computation overhead by limiting the search space. It also creates a higher resolution result by focusing the limited number of rays in the direction of the other objects shown in figure \ref{fig:samp_method}.
+where $r_u$ and $\theta_u$ are uniformly distributed random variables from $0 \leq r_u \leq BladeLength^{2}$ and $ 0 \leq \theta_u \leq 2\pi$ respectively.
+
+The casting technique reduces the computation overhead by limiting the search space. It also creates a higher resolution result by focusing the limited number of rays in the direction of the other objects shown in Figure \ref{fig:samp_method}.
 
 %figure of casting disk
 \begin{figure}
@@ -228,7 +230,7 @@ The casting technique reduces the computation overhead by limiting the search sp
 	\end{center}
 \end{figure}
 
-When a ray is casted into the scene it has an origin point, a direction vector, a frequency, and an initial power level. The ray then travels through the scene till it encounters another object. If there is a collision with the receiver it is recorded. If the ray collides with a rotor blade a new ray is calculated based on the normal of the geometric surface. The new ray's power is then updated as well as an updated frequency since the blade is moving. The power level is adjusted based on the BRDF of the specific material. Due to only the rotor and receiver being in the scene, rays that are found to hit the rotor are reflected, then a dedicated ray in the direction of the receiver is also calculated with a decayed power and adjusted frequency respective to the reflection.
+When a ray is casted into the scene it has an origin point, a direction vector, a frequency, and an initial power level. The ray then travels through the scene till it encounters another object. If there is a collision with the receiver it is recorded. If the ray collides with a rotor blade a new ray is calculated based on the normal of the geometric surface. The new ray's power is then updated as well as an updated frequency since the blade is moving. The power level is adjusted based on the BRDF of the specific material. Due to only the rotor and receiver being in the scene, rays that are found to hit the rotor are reflected accordingly. Then a dedicated ray, in the direction of the receiver, is also calculated with a decayed power and adjusted frequency respective to the reflection.
 
 \subsection{Output}
 %iq samples

@@ -26,7 +26,8 @@ plot(360*elevation_angle/(2*pi),doppler_minus)
 hold off
 xlabel('Elevation Angle (deg)');
 ylabel('Doppler Frequency (Hz)');
-title('Doppler Frequency vs. Elevation angle for 270deg Transmitter Azimuth');
+legend('Max Upper Envelope', 'Min Lower Envelope');
+title('Theoretical Doppler Frequency vs. Elevation angle for 270deg Transmitter Azimuth');
 
  i = 0.01:.01:7;
  el = fliplr(atan(2./i));
@@ -41,4 +42,5 @@ title('Doppler Frequency vs. Elevation angle for 270deg Transmitter Azimuth');
  hold off
  xlabel('Elevation Angle (deg)');
  ylabel('Doppler Frequency (Hz)');
- title('Doppler Frequency vs. Elevation angle for 270deg Transmitter Azimuth');
+ legend('Max Upper Envelope', 'Min Lower Envelope');
+ title('Theoretical Doppler Frequency vs. Elevation angle for 270deg Transmitter Azimuth');

@@ -37,43 +37,43 @@ Warning--empty booktitle in Phong:1998:ICG:280811.280980
 Done.
 You've used 16 entries,
             4039 wiz_defined-function locations,
-            956 strings with 11118 characters,
-and the built_in function-call counts, 9500 in all, are:
-= -- 783
+            955 strings with 11116 characters,
+and the built_in function-call counts, 9406 in all, are:
+= -- 771
 > -- 141
-< -- 56
+< -- 55
 + -- 77
 - -- 25
-* -- 451
-:= -- 1593
+* -- 447
+:= -- 1580
 add.period$ -- 35
 call.type$ -- 16
 change.case$ -- 11
 chr.to.int$ -- 111
 cite$ -- 19
-duplicate$ -- 706
-empty$ -- 885
+duplicate$ -- 698
+empty$ -- 881
 format.name$ -- 29
-if$ -- 2155
+if$ -- 2130
 int.to.chr$ -- 0
 int.to.str$ -- 16
-missing$ -- 122
+missing$ -- 121
 newline$ -- 91
 num.names$ -- 16
-pop$ -- 290
+pop$ -- 289
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 769
+skip$ -- 760
 stack$ -- 0
-substring$ -- 292
-swap$ -- 515
-text.length$ -- 19
+substring$ -- 288
+swap$ -- 506
+text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 16
 warning$ -- 3
-while$ -- 40
+while$ -- 39
 width$ -- 18
-write$ -- 192
+write$ -- 191
 (There were 3 warnings)
