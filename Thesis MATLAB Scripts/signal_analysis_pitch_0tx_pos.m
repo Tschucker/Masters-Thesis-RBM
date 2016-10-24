@@ -52,29 +52,29 @@ for i=1:num_files
     lower_envelope = smooth(lower_envelope,.02);
     upper_envelope = smooth(upper_envelope,.02);
     
-    figure;
-    hold on
-    plot3(t/60,lower_envelope/1000,z,'w','linewidth',4)
-    plot3(t/60,upper_envelope/1000,z,'w','linewidth',4)
-    %plot3(t/60,f(nd)/1000,q,'r','linewidth',4)
-    %plot3(t/60,cos(angle_b1(1:end-1)),z);
-    %plot3(t/60,cos(angle_b2(1:end-1)),z);
-    spectrogram(data(i,:),5000,4000,5000,fs,'reassign','MinThreshold',-SNR,'yaxis','centered')
-    title(files(i).name);
-    hold off
-    colormap(jet);
-    colorbar
-    view(2)
-    
-    figure;
-    hold on
-    plot3(t_fixed,upper_envelope,z,'r','linewidth',4)
-    plot3(t_fixed,lower_envelope,z,'b','linewidth',4)
-    title(files(i).name);
-    legend('Upper Envelope', 'Lower Envelope');
-    xlabel('Time (s)');
-    ylabel('Doppler Frequency (Hz)');
-    hold off
+%     figure;
+%     hold on
+%     plot3(t/60,lower_envelope/1000,z,'w','linewidth',4)
+%     plot3(t/60,upper_envelope/1000,z,'w','linewidth',4)
+%     %plot3(t/60,f(nd)/1000,q,'r','linewidth',4)
+%     %plot3(t/60,cos(angle_b1(1:end-1)),z);
+%     %plot3(t/60,cos(angle_b2(1:end-1)),z);
+%     spectrogram(data(i,:),5000,4000,5000,fs,'reassign','MinThreshold',-SNR,'yaxis','centered')
+%     title(files(i).name);
+%     hold off
+%     colormap(jet);
+%     colorbar
+%     view(2)
+%     
+%     figure;
+%     hold on
+%     plot3(t_fixed,upper_envelope,z,'r','linewidth',4)
+%     plot3(t_fixed,lower_envelope,z,'b','linewidth',4)
+%     title(files(i).name);
+%     legend('Upper Envelope', 'Lower Envelope');
+%     xlabel('Time (s)');
+%     ylabel('Doppler Frequency (Hz)');
+%     hold off
     
     data_table(i,2) = min(lower_envelope);
     data_table(i,1) = max(upper_envelope); 
@@ -86,7 +86,7 @@ hold on
 plot(pitch,data_table(:,1))
 plot(pitch,data_table(:,2))
 hold off
-legend('Max Upper Envelope', 'Min Lower Envelope');
+legend('Max Doppler Profile', 'Min Doppler Profile');
 title('Max and Min Envelope Frequencies vs Rotor Pitch');
 xlabel('Rotor Pitch (deg)');
 ylabel('Doppler Frequency (Hz)');

@@ -85,8 +85,8 @@ end
 
 figure;
 hold on
-plot((location_data(:,5)/(2*pi))*360,-data_table(:,2))
-plot((location_data(:,5)/(2*pi))*360,-data_table(:,1))
+plot((location_data(:,5)/(2*pi))*360,data_table(:,2))
+plot((location_data(:,5)/(2*pi))*360,data_table(:,1))
 hold off
 legend('Max Upper Envelope', 'Min Lower Envelope');
 title('Max and Min Envelope Frequencies vs Transmitter Elevation Angle');

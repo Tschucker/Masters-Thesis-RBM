@@ -19,7 +19,7 @@ plot(data_both(:,4),data_15(:,1));
 hold off
 
 legend('Pitch 0deg', '7.5deg', '15deg');
-title('Max Envelope Frequencies vs Transmitter Elevation Angle');
+title('Max Doppler Profile Frequencies vs Transmitter Elevation Angle');
 xlabel('Elevation Angle (deg)');
 ylabel('Doppler Frequency (Hz)');
 

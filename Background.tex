@@ -14,6 +14,9 @@ The Doppler shifted signal, caused by RBM, is shown by Barbiero, Vincent, and De
 
 The role of RBM in this thesis is based on specific Doppler shifts associated with where a dominant reflection occurs along the length of the blade, and the associated elevation angle of the transmitter. The received signal is then used to create a mapping between the amount of Doppler present and the position of the transmitter on the ground.
 
+\section{Thesis Scope}
+\textcolor{red}{ADD WHAT THIS THESIS IS AND POINT OUT WHAT IT IS NOT!}
+
 \section{Geometric Models}
 The geometric model will begin with a 2D scene that will describe the geometry between the rotor blade, the transmitter, and the receiver. Then the model will evolve into a selection of 3D models that will form the foundation for the results of the ray tracer.
 
@@ -46,7 +49,7 @@ where $f_d$ is the Doppler frequency shift, $f_{DopplerMax}$ is defined later by
 %doppler profile result
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=10cm]{images/background/2d_theoretical_doppler_profile.eps}
+		\includegraphics[width=15cm]{images/background/2d_theoretical_doppler_profile.eps}
 		\caption{Doppler Frequency vs. Rotor Position with varying Elevation Angle}
 		\label{fig:2D_theoretical_doppler}
 	\end{center}
@@ -82,30 +85,30 @@ The equation for modeling the scenario for a transmitter located at 90\textdegre
 
 %formulate the geometric equations
 \begin{equation}
-	MaxUpperEnvelope = f_{DopplerMax}cos(\theta_{Limited})
+	MaxDopplerProfile = f_{DopplerMax}cos(\theta_{Limited})
 	\label{eq:theory_90_upper}
 \end{equation}
 
 and
 
 \begin{equation}
-	MinLowerEnvelope = -f_{DopplerMax}cos(\theta_{Limited})
+	MinDopplerProfile = -f_{DopplerMax}cos(\theta_{Limited})
 	\label{eq:theory_90_lower}
 \end{equation}
 
-where $MaxUpperEnvelope$ is an array of the maximum upper envelope values for each elevation sample, $MinLowerEnvelope$ is an array of minimum lower envelope values for each elevation sample, and $\theta_{Limited}$ is the limited elevation angle range
+where $MaxDopplerProfile$ is an array of the maximum upper envelope values for each elevation sample, $MinDopplerProfile$ is an array of minimum lower envelope values for each elevation sample, and $\theta_{Limited}$ is the limited elevation angle range
 
 \begin{equation}
-	\theta_{Limited} = atan\left(\frac{Rx_z}{[0,\dots, (BladeLength - Rx_y)]}\right)
+	\theta_{Limited} = atan\left(\frac{Rx_z}{[0,\dots, (r_b - Rx_y)]}\right)
 	\label{eq:theory_90_limited}
 \end{equation}
 
-where $Rx_z$ is the receivers position below the rotor head, $BladeLength$ is the length of the rotor blade, and $Rx_y$ is the receivers position on the Y axis.
+where $Rx_z$ is the receivers position below the rotor head, $r_b$ is the length of the rotor blade, and $Rx_y$ is the receivers position on the Y axis.
 
 %doppler profile result
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=10cm]{images/background/3d_geometry_tx_90az_doppler_profile.eps}
+		\includegraphics[width=15cm]{images/background/3d_geometry_tx_90az_doppler_profile.eps}
 		\caption{Doppler profile of Tx at Azimuth angle of 90\textdegree}
 		\label{fig:3D_model_90az_doppler}
 	\end{center}
@@ -127,14 +130,14 @@ Figure \ref{fig:3D_model_270az} depicts the transmitter at a 270\textdegree \spa
 The equation for modeling the scenario for a transmitter located at 270\textdegree \space azimuth is similar to the equations for calculating the 90\textdegree \space scenario where $f_{DopplerMax}$ is now calculated with a smaller reflection radius of 2m and $\theta_{Limited}$ is now calculated by
 
 \begin{equation}
-	\theta_{Limited} = atan\left(\frac{Rx_z}{[0, \dots, BladeLength]}\right)
+	\theta_{Limited} = atan\left(\frac{Rx_z}{[0, \dots, Rx_y]}\right)
 	\label{eq:theory_270_limited}
 \end{equation}
 
 %doppler profile result
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=10cm]{images/background/3d_geometry_tx_270az_doppler_profile.eps}
+		\includegraphics[width=15cm]{images/background/3d_geometry_tx_270az_doppler_profile.eps}
 		\caption{Doppler profile of Tx at Azimuth angle of 270\textdegree}
 		\label{fig:3D_model_270az_doppler}
 	\end{center}
@@ -164,22 +167,22 @@ The equation for modeling the scenario for a transmitter located at 180\textdegr
 
 %formulate the geometric equations
 \begin{equation}
-	MaxUpperEnvelope = f_{DopplerMax}cos(\theta_{El})
+	MaxDopplerProfile = f_{DopplerMax}cos(\theta_{El})
 	\label{eq:theory_180_upper}
 \end{equation}
 
-and the $MinLowerEnvelope$ is set to 0 for the range.
+and the $MinDopplerProfile$ is set to 0 for the range.
 
 %doppler profile result
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=10cm]{images/background/3d_geometry_tx_180az_doppler_profile.eps}
+		\includegraphics[width=15cm]{images/background/3d_geometry_tx_180az_doppler_profile.eps}
 		\caption{Doppler profile of Tx at Azimuth angle of 180\textdegree}
 		\label{fig:3D_model_180az_doppler}
 	\end{center}
 \end{figure}
 
-Figure \ref{fig:3D_model_180az_doppler} shows the maximum and minimum Doppler envelope values versus elevation angle for a transmitter at an azimuth angle of 180\textdegree. The data from the figure shows the maximum, of the Doppler profile, decrease as the elevation angle gets larger.
+Figure \ref{fig:3D_model_180az_doppler} shows the maximum and minimum Doppler profile values versus elevation angle for a transmitter at an azimuth angle of 180\textdegree. The data from the figure shows the maximum, of the Doppler profile, decrease as the elevation angle gets larger.
 
 \subsubsection{Receding Model}
 %go over the 3d model for the receding blade
@@ -201,19 +204,19 @@ The equation for modeling the scenario for a transmitter located at 0\textdegree
 
 %formulate the geometric equations
 \begin{equation}
-	MinLowerEnvelope = -f_{DopplerMax}cos(\theta_{El})
+	MinDopplerProfile = -f_{DopplerMax}cos(\theta_{El})
 	\label{eq:theory_0_lower}
 \end{equation}
 
-and the $MaxUpperEnvelope$ is set to 0 for the range.
+and the $MaxDopplerProfile$ is set to 0 for the range.
 
 %doppler profile result
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=10cm]{images/background/3d_geometry_tx_0az_doppler_profile.eps}
+		\includegraphics[width=15cm]{images/background/3d_geometry_tx_0az_doppler_profile.eps}
 		\caption{Doppler profile of Tx at Azimuth angle of 0\textdegree}
 		\label{fig:3D_model_0az_doppler}
 	\end{center}
 \end{figure}
 
-Figure \ref{fig:3D_model_0az_doppler} shows the maximum and minimum Doppler envelope values versus elevation angle for a transmitter at an azimuth angle of 0\textdegree. The data from the figure shows the minimum of the Doppler profile increase as the elevation angle gets larger.
+Figure \ref{fig:3D_model_0az_doppler} shows the maximum and minimum Doppler profile values versus elevation angle for a transmitter at an azimuth angle of 0\textdegree. The data from the figure shows the minimum of the Doppler profile increase as the elevation angle gets larger.

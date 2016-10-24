@@ -2,7 +2,7 @@
 clear;
 %test_locationdatainfile_4
 %Altitude_200m/rx_test_Bistatic_dop0.000000rad2
-samples = csvread('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/bistatic_azimuth_45_pitch/rx_test_Bistatic_dop3.141593rad.csv');
+samples = csvread('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/.csv');
 rpm = 250;
 
 %B = horzcat(samples,samples)';
@@ -57,9 +57,9 @@ figure;
 hold on
 plot3(t*1000,smooth(lower_envelope/1e6,.02),z,'b','linewidth',4)
 plot3(t*1000,smooth(upper_envelope/1e6,.02),z,'r','linewidth',4)
-plot3(t*1000,cos(angle_b1(1:end-1)),z);
-plot3(t*1000,cos(angle_b2(1:end-1)),z);
-legend('Lower Envelope','Upper Envelope');
+%plot3(t*1000,cos(angle_b1(1:end-1)),z);
+%plot3(t*1000,cos(angle_b2(1:end-1)),z);
+legend('Lower Doppler Profile','Upper Doppler Profile');
 spectrogram(samples,5000,500,5000,fs_real,'yaxis','centered')
 hold off
 ylabel('Doppler Frequency (kHz)');

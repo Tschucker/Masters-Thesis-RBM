@@ -1,11 +1,11 @@
 clear;
-total_samples = 959000;%479000; 
+total_samples = 479000;%959000 
 
-files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Centered/Altitude_200m/data_rotation_theta_far_range/*.csv');
+files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rotate_degs_200m/*.csv');
 num_files = length(files);
 data = zeros(num_files,total_samples);
 for i=1:num_files
-     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Centered/Altitude_200m/data_rotation_theta_far_range/',files(i).name)));
+     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rotate_degs_200m/',files(i).name)));
 end
 
 rpm = 250;
@@ -51,18 +51,18 @@ for i=1:num_files
     lower_envelope = smooth(lower_envelope,.02);
     upper_envelope = smooth(upper_envelope,.02);
     
-    figure;
-    
-    hold on
-    plot3(t/60,lower_envelope/1000,z,'w','linewidth',4)
-    plot3(t/60,upper_envelope/1000,z,'w','linewidth',4)
-    plot3(t/60,f(nd)/1000,q,'r','linewidth',4)
-    spectrogram(data(i,:),5000,500,5000,fs,'yaxis','centered')
-    colormap(jet);
-    colorbar
-    view(2)
-    title(files(i).name);
-    hold off
+%     figure;
+%     
+%     hold on
+%     plot3(t/60,lower_envelope/1000,z,'w','linewidth',4)
+%     plot3(t/60,upper_envelope/1000,z,'w','linewidth',4)
+%     plot3(t/60,f(nd)/1000,q,'r','linewidth',4)
+%     spectrogram(data(i,:),5000,500,5000,fs,'yaxis','centered')
+%     colormap(jet);
+%     colorbar
+%     view(2)
+%     title(files(i).name);
+%     hold off
 %     
 %     upper_envelope_table(i,:) = upper_envelope;
 %     lower_envelope_table(i,:) = lower_envelope;
@@ -78,14 +78,14 @@ for i=1:num_files
     
 end
 
-%Azimuth = 0:(360)/(num_files - 1):360;%not correct needs to be elevation
+Azimuth = 0:(360)/(num_files - 1):360;%not correct needs to be elevation
 
 figure;
 hold on
-plot(data_table(:,1))
-plot(data_table(:,2))
+plot(Azimuth,data_table(:,1))
+plot(Azimuth,data_table(:,2))
 hold off
-legend('Max Upper Envelope', 'Min Lower Envelope');
+legend('Max Doppler Profile', 'Min Doppler Profile');
 title('Max and Min Envelope Frequencies vs Transmitter Azimuth Angle');
 xlabel('Transmitter Azimuth Angle (deg)');
 ylabel('Doppler Frequency (Hz)');

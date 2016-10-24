@@ -4,11 +4,11 @@ clear;
 %--------------------------------------------------------------------------
 %Load Data
 %--------------------------------------------------------------------------
-files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/pitch7.5deg_rotation_200m2/*.csv');
+files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m//*.csv');
 num_files = length(files);
 %data = zeros(num_files,959006); %479000;
 for i=1:num_files
-     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/pitch7.5deg_rotation_200m2/',files(i).name)));
+     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m//',files(i).name)));
 end
 
 %--------------------------------------------------------------------------
@@ -117,7 +117,7 @@ hold on
 plot(Azimuth,data_table(:,1))
 plot(Azimuth,data_table(:,2))
 hold off
-legend('Max Upper Envelope', 'Min Lower Envelope');
+legend('Max Doppler Profile', 'Min Doppler Profile');
 title('Max and Min Envelope Frequencies vs Transmitter Azimuth Angle with 7.5deg Pitch');
 xlabel('Transmitter Azimuth Angle (deg)');
 ylabel('Doppler Frequency (Hz)');

@@ -72,30 +72,16 @@ A perfect diffuse reflection, also known as Lambertian reflection, will reflect 
 \subsection{Fading}
 The transmitted signal power experiences fading described by
 
-\begin{equation}
-	F = cos\left(2\pi \frac{d}{c} + t_0\right)
-	\label{eqn:fading_coeff}
-\end{equation}
+\textcolor{red}{FIGURE OUT WHAT TO PUT HERE FOR FADING COEFFICIENT?}
 
-where $F$ is the fading coefficient, $d$ is the total distance the particular ray has traveled, $c$ is the speed of light, and $t_0$ is the starting time of the current frame. The power can then be calculated using
+The power can then be calculated using
 
-\begin{equation}
-	P_{faded} = PF
-	\label{eqn:power_faded}
-\end{equation}
+\textcolor{red}{FADING POWER?}
 
-where $P_{faded}$ is the adjusted power due to fading and $P$ is the signal power. The superposition of each ray's faded power becomes the received signal.
+The superposition of each ray's faded power becomes the received signal.
 
 \subsection{Doppler Effect}
 %define doppler effect
-The Doppler effect is characterized by
-
-%Doppler formula
-\begin{equation}
-	f = \left ( \frac{c + v_r}{c + v_s} \right ) f_0
-	\label{eqn:formalDop}
-\end{equation}
-
 It is assumed that both the receiver and the transmitter are not moving therefore, the only Doppler imparted on the signal will be from the rotation of the blades. The associated Doppler is calculated using
 
 %formula for doppler on the rotor blade.
@@ -104,7 +90,7 @@ It is assumed that both the receiver and the transmitter are not moving therefor
 	\label{eqn:observedShift}	
 \end{equation}
 
-where $f_0$ is the initial transmitted frequency, $\lambda$ is the wavelength, $v_t$ is the velocity in the direction of the transmitter, and $v_r$ is the velocity in the direction of the reflection. This is similar to the Bistatic radar equation for Doppler, but since the reflection is not guaranteed to be toward the receiver we calculate the Doppler as it makes contact with the surface and as it is re-radiated according the blades direction of travel.
+where $f_0$ is the initial transmitted frequency, $\lambda$ is the wavelength, $v_t$ is the velocity in the direction of the transmitter, and $v_r$ is the velocity in the direction of the reflection. This is similar to the Bi-static radar equation for Doppler, but since the reflection is not guaranteed to be toward the receiver we calculate the Doppler as it makes contact with the surface and as it is re-radiated according the blades direction of travel.
 
 \begin{equation}
 	\lambda = \frac{c}{f_0}
@@ -187,6 +173,8 @@ The receiver is configurable which allows the user to set a desired center frequ
 \section{Ray Tracing}
 %describe the core tracing engine and describe the flow of the program
 The ray tracing simulation is conducted in the Monte Carlo fashion acting on the scene and propagation models. This method of raytracing is established for creating realistic images in \cite{Suffern2007}, \cite{Pharr2010}. The simulation is performed over successive iterations. Each iteration is a discrete element called a frame and each frame will be updated to represent the change in the position of the rotor blade.
+
+\textcolor{red}{ADD MORE ABOUT RAY TRACING}
 
 \subsection{Computation}
 %flow of the program

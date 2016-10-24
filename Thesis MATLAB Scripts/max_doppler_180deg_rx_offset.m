@@ -24,7 +24,7 @@ plot(360*elevation_angle/(2*pi),doppler_plus)
 hold off
 xlabel('Elevation Angle (deg)');
 ylabel('Doppler Frequency (Hz)');
-legend('Max Upper Envelope', 'Min Lower Envelope');
+legend('Max Doppler Profile', 'Min Doppler Profile');
 title('Theoretical Doppler Frequency vs. Elevation angle for 180deg Transmitter Azimuth');
 
 % %Rx position (might not be needed)

@@ -29,9 +29,9 @@ hold on
 plot(360*elevation_angle/(2*pi),max_fd*cos(elevation_angle))
 plot(360*elevation_angle/(2*pi),-max_fd*cos(elevation_angle))
 hold off
-xlabel('Elevation Angle (deg)');
-ylabel('Doppler Frequency (Hz)');
-legend('Max Upper Envelope', 'Min Lower Envelope');
-title('Theoretical Doppler Frequency vs. Elevation angle for 90deg Transmitter Azimuth');
+xlabel('Elevation Angle (deg)','FontSize', 14);
+ylabel('Doppler Frequency (Hz)','FontSize', 14);
+legend('Max Doppler Profile', 'Min Doppler Profile');
+title('Theoretical Doppler Frequency vs. Elevation angle for 90deg Transmitter Azimuth','FontSize', 14);
 
 

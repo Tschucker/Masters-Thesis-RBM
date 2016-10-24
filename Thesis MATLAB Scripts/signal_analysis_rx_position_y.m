@@ -69,7 +69,7 @@ for i=1:num_files
     plot3(t_fixed,upper_envelope,z,'r','linewidth',4)
     plot3(t_fixed,lower_envelope,z,'b','linewidth',4)
     title(files(i).name);
-    legend('Upper Envelope', 'Lower Envelope');
+    legend('Upper Doppler Profile','Lower Doppler Profile');
     xlabel('Time (s)');
     ylabel('Doppler Frequency (Hz)');
     hold off
@@ -84,7 +84,7 @@ hold on
 plot(range,data_table(:,1))
 plot(range,data_table(:,2))
 hold off
-legend('Max Upper Envelope', 'Min Lower Envelope');
+legend('Max Doppler Profile', 'Min Doppler Profile');
 title('Max and Min Envelope Frequencies vs Receiver distance');
 xlabel('Rx position (m)');
 ylabel('Doppler Frequency (Hz)');

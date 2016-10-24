@@ -4,11 +4,11 @@ clear;
 %--------------------------------------------------------------------------
 %Load Data
 %--------------------------------------------------------------------------
-files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/pitch7.5deg_rotation_200m2/*.csv');
+files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rotate_degs_50m/*.csv');
 num_files = length(files);
-data = zeros(num_files,959006); %959000;  479000
+data = zeros(num_files,479000); %959000;  479000
 for i=1:num_files
-     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/pitch7.5deg_rotation_200m2/',files(i).name)));
+     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rotate_degs_50m/',files(i).name)));
 end
 
 %--------------------------------------------------------------------------
@@ -19,7 +19,7 @@ RPM = 250;
 Altitude = 200;
 fc = 1e9;
 c = 3e8;
-tx_range = 200;
+tx_range = 50;
 pitch_corrected = 0;
 
 %--------------------------------------------------------------------------
@@ -31,8 +31,8 @@ pitch_corrected = 0;
 
 data_table = zeros(num_files,3);
 
-location_data = data(:,1:6);
-data = data(:,7:end);
+%location_data = data(:,1:6);
+%data = data(:,7:end);
 
 for i=1:num_files
     [s,f,t,p] = spectrogram(data(i,:),5000,500,5000,fs,'yaxis','centered');
@@ -127,7 +127,7 @@ end
 [Max,Imax] = max(correct_fd);
 
 %peak prominence calc
-min_peak_prominence = (1/(Max - Min))*.01;
+min_peak_prominence = (1/(Max - Min))*.5;
 [pk,lc] = findpeaks(1./correct_fd,'NPeaks',2,'MinPeakProminence',min_peak_prominence);
 
 %double check average power against peaks to fix 90deg
@@ -151,8 +151,8 @@ hold on
 plot(Azimuth,data_table(:,1))
 plot(Azimuth,data_table(:,2))
 hold off
-legend('Max Upper Envelope', 'Min Lower Envelope');
-title('Max and Min Envelope Frequencies vs Transmitter Azimuth Angle');
+legend('Max Doppler Profile', 'Min Doppler Profile');
+title('Max and Min Doppler Profile Frequencies vs Transmitter Azimuth Angle');
 xlabel('Transmitter Azimuth Angle (deg)');
 ylabel('Doppler Frequency (Hz)');
 
@@ -161,8 +161,8 @@ hold on
 plot(Azimuth,data_table(:,1))
 plot(Azimuth,abs(data_table(:,2)))
 hold off
-legend('Max Upper Envelope', '| Min Lower Envelope |');
-title('Max and Absolute value of Min Envelope Frequencies vs Transmitter Azimuth Angle');
+legend('Max Doppler Profile', '| Min Doppler Profile |');
+title('Max and Absolute value of Min Doppler Profile Frequencies vs Transmitter Azimuth Angle');
 xlabel('Transmitter Azimuth Angle (deg)');
 ylabel('Doppler Frequency (Hz)');
 
@@ -170,7 +170,7 @@ figure;
 hold on
 plot(Azimuth,difference)
 hold off
-title('Pitch Adjusted Difference between Max and Min Envelope Calculations');
+title('Pitch Adjusted Difference between Max and Min Doppler Profile Calculations');
 xlabel('Transmitter Azimuth Angle (deg)');
 ylabel('Frequency Difference(Hz)');
 
