@@ -4,11 +4,11 @@ clear;
 %--------------------------------------------------------------------------
 %Load Data
 %--------------------------------------------------------------------------
-files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rotate_degs_50m/*.csv');
+files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rotate_degs_200m/*.csv');
 num_files = length(files);
 data = zeros(num_files,479000); %959000;  479000
 for i=1:num_files
-     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rotate_degs_50m/',files(i).name)));
+     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rotate_degs_200m/',files(i).name)));
 end
 
 %--------------------------------------------------------------------------
@@ -19,7 +19,7 @@ RPM = 250;
 Altitude = 200;
 fc = 1e9;
 c = 3e8;
-tx_range = 50;
+tx_range = 200;
 pitch_corrected = 0;
 
 %--------------------------------------------------------------------------
@@ -29,13 +29,21 @@ pitch_corrected = 0;
 %shift data for different start sections
 %data = circshift(data,11,1);
 
-data_table = zeros(num_files,3);
+%data_table = zeros(num_files,3);
 
-%location_data = data(:,1:6);
-%data = data(:,7:end);
+% location_data = data(:,1:6);
+% data = data(:,7:end);
+
+hPhNoise = comm.PhaseNoise('Level',[-25 -40], ...
+        'FrequencyOffset',[10 1000], ...
+        'SampleRate',fs);
+
+ee = 1;
 
 for i=1:num_files
-    [s,f,t,p] = spectrogram(data(i,:),5000,500,5000,fs,'yaxis','centered');
+    s_awgn = awgn(data(i,:),-11.5);
+    s_pnoise = step(hPhNoise, data(i,:)');
+    [s,f,t,p] = spectrogram(s_awgn,5000,500,5000,fs,'yaxis','centered');
     angle_b1 = 0:(2*pi)/length(t):2*pi;
     angle_b2 = pi:(2*pi)/length(t):3*pi;
     z = zeros(1,length(t));
@@ -68,24 +76,25 @@ for i=1:num_files
     lower_envelope = smooth(lower_envelope,.02);
     upper_envelope = smooth(upper_envelope,.02);
    
-    data_table(i,1) = max(upper_envelope); 
-    data_table(i,2) = min(lower_envelope);
+    data_table(ee,1) = max(upper_envelope); 
+    data_table(ee,2) = min(lower_envelope);
+    ee = ee + 1;
     
 %     figure;
 %     hold on
 %     plot3(t/60,lower_envelope/1000,z,'b','linewidth',4)
 %     plot3(t/60,upper_envelope/1000,z,'r','linewidth',4)
-%     spectrogram(data(i,:),5000,500,5000,fs,'yaxis','centered')
+%     spectrogram(s_pnoise,5000,500,5000,fs,'yaxis','centered')
 %     colormap(jet);
 %     colorbar
 %     view(2)
-%     title(num2str(location_data(i,4)));
+%     %title(num2str(location_data(i,4)));
 %     hold off
 end
 
 %fix estimation error on first envelope -----
-data_table(1,1) = data_table(num_files,1);
-data_table(1,2) = data_table(num_files,2);
+%data_table(1,1) = data_table(length(data_table),1);
+%data_table(1,2) = data_table(length(data_table),2);
 %important ----------------------------------
 
 
@@ -125,6 +134,7 @@ end
 
 [Min,Imin] = min(correct_fd);
 [Max,Imax] = max(correct_fd);
+[Pmax,Ipmax] = max(ave_q);
 
 %peak prominence calc
 min_peak_prominence = (1/(Max - Min))*.5;
@@ -140,10 +150,11 @@ if(length(lc) > 1)
 else
     I_90deg = lc;
 end
-Azimuth = 0:(360)/(num_files - 1):360;
+Azimuth = 0:(360)/(length(data_table) - 1):360;
 
-error_minMethod = 100*(Azimuth(I_90deg) - 90)/90;
-error_peakMethod = 100*(Azimuth(Imin) - 90)/90;
+error_minMethod = 100*(Azimuth(Imin) - 90)/90;
+error_peakMethod = 100*(Azimuth(I_90deg) - 90)/90;
+error_powerMethod = 100*(Azimuth(Ipmax)- 180 - 90)/90;
 
 %Azimuth estimation plots
 figure;
@@ -170,7 +181,7 @@ figure;
 hold on
 plot(Azimuth,difference)
 hold off
-title('Pitch Adjusted Difference between Max and Min Doppler Profile Calculations');
+title('Difference between Max and Min Doppler Profile Calculations');
 xlabel('Transmitter Azimuth Angle (deg)');
 ylabel('Frequency Difference(Hz)');
 

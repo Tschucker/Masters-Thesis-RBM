@@ -85,6 +85,6 @@ plot(range,data_table(:,1))
 plot(range,data_table(:,2))
 hold off
 legend('Max Doppler Profile', 'Min Doppler Profile');
-title('Max and Min Envelope Frequencies vs Receiver distance');
+title('Max and Min Doppler Profile Frequencies vs Receiver distance');
 xlabel('Rx position (m)');
 ylabel('Doppler Frequency (Hz)');

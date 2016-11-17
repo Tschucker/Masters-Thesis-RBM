@@ -15,7 +15,9 @@ The Doppler shifted signal, caused by RBM, is shown by Barbiero, Vincent, and De
 The role of RBM in this thesis is based on specific Doppler shifts associated with where a dominant reflection occurs along the length of the blade, and the associated elevation angle of the transmitter. The received signal is then used to create a mapping between the amount of Doppler present and the position of the transmitter on the ground.
 
 \section{Thesis Scope}
-\textcolor{red}{ADD WHAT THIS THESIS IS AND POINT OUT WHAT IT IS NOT!}
+\textcolor{red}{EDITED}
+
+The scope of this thesis is to investigate whether it is possible to use the effect of RBM to geolocate a transmitter in ideal conditions. Under ideal conditions the received signal is deterministic based upon the propagation model and the initial conditions. This thesis does not intend to include every physical effect but is limited to the effects defined in the propagation model and by the assumptions made about the physical scene. The ray tracing software developed for the thesis is created for the sole purpose of understanding RBM. In order to determine the signals interaction with the moving rotor blade in an ideal environment, the ray traced scene is limited to the rotor blades, transmitter and receiver. The signal produced by the simulation is used to derive an algorithm that determines both the azimuth and elevation angle of a transmitter. The derived algorithm is then evaluated on both the deterministic signal to determine its azimuth and elevation accuracy. The algorithm is then tested again on signals in the presence of differing levels of noise to determine the algorithm's performance in a more realistic environment. 
 
 \section{Geometric Models}
 The geometric model will begin with a 2D scene that will describe the geometry between the rotor blade, the transmitter, and the receiver. Then the model will evolve into a selection of 3D models that will form the foundation for the results of the ray tracer.
@@ -36,7 +38,7 @@ The 2D geometric mode is based on a few assumptions, first that the receiver is 
 %describe the situation and the position of the objects
 There are three physical objects within this scene. The first being the rotor blade, which is the dark green bar depicted in the figure. Next is the transmitter $Tx$, in green, and the receiver $Rx$ in blue. The measurements, depicted as black bars with denoted start and stop points, reference the various distances used in the following equations. The dashed green line shows at which altitude the helicopter is hovering at, and the red dashed line transverses the transmitter and the center of rotation for the blades. $\theta_{El}$ is the elevation angle of the transmitter with respect to the rotor blades and $\theta_r$ denotes the specular reflection of the casted and reflected rays in orange. Lastly the line of sight (LOS) ray shows that the transmitter and receiver are in visual line of sight of each other.
 
-The resulting Doppler equation is described by
+The resulting Doppler equation is:
 
 %formulate the geometric equations
 \begin{equation}
@@ -81,7 +83,7 @@ The objects in \ref{fig:3D_model_90az}  are similar to the ones previously state
 	\end{center}
 \end{figure}
 
-The equation for modeling the scenario for a transmitter located at 90\textdegree \space azimuth is
+The equation for modeling the scenario for a transmitter located at 90\textdegree \space azimuth is:
 
 %formulate the geometric equations
 \begin{equation}
@@ -96,7 +98,7 @@ and
 	\label{eq:theory_90_lower}
 \end{equation}
 
-where $MaxDopplerProfile$ is an array of the maximum upper envelope values for each elevation sample, $MinDopplerProfile$ is an array of minimum lower envelope values for each elevation sample, and $\theta_{Limited}$ is the limited elevation angle range
+where $MaxDopplerProfile$ is an array of the maximum upper profile values for each elevation sample, $MinDopplerProfile$ is an array of minimum lower profile values for each elevation sample, and $\theta_{Limited}$ is the limited elevation angle range:
 
 \begin{equation}
 	\theta_{Limited} = atan\left(\frac{Rx_z}{[0,\dots, (r_b - Rx_y)]}\right)
@@ -127,7 +129,7 @@ Figure \ref{fig:3D_model_270az} depicts the transmitter at a 270\textdegree \spa
 \end{figure}
 
 %formulate the geometric equations
-The equation for modeling the scenario for a transmitter located at 270\textdegree \space azimuth is similar to the equations for calculating the 90\textdegree \space scenario where $f_{DopplerMax}$ is now calculated with a smaller reflection radius of 2m and $\theta_{Limited}$ is now calculated by
+The equation for modeling the scenario for a transmitter located at 270\textdegree \space azimuth is similar to the equations for calculating the 90\textdegree \space scenario where $f_{DopplerMax}$ is now calculated with a smaller reflection radius of 2m and $\theta_{Limited}$ is:
 
 \begin{equation}
 	\theta_{Limited} = atan\left(\frac{Rx_z}{[0, \dots, Rx_y]}\right)
@@ -163,7 +165,7 @@ This case of the 3D model places the transmitter at 180\textdegree \space so tha
 	\end{center}
 \end{figure}
 
-The equation for modeling the scenario for a transmitter located at 180\textdegree \space azimuth is
+The equation for modeling the scenario for a transmitter located at 180\textdegree \space azimuth is:
 
 %formulate the geometric equations
 \begin{equation}
@@ -200,7 +202,7 @@ This case of the 3D model places the transmitter at 0\textdegree \space so that 
 	\end{center}
 \end{figure}
 
-The equation for modeling the scenario for a transmitter located at 0\textdegree \space azimuth is
+The equation for modeling the scenario for a transmitter located at 0\textdegree \space azimuth is:
 
 %formulate the geometric equations
 \begin{equation}

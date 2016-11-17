@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  24 OCT 2016 16:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  17 NOV 2016 10:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1519,7 +1519,7 @@ d-to.pdf>
 (epstopdf)                    size: 2084139 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/background/2d_geome
 try-eps-converted-to.pdf images/background/2d_geometry.eps>
-(epstopdf)             \includegraphics on input line 30.
+(epstopdf)             \includegraphics on input line 32.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/background/2d_geometry-eps-converted-to.pdf, id=591, 1204.5pt x 803.0pt
@@ -1528,14 +1528,17 @@ File: images/background/2d_geometry-eps-converted-to.pdf Graphic file (type pdf
 )
  <use images/background/2d_geometry-eps-converted-to.pdf>
 Package pdftex.def Info: images/background/2d_geometry-eps-converted-to.pdf use
-d on input line 30.
+d on input line 32.
 (pdftex.def)             Requested size: 426.79134pt x 284.534pt.
 
-Overfull \hbox (9.31827pt too wide) in paragraph at lines 30--31
+Overfull \hbox (9.31827pt too wide) in paragraph at lines 32--33
  [] 
  []
 
-[18 <./images/background/2d_geometry-eps-converted-to.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18]
 Package epstopdf Info: Source file: <images/background/2d_theoretical_doppler_p
 rofile.eps>
 (epstopdf)                    date: 2016-10-18 12:57:49
@@ -1547,25 +1550,25 @@ rofile-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/background/2d_theor
 etical_doppler_profile-eps-converted-to.pdf images/background/2d_theoretical_do
 ppler_profile.eps>
-(epstopdf)             \includegraphics on input line 52.
+(epstopdf)             \includegraphics on input line 54.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/background/2d_theoretical_doppler_profile-eps-converted-to.pdf, id=637,
+<images/background/2d_theoretical_doppler_profile-eps-converted-to.pdf, id=598,
  562.1pt x 421.575pt>
 File: images/background/2d_theoretical_doppler_profile-eps-converted-to.pdf Gra
 phic file (type pdf)
 
 <use images/background/2d_theoretical_doppler_profile-eps-converted-to.pdf>
 Package pdftex.def Info: images/background/2d_theoretical_doppler_profile-eps-c
-onverted-to.pdf used on input line 52.
+onverted-to.pdf used on input line 54.
 (pdftex.def)             Requested size: 426.79134pt x 320.09155pt.
 
-Overfull \hbox (9.31827pt too wide) in paragraph at lines 52--53
+Overfull \hbox (9.31827pt too wide) in paragraph at lines 54--55
  [] 
  []
 
-[19] [20 <./images/background/2d_theoretical_doppler_profile-eps-converted-to.p
-df>]
+[19 <./images/background/2d_geometry-eps-converted-to.pdf>] [20 <./images/backg
+round/2d_theoretical_doppler_profile-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/background/3d_geometry_tx_90az.eps>
 
 (epstopdf)                    date: 2016-07-25 16:28:41
@@ -1576,7 +1579,7 @@ converted-to.pdf>
 (epstopdf)                    size: 826172 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/background/3d_geome
 try_tx_90az-eps-converted-to.pdf images/background/3d_geometry_tx_90az.eps>
-(epstopdf)             \includegraphics on input line 78.
+(epstopdf)             \includegraphics on input line 80.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/background/3d_geometry_tx_90az-eps-converted-to.pdf, id=660, 2168.1pt x
@@ -1585,14 +1588,14 @@ File: images/background/3d_geometry_tx_90az-eps-converted-to.pdf Graphic file (
 type pdf)
  <use images/background/3d_geometry_tx_90az-eps-converted-to.pdf>
 Package pdftex.def Info: images/background/3d_geometry_tx_90az-eps-converted-to
-.pdf used on input line 78.
+.pdf used on input line 80.
 (pdftex.def)             Requested size: 426.79134pt x 284.50949pt.
 
-Overfull \hbox (9.31827pt too wide) in paragraph at lines 78--79
+Overfull \hbox (9.31827pt too wide) in paragraph at lines 80--81
  [] 
  []
 
-[21 <./images/background/3d_geometry_tx_90az-eps-converted-to.pdf>]
+[21]
 Package epstopdf Info: Source file: <images/background/3d_geometry_tx_90az_dopp
 ler_profile.eps>
 (epstopdf)                    date: 2016-10-24 15:29:53
@@ -1604,26 +1607,24 @@ ler_profile-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/background/3d_geome
 try_tx_90az_doppler_profile-eps-converted-to.pdf images/background/3d_geometry_
 tx_90az_doppler_profile.eps>
-(epstopdf)             \includegraphics on input line 111.
+(epstopdf)             \includegraphics on input line 113.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/background/3d_geometry_tx_90az_doppler_profile-eps-converted-to.pdf, id
-=673, 782.925pt x 598.235pt>
+=668, 782.925pt x 598.235pt>
 File: images/background/3d_geometry_tx_90az_doppler_profile-eps-converted-to.pd
 f Graphic file (type pdf)
 
 <use images/background/3d_geometry_tx_90az_doppler_profile-eps-converted-to.pdf
 >
 Package pdftex.def Info: images/background/3d_geometry_tx_90az_doppler_profile-
-eps-converted-to.pdf used on input line 111.
+eps-converted-to.pdf used on input line 113.
 (pdftex.def)             Requested size: 426.79134pt x 326.11833pt.
 
-Overfull \hbox (9.31827pt too wide) in paragraph at lines 111--112
+Overfull \hbox (9.31827pt too wide) in paragraph at lines 113--114
  [] 
  []
 
-[22 <./images/background/3d_geometry_tx_90az_doppler_profile-eps-converted-to.p
-df>]
 Package epstopdf Info: Source file: <images/background/3d_geometry_tx_270az.eps
 >
 (epstopdf)                    date: 2016-07-25 16:30:26
@@ -1634,22 +1635,23 @@ Package epstopdf Info: Source file: <images/background/3d_geometry_tx_270az.eps
 (epstopdf)                    size: 1029512 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/background/3d_geome
 try_tx_270az-eps-converted-to.pdf images/background/3d_geometry_tx_270az.eps>
-(epstopdf)             \includegraphics on input line 123.
+(epstopdf)             \includegraphics on input line 125.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/background/3d_geometry_tx_270az-eps-converted-to.pdf, id=691, 2168.1pt 
+<images/background/3d_geometry_tx_270az-eps-converted-to.pdf, id=672, 2168.1pt 
 x 1445.4pt>
 File: images/background/3d_geometry_tx_270az-eps-converted-to.pdf Graphic file 
 (type pdf)
  <use images/background/3d_geometry_tx_270az-eps-converted-to.pdf>
 Package pdftex.def Info: images/background/3d_geometry_tx_270az-eps-converted-t
-o.pdf used on input line 123.
+o.pdf used on input line 125.
 (pdftex.def)             Requested size: 426.79134pt x 284.50949pt.
 
-Overfull \hbox (9.31827pt too wide) in paragraph at lines 123--124
+Overfull \hbox (9.31827pt too wide) in paragraph at lines 125--126
  [] 
  []
 
+[22 <./images/background/3d_geometry_tx_90az-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/background/3d_geometry_tx_270az_dop
 pler_profile.eps>
 (epstopdf)                    date: 2016-10-24 15:32:51
@@ -1661,25 +1663,26 @@ pler_profile-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/background/3d_geome
 try_tx_270az_doppler_profile-eps-converted-to.pdf images/background/3d_geometry
 _tx_270az_doppler_profile.eps>
-(epstopdf)             \includegraphics on input line 140.
+(epstopdf)             \includegraphics on input line 142.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/background/3d_geometry_tx_270az_doppler_profile-eps-converted-to.pdf, i
-d=692, 599.23875pt x 445.665pt>
+d=684, 599.23875pt x 445.665pt>
 File: images/background/3d_geometry_tx_270az_doppler_profile-eps-converted-to.p
 df Graphic file (type pdf)
 
 <use images/background/3d_geometry_tx_270az_doppler_profile-eps-converted-to.pd
 f>
 Package pdftex.def Info: images/background/3d_geometry_tx_270az_doppler_profile
--eps-converted-to.pdf used on input line 140.
+-eps-converted-to.pdf used on input line 142.
 (pdftex.def)             Requested size: 426.79134pt x 317.4172pt.
 
-Overfull \hbox (9.31827pt too wide) in paragraph at lines 140--141
+Overfull \hbox (9.31827pt too wide) in paragraph at lines 142--143
  [] 
  []
 
-[23 <./images/background/3d_geometry_tx_270az-eps-converted-to.pdf>]
+[23 <./images/background/3d_geometry_tx_90az_doppler_profile-eps-converted-to.p
+df>]
 Package epstopdf Info: Source file: <images/background/3d_geometry_tx_180az.eps
 >
 (epstopdf)                    date: 2016-07-25 16:27:25
@@ -1690,19 +1693,19 @@ Package epstopdf Info: Source file: <images/background/3d_geometry_tx_180az.eps
 (epstopdf)                    size: 1240823 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/background/3d_geome
 try_tx_180az-eps-converted-to.pdf images/background/3d_geometry_tx_180az.eps>
-(epstopdf)             \includegraphics on input line 160.
+(epstopdf)             \includegraphics on input line 162.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/background/3d_geometry_tx_180az-eps-converted-to.pdf, id=705, 2168.1pt 
+<images/background/3d_geometry_tx_180az-eps-converted-to.pdf, id=701, 2168.1pt 
 x 1445.4pt>
 File: images/background/3d_geometry_tx_180az-eps-converted-to.pdf Graphic file 
 (type pdf)
  <use images/background/3d_geometry_tx_180az-eps-converted-to.pdf>
 Package pdftex.def Info: images/background/3d_geometry_tx_180az-eps-converted-t
-o.pdf used on input line 160.
+o.pdf used on input line 162.
 (pdftex.def)             Requested size: 426.79134pt x 284.50949pt.
 
-Overfull \hbox (9.31827pt too wide) in paragraph at lines 160--161
+Overfull \hbox (9.31827pt too wide) in paragraph at lines 162--163
  [] 
  []
 
@@ -1717,26 +1720,25 @@ pler_profile-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/background/3d_geome
 try_tx_180az_doppler_profile-eps-converted-to.pdf images/background/3d_geometry
 _tx_180az_doppler_profile.eps>
-(epstopdf)             \includegraphics on input line 179.
+(epstopdf)             \includegraphics on input line 181.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/background/3d_geometry_tx_180az_doppler_profile-eps-converted-to.pdf, i
-d=706, 562.1pt x 421.575pt>
+d=702, 562.1pt x 421.575pt>
 File: images/background/3d_geometry_tx_180az_doppler_profile-eps-converted-to.p
 df Graphic file (type pdf)
 
 <use images/background/3d_geometry_tx_180az_doppler_profile-eps-converted-to.pd
 f>
 Package pdftex.def Info: images/background/3d_geometry_tx_180az_doppler_profile
--eps-converted-to.pdf used on input line 179.
+-eps-converted-to.pdf used on input line 181.
 (pdftex.def)             Requested size: 426.79134pt x 320.09155pt.
 
-Overfull \hbox (9.31827pt too wide) in paragraph at lines 179--180
+Overfull \hbox (9.31827pt too wide) in paragraph at lines 181--182
  [] 
  []
 
-[24 <./images/background/3d_geometry_tx_270az_doppler_profile-eps-converted-to.
-pdf>]
+[24 <./images/background/3d_geometry_tx_270az-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/background/3d_geometry_tx_0az.eps>
 (epstopdf)                    date: 2016-07-25 16:25:26
 (epstopdf)                    size: 273114139 bytes
@@ -1746,23 +1748,24 @@ onverted-to.pdf>
 (epstopdf)                    size: 1242715 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/background/3d_geome
 try_tx_0az-eps-converted-to.pdf images/background/3d_geometry_tx_0az.eps>
-(epstopdf)             \includegraphics on input line 197.
+(epstopdf)             \includegraphics on input line 199.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/background/3d_geometry_tx_0az-eps-converted-to.pdf, id=723, 2168.1pt x 
+<images/background/3d_geometry_tx_0az-eps-converted-to.pdf, id=715, 2168.1pt x 
 1445.4pt>
 File: images/background/3d_geometry_tx_0az-eps-converted-to.pdf Graphic file (t
 ype pdf)
  <use images/background/3d_geometry_tx_0az-eps-converted-to.pdf>
 Package pdftex.def Info: images/background/3d_geometry_tx_0az-eps-converted-to.
-pdf used on input line 197.
+pdf used on input line 199.
 (pdftex.def)             Requested size: 426.79134pt x 284.50949pt.
 
-Overfull \hbox (9.31827pt too wide) in paragraph at lines 197--198
+Overfull \hbox (9.31827pt too wide) in paragraph at lines 199--200
  [] 
  []
 
-[25 <./images/background/3d_geometry_tx_180az-eps-converted-to.pdf>]
+[25 <./images/background/3d_geometry_tx_270az_doppler_profile-eps-converted-to.
+pdf>]
 Package epstopdf Info: Source file: <images/background/3d_geometry_tx_0az_doppl
 er_profile.eps>
 (epstopdf)                    date: 2016-10-24 15:36:04
@@ -1774,53 +1777,49 @@ er_profile-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/background/3d_geome
 try_tx_0az_doppler_profile-eps-converted-to.pdf images/background/3d_geometry_t
 x_0az_doppler_profile.eps>
-(epstopdf)             \includegraphics on input line 216.
+(epstopdf)             \includegraphics on input line 218.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/background/3d_geometry_tx_0az_doppler_profile-eps-converted-to.pdf, id=
-732, 562.1pt x 421.575pt>
+728, 562.1pt x 421.575pt>
 File: images/background/3d_geometry_tx_0az_doppler_profile-eps-converted-to.pdf
  Graphic file (type pdf)
 
 <use images/background/3d_geometry_tx_0az_doppler_profile-eps-converted-to.pdf>
 Package pdftex.def Info: images/background/3d_geometry_tx_0az_doppler_profile-e
-ps-converted-to.pdf used on input line 216.
+ps-converted-to.pdf used on input line 218.
 (pdftex.def)             Requested size: 426.79134pt x 320.09155pt.
 
-Overfull \hbox (9.31827pt too wide) in paragraph at lines 216--217
+Overfull \hbox (9.31827pt too wide) in paragraph at lines 218--219
  [] 
  []
 
-) [26 <./images/background/3d_geometry_tx_180az_doppler_profile-eps-converted-t
-o.pdf>] [27 <./images/background/3d_geometry_tx_0az-eps-converted-to.pdf>]
-[28 <./images/background/3d_geometry_tx_0az_doppler_profile-eps-converted-to.pd
-f>]
+) [26 <./images/background/3d_geometry_tx_180az-eps-converted-to.pdf>] [27 <./i
+mages/background/3d_geometry_tx_180az_doppler_profile-eps-converted-to.pdf>]
+[28 <./images/background/3d_geometry_tx_0az-eps-converted-to.pdf>] [29 <./image
+s/background/3d_geometry_tx_0az_doppler_profile-eps-converted-to.pdf>]
 \openout2 = `Radio_Propagation_Simulation.aux'.
 
- (./Radio_Propagation_Simulation.tex
+
+(./Radio_Propagation_Simulation.tex
 Chapter 3.
 ------------------------------------------------------------------------------
  3 Radio Propagation Simulation
 ------------------------------------------------------------------------------
-[29
+[30
 
 
 
 
-] [30] [31] [32]
-<images/radio_propagation/2d_airfoil.png, id=810, 339.669pt x 120.45pt>
+] [31] [32] [33]
+<images/radio_propagation/2d_airfoil.png, id=813, 1296.5238pt x 378.6948pt>
 File: images/radio_propagation/2d_airfoil.png Graphic file (type png)
 
 <use images/radio_propagation/2d_airfoil.png>
 Package pdftex.def Info: images/radio_propagation/2d_airfoil.png used on input 
-line 129.
-(pdftex.def)             Requested size: 426.79134pt x 151.34874pt.
-
-Overfull \hbox (9.31827pt too wide) in paragraph at lines 129--130
- [] 
- []
-
-[33 <./images/radio_propagation/2d_airfoil.png>]
+line 123.
+(pdftex.def)             Requested size: 398.33858pt x 116.34827pt.
+ [34 <./images/radio_propagation/2d_airfoil.png>]
 Package epstopdf Info: Source file: <images/radio_propagation/blade_surface_tes
 selation.eps>
 (epstopdf)                    date: 2016-10-24 14:29:51
@@ -1832,24 +1831,24 @@ selation-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/radio_propagation/b
 lade_surface_tesselation-eps-converted-to.pdf images/radio_propagation/blade_su
 rface_tesselation.eps>
-(epstopdf)             \includegraphics on input line 141.
+(epstopdf)             \includegraphics on input line 135.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/radio_propagation/blade_surface_tesselation-eps-converted-to.pdf, id=81
-9, 562.1pt x 421.575pt>
+<images/radio_propagation/blade_surface_tesselation-eps-converted-to.pdf, id=82
+3, 562.1pt x 421.575pt>
 File: images/radio_propagation/blade_surface_tesselation-eps-converted-to.pdf G
 raphic file (type pdf)
 
 <use images/radio_propagation/blade_surface_tesselation-eps-converted-to.pdf>
 Package pdftex.def Info: images/radio_propagation/blade_surface_tesselation-eps
--converted-to.pdf used on input line 141.
+-converted-to.pdf used on input line 135.
 (pdftex.def)             Requested size: 426.79134pt x 320.09155pt.
 
-Overfull \hbox (9.31827pt too wide) in paragraph at lines 141--142
+Overfull \hbox (9.31827pt too wide) in paragraph at lines 135--136
  [] 
  []
 
-[34 <./images/radio_propagation/blade_surface_tesselation-eps-converted-to.pdf>
+[35 <./images/radio_propagation/blade_surface_tesselation-eps-converted-to.pdf>
 ]
 Package epstopdf Info: Source file: <images/radio_propagation/transmitted.eps>
 (epstopdf)                    date: 2016-10-24 15:16:34
@@ -1860,30 +1859,23 @@ onverted-to.pdf>
 (epstopdf)                    size: 443548 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/radio_propagation/t
 ransmitted-eps-converted-to.pdf images/radio_propagation/transmitted.eps>
-(epstopdf)             \includegraphics on input line 159.
+(epstopdf)             \includegraphics on input line 153.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/radio_propagation/transmitted-eps-converted-to.pdf, id=834, 766.865pt x
+<images/radio_propagation/transmitted-eps-converted-to.pdf, id=838, 766.865pt x
  612.2875pt>
 File: images/radio_propagation/transmitted-eps-converted-to.pdf Graphic file (t
 ype pdf)
  <use images/radio_propagation/transmitted-eps-converted-to.pdf>
 Package pdftex.def Info: images/radio_propagation/transmitted-eps-converted-to.
-pdf used on input line 159.
+pdf used on input line 153.
 (pdftex.def)             Requested size: 426.79134pt x 340.7672pt.
 
-Overfull \hbox (9.31827pt too wide) in paragraph at lines 159--160
+Overfull \hbox (9.31827pt too wide) in paragraph at lines 153--154
  [] 
  []
 
-[35] [36 <./images/radio_propagation/transmitted-eps-converted-to.pdf>]
-Overfull \hbox (0.98079pt too wide) in paragraph at lines 208--209
-[]\OT1/cmr/m/n/10.95 where $\OML/cmm/m/it/10.95 r[]$ \OT1/cmr/m/n/10.95 and $\O
-ML/cmm/m/it/10.95 ^^R[]$ \OT1/cmr/m/n/10.95 are uni-formly dis-tributed ran-dom
- vari-ables from $0 \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 r[] \OMS/cmsy/m
-/n/10.95 ^^T \OML/cmm/m/it/10.95 BladeLength[]$
- []
-
+[36] [37 <./images/radio_propagation/transmitted-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/radio_propagation/sampling_method.e
 ps>
 (epstopdf)                    date: 2016-10-24 15:12:25
@@ -1895,25 +1887,25 @@ ps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=images/radio_propagation/s
 ampling_method-eps-converted-to.pdf images/radio_propagation/sampling_method.ep
 s>
-(epstopdf)             \includegraphics on input line 215.
+(epstopdf)             \includegraphics on input line 209.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/radio_propagation/sampling_method-eps-converted-to.pdf, id=858, 755.823
+<images/radio_propagation/sampling_method-eps-converted-to.pdf, id=862, 755.823
 75pt x 683.55376pt>
 File: images/radio_propagation/sampling_method-eps-converted-to.pdf Graphic fil
 e (type pdf)
 
 <use images/radio_propagation/sampling_method-eps-converted-to.pdf>
 Package pdftex.def Info: images/radio_propagation/sampling_method-eps-converted
--to.pdf used on input line 215.
+-to.pdf used on input line 209.
 (pdftex.def)             Requested size: 426.79134pt x 385.97913pt.
 
-Overfull \hbox (9.31827pt too wide) in paragraph at lines 215--216
+Overfull \hbox (9.31827pt too wide) in paragraph at lines 209--210
  [] 
  []
 
-[37] [38 <./images/radio_propagation/sampling_method-eps-converted-to.pdf>])
-[39]
+[38] [39 <./images/radio_propagation/sampling_method-eps-converted-to.pdf>])
+[40]
 \openout2 = `Simulation.aux'.
 
  (./Simulation.tex
@@ -1935,7 +1927,7 @@ ram.eps>
 (epstopdf)             \includegraphics on input line 16.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/simulation/test_analysis_spectrogram-eps-converted-to.pdf, id=879, 562.
+<images/simulation/test_analysis_spectrogram-eps-converted-to.pdf, id=883, 562.
 1pt x 421.575pt>
 File: images/simulation/test_analysis_spectrogram-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -1949,12 +1941,12 @@ Overfull \hbox (9.31827pt too wide) in paragraph at lines 16--17
  [] 
  []
 
-[40
+[41
 
 
 
 
-] [41 <./images/simulation/test_analysis_spectrogram-eps-converted-to.pdf>]
+] [42 <./images/simulation/test_analysis_spectrogram-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/simulation/test_analysis_spectrogra
 m_with_envelope.eps>
 (epstopdf)                    date: 2016-10-24 15:42:33
@@ -1970,7 +1962,7 @@ lysis_spectrogram_with_envelope.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/simulation/test_analysis_spectrogram_with_envelope-eps-converted-to.pdf
-, id=899, 562.1pt x 421.575pt>
+, id=904, 562.1pt x 421.575pt>
 File: images/simulation/test_analysis_spectrogram_with_envelope-eps-converted-t
 o.pdf Graphic file (type pdf)
 
@@ -1996,7 +1988,7 @@ _position-eps-converted-to.pdf images/simulation/rotor_rx_position.eps>
 (epstopdf)             \includegraphics on input line 47.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/simulation/rotor_rx_position-eps-converted-to.pdf, id=901, 2168.1pt x 1
+<images/simulation/rotor_rx_position-eps-converted-to.pdf, id=906, 2168.1pt x 1
 445.4pt>
 File: images/simulation/rotor_rx_position-eps-converted-to.pdf Graphic file (ty
 pe pdf)
@@ -2005,23 +1997,23 @@ Package pdftex.def Info: images/simulation/rotor_rx_position-eps-converted-to.p
 df used on input line 47.
 (pdftex.def)             Requested size: 256.0748pt x 170.70569pt.
 
-[42 <./images/simulation/test_analysis_spectrogram_with_envelope-eps-converted-
+[43 <./images/simulation/test_analysis_spectrogram_with_envelope-eps-converted-
 to.pdf>]
 Package epstopdf Info: Source file: <images/simulation/receiver_position_max_do
 ppler.eps>
-(epstopdf)                    date: 2016-10-24 15:47:00
-(epstopdf)                    size: 14821 bytes
+(epstopdf)                    date: 2016-11-14 15:01:56
+(epstopdf)                    size: 14828 bytes
 (epstopdf)             Output file: <images/simulation/receiver_position_max_do
 ppler-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-24 15:52:46
-(epstopdf)                    size: 9606 bytes
+(epstopdf)                    date: 2016-11-14 15:02:02
+(epstopdf)                    size: 9765 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/simulation/receiver
 _position_max_doppler-eps-converted-to.pdf images/simulation/receiver_position_
 max_doppler.eps>
 (epstopdf)             \includegraphics on input line 58.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/simulation/receiver_position_max_doppler-eps-converted-to.pdf, id=917, 
+<images/simulation/receiver_position_max_doppler-eps-converted-to.pdf, id=921, 
 562.1pt x 421.575pt>
 File: images/simulation/receiver_position_max_doppler-eps-converted-to.pdf Grap
 hic file (type pdf)
@@ -2031,7 +2023,7 @@ Package pdftex.def Info: images/simulation/receiver_position_max_doppler-eps-co
 nverted-to.pdf used on input line 58.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
 
-[43 <./images/simulation/rotor_rx_position-eps-converted-to.pdf> <./images/simu
+[44 <./images/simulation/rotor_rx_position-eps-converted-to.pdf> <./images/simu
 lation/receiver_position_max_doppler-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/simulation/Doppler_Receiver_0m.eps>
 
@@ -2046,7 +2038,7 @@ Receiver_0m-eps-converted-to.pdf images/simulation/Doppler_Receiver_0m.eps>
 (epstopdf)             \includegraphics on input line 70.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/simulation/Doppler_Receiver_0m-eps-converted-to.pdf, id=950, 562.1pt x 
+<images/simulation/Doppler_Receiver_0m-eps-converted-to.pdf, id=954, 562.1pt x 
 421.575pt>
 File: images/simulation/Doppler_Receiver_0m-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -2067,7 +2059,7 @@ Receiver_7m-eps-converted-to.pdf images/simulation/Doppler_Receiver_7m.eps>
 (epstopdf)             \includegraphics on input line 78.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/simulation/Doppler_Receiver_7m-eps-converted-to.pdf, id=951, 562.1pt x 
+<images/simulation/Doppler_Receiver_7m-eps-converted-to.pdf, id=955, 562.1pt x 
 421.575pt>
 File: images/simulation/Doppler_Receiver_7m-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -2076,7 +2068,7 @@ Package pdftex.def Info: images/simulation/Doppler_Receiver_7m-eps-converted-to
 .pdf used on input line 78.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
 
-[44 <./images/simulation/Doppler_Receiver_0m-eps-converted-to.pdf> <./images/si
+[45 <./images/simulation/Doppler_Receiver_0m-eps-converted-to.pdf> <./images/si
 mulation/Doppler_Receiver_7m-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/simulation/pitch.eps>
 (epstopdf)                    date: 2016-07-23 18:07:10
@@ -2090,25 +2082,25 @@ s-converted-to.pdf images/simulation/pitch.eps>
 (epstopdf)             \includegraphics on input line 96.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/simulation/pitch-eps-converted-to.pdf, id=978, 1945.2675pt x 782.925pt>
+<images/simulation/pitch-eps-converted-to.pdf, id=982, 1945.2675pt x 782.925pt>
 File: images/simulation/pitch-eps-converted-to.pdf Graphic file (type pdf)
 <use images/simulation/pitch-eps-converted-to.pdf>
 Package pdftex.def Info: images/simulation/pitch-eps-converted-to.pdf used on i
 nput line 96.
 (pdftex.def)             Requested size: 256.0748pt x 103.06209pt.
 Package epstopdf Info: Source file: <images/simulation/pitch_max_doppler.eps>
-(epstopdf)                    date: 2016-10-24 15:59:01
-(epstopdf)                    size: 13095 bytes
+(epstopdf)                    date: 2016-11-14 14:28:24
+(epstopdf)                    size: 13102 bytes
 (epstopdf)             Output file: <images/simulation/pitch_max_doppler-eps-co
 nverted-to.pdf>
-(epstopdf)                    date: 2016-10-24 15:59:11
-(epstopdf)                    size: 9405 bytes
+(epstopdf)                    date: 2016-11-14 14:28:34
+(epstopdf)                    size: 9494 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/simulation/pitch_ma
 x_doppler-eps-converted-to.pdf images/simulation/pitch_max_doppler.eps>
 (epstopdf)             \includegraphics on input line 107.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/simulation/pitch_max_doppler-eps-converted-to.pdf, id=979, 562.1pt x 42
+<images/simulation/pitch_max_doppler-eps-converted-to.pdf, id=983, 562.1pt x 42
 1.575pt>
 File: images/simulation/pitch_max_doppler-eps-converted-to.pdf Graphic file (ty
 pe pdf)
@@ -2118,19 +2110,19 @@ df used on input line 107.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
 Package epstopdf Info: Source file: <images/simulation/pitch_0txPos_max_doppler
 .eps>
-(epstopdf)                    date: 2016-10-24 16:01:43
-(epstopdf)                    size: 13562 bytes
+(epstopdf)                    date: 2016-11-14 14:30:08
+(epstopdf)                    size: 13569 bytes
 (epstopdf)             Output file: <images/simulation/pitch_0txPos_max_doppler
 -eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-24 16:01:55
-(epstopdf)                    size: 9462 bytes
+(epstopdf)                    date: 2016-11-14 14:30:16
+(epstopdf)                    size: 9554 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/simulation/pitch_0t
 xPos_max_doppler-eps-converted-to.pdf images/simulation/pitch_0txPos_max_dopple
 r.eps>
 (epstopdf)             \includegraphics on input line 119.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/simulation/pitch_0txPos_max_doppler-eps-converted-to.pdf, id=982, 562.1
+<images/simulation/pitch_0txPos_max_doppler-eps-converted-to.pdf, id=986, 562.1
 pt x 421.575pt>
 File: images/simulation/pitch_0txPos_max_doppler-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2139,7 +2131,7 @@ ile (type pdf)
 Package pdftex.def Info: images/simulation/pitch_0txPos_max_doppler-eps-convert
 ed-to.pdf used on input line 119.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
- [45 <./images/simulation/pitch-eps-converted-to.pdf>] [46 <./images/simulation
+ [46 <./images/simulation/pitch-eps-converted-to.pdf>] [47 <./images/simulation
 /pitch_max_doppler-eps-converted-to.pdf> <./images/simulation/pitch_0txPos_max_
 doppler-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/simulation/elevation_angle_with_pit
@@ -2157,7 +2149,7 @@ _angle_with_pitch_max_doppler.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/simulation/elevation_angle_with_pitch_max_doppler-eps-converted-to.pdf,
- id=1011, 562.1pt x 421.575pt>
+ id=1015, 562.1pt x 421.575pt>
 File: images/simulation/elevation_angle_with_pitch_max_doppler-eps-converted-to
 .pdf Graphic file (type pdf)
 
@@ -2181,7 +2173,7 @@ n/elevation_angle_with_pitch_max_doppler_Difference.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/simulation/elevation_angle_with_pitch_max_doppler_Difference-eps-conver
-ted-to.pdf, id=1014, 562.1pt x 421.575pt>
+ted-to.pdf, id=1018, 562.1pt x 421.575pt>
 File: images/simulation/elevation_angle_with_pitch_max_doppler_Difference-eps-c
 onverted-to.pdf Graphic file (type pdf)
 
@@ -2202,14 +2194,14 @@ eps-converted-to.pdf images/simulation/azimuth.eps>
 (epstopdf)             \includegraphics on input line 158.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/simulation/azimuth-eps-converted-to.pdf, id=1016, 1434.35875pt x 1445.4
+<images/simulation/azimuth-eps-converted-to.pdf, id=1020, 1434.35875pt x 1445.4
 pt>
 File: images/simulation/azimuth-eps-converted-to.pdf Graphic file (type pdf)
  <use images/simulation/azimuth-eps-converted-to.pdf>
 Package pdftex.def Info: images/simulation/azimuth-eps-converted-to.pdf used on
  input line 158.
 (pdftex.def)             Requested size: 256.0748pt x 258.04349pt.
- [47 <./images/simulation/elevation_angle_with_pitch_max_doppler-eps-converted-
+ [48 <./images/simulation/elevation_angle_with_pitch_max_doppler-eps-converted-
 to.pdf>]
 Package epstopdf Info: Source file: <images/simulation/Azimuth_angle_200_max_do
 ppler.eps>
@@ -2225,7 +2217,7 @@ max_doppler.eps>
 (epstopdf)             \includegraphics on input line 169.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/simulation/Azimuth_angle_200_max_doppler-eps-converted-to.pdf, id=1030,
+<images/simulation/Azimuth_angle_200_max_doppler-eps-converted-to.pdf, id=1035,
  562.1pt x 421.575pt>
 File: images/simulation/Azimuth_angle_200_max_doppler-eps-converted-to.pdf Grap
 hic file (type pdf)
@@ -2248,7 +2240,7 @@ x_doppler.eps>
 (epstopdf)             \includegraphics on input line 181.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/simulation/Azimuth_angle_50_max_doppler-eps-converted-to.pdf, id=1034, 
+<images/simulation/Azimuth_angle_50_max_doppler-eps-converted-to.pdf, id=1039, 
 562.1pt x 421.575pt>
 File: images/simulation/Azimuth_angle_50_max_doppler-eps-converted-to.pdf Graph
 ic file (type pdf)
@@ -2271,7 +2263,7 @@ max_doppler.eps>
 (epstopdf)             \includegraphics on input line 190.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/simulation/Azimuth_angle_400_max_doppler-eps-converted-to.pdf, id=1035,
+<images/simulation/Azimuth_angle_400_max_doppler-eps-converted-to.pdf, id=1040,
  562.1pt x 421.575pt>
 File: images/simulation/Azimuth_angle_400_max_doppler-eps-converted-to.pdf Grap
 hic file (type pdf)
@@ -2282,19 +2274,19 @@ nverted-to.pdf used on input line 190.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
 Package epstopdf Info: Source file: <images/simulation/Azimuth_angle_rx0_max_do
 ppler.eps>
-(epstopdf)                    date: 2016-09-28 13:17:59
-(epstopdf)                    size: 13797 bytes
+(epstopdf)                    date: 2016-11-02 16:09:42
+(epstopdf)                    size: 14683 bytes
 (epstopdf)             Output file: <images/simulation/Azimuth_angle_rx0_max_do
 ppler-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-09-28 13:18:10
-(epstopdf)                    size: 9973 bytes
+(epstopdf)                    date: 2016-11-02 16:09:56
+(epstopdf)                    size: 10062 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/simulation/Azimuth_
 angle_rx0_max_doppler-eps-converted-to.pdf images/simulation/Azimuth_angle_rx0_
 max_doppler.eps>
 (epstopdf)             \includegraphics on input line 203.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/simulation/Azimuth_angle_rx0_max_doppler-eps-converted-to.pdf, id=1037,
+<images/simulation/Azimuth_angle_rx0_max_doppler-eps-converted-to.pdf, id=1042,
  562.1pt x 421.575pt>
 File: images/simulation/Azimuth_angle_rx0_max_doppler-eps-converted-to.pdf Grap
 hic file (type pdf)
@@ -2304,24 +2296,24 @@ Package pdftex.def Info: images/simulation/Azimuth_angle_rx0_max_doppler-eps-co
 nverted-to.pdf used on input line 203.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
 
-[48 <./images/simulation/elevation_angle_with_pitch_max_doppler_Difference-eps-
-converted-to.pdf>] [49 <./images/simulation/azimuth-eps-converted-to.pdf> <./im
-ages/simulation/Azimuth_angle_200_max_doppler-eps-converted-to.pdf>] [50 <./ima
+[49 <./images/simulation/elevation_angle_with_pitch_max_doppler_Difference-eps-
+converted-to.pdf>] [50 <./images/simulation/azimuth-eps-converted-to.pdf> <./im
+ages/simulation/Azimuth_angle_200_max_doppler-eps-converted-to.pdf>] [51 <./ima
 ges/simulation/Azimuth_angle_50_max_doppler-eps-converted-to.pdf> <./images/sim
 ulation/Azimuth_angle_400_max_doppler-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/simulation/pitch_azimuth_rev.eps>
-(epstopdf)                    date: 2016-10-11 13:09:51
-(epstopdf)                    size: 15831 bytes
+(epstopdf)                    date: 2016-11-02 16:14:09
+(epstopdf)                    size: 15824 bytes
 (epstopdf)             Output file: <images/simulation/pitch_azimuth_rev-eps-co
 nverted-to.pdf>
-(epstopdf)                    date: 2016-10-11 13:09:57
-(epstopdf)                    size: 10783 bytes
+(epstopdf)                    date: 2016-11-02 16:14:19
+(epstopdf)                    size: 10552 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/simulation/pitch_az
 imuth_rev-eps-converted-to.pdf images/simulation/pitch_azimuth_rev.eps>
 (epstopdf)             \includegraphics on input line 216.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/simulation/pitch_azimuth_rev-eps-converted-to.pdf, id=1090, 562.1pt x 4
+<images/simulation/pitch_azimuth_rev-eps-converted-to.pdf, id=1094, 562.1pt x 4
 21.575pt>
 File: images/simulation/pitch_azimuth_rev-eps-converted-to.pdf Graphic file (ty
 pe pdf)
@@ -2341,14 +2333,14 @@ n-eps-converted-to.pdf images/simulation/elevation.eps>
 (epstopdf)             \includegraphics on input line 232.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/simulation/elevation-eps-converted-to.pdf, id=1093, 2168.1pt x 1445.4pt
+<images/simulation/elevation-eps-converted-to.pdf, id=1097, 2168.1pt x 1445.4pt
 >
 File: images/simulation/elevation-eps-converted-to.pdf Graphic file (type pdf)
  <use images/simulation/elevation-eps-converted-to.pdf>
 Package pdftex.def Info: images/simulation/elevation-eps-converted-to.pdf used 
 on input line 232.
 (pdftex.def)             Requested size: 284.52756pt x 189.67299pt.
- [51 <./images/simulation/Azimuth_angle_rx0_max_doppler-eps-converted-to.pdf>]
+ [52 <./images/simulation/Azimuth_angle_rx0_max_doppler-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/simulation/range_elevation_rel.eps>
 
 (epstopdf)                    date: 2016-07-23 15:33:33
@@ -2362,7 +2354,7 @@ evation_rel-eps-converted-to.pdf images/simulation/range_elevation_rel.eps>
 (epstopdf)             \includegraphics on input line 243.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/simulation/range_elevation_rel-eps-converted-to.pdf, id=1107, 562.1pt x
+<images/simulation/range_elevation_rel-eps-converted-to.pdf, id=1111, 562.1pt x
  421.575pt>
 File: images/simulation/range_elevation_rel-eps-converted-to.pdf Graphic file (
 type pdf)
@@ -2371,129 +2363,125 @@ Package pdftex.def Info: images/simulation/range_elevation_rel-eps-converted-to
 .pdf used on input line 243.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
 
-[52 <./images/simulation/pitch_azimuth_rev-eps-converted-to.pdf> <./images/simu
+[53 <./images/simulation/pitch_azimuth_rev-eps-converted-to.pdf> <./images/simu
 lation/elevation-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/simulation/elevation_angle_max_dopp
-ler_135deg.eps>
-(epstopdf)                    date: 2016-07-22 20:07:43
-(epstopdf)                    size: 15480 bytes
-(epstopdf)             Output file: <images/simulation/elevation_angle_max_dopp
-ler_135deg-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-22 20:08:02
-(epstopdf)                    size: 10682 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/simulation/elevatio
-n_angle_max_doppler_135deg-eps-converted-to.pdf images/simulation/elevation_ang
-le_max_doppler_135deg.eps>
-(epstopdf)             \includegraphics on input line 254.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/simulation/elevation_angle_max_doppler_135deg-eps-converted-to.pdf, id=
-1133, 562.1pt x 421.575pt>
-File: images/simulation/elevation_angle_max_doppler_135deg-eps-converted-to.pdf
- Graphic file (type pdf)
-
-<use images/simulation/elevation_angle_max_doppler_135deg-eps-converted-to.pdf>
-Package pdftex.def Info: images/simulation/elevation_angle_max_doppler_135deg-e
-ps-converted-to.pdf used on input line 254.
-(pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
-Package epstopdf Info: Source file: <images/simulation/elevation_angle_max_dopp
-ler_0deg.eps>
-(epstopdf)                    date: 2016-10-14 16:31:06
-(epstopdf)                    size: 15023 bytes
-(epstopdf)             Output file: <images/simulation/elevation_angle_max_dopp
-ler_0deg-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-14 16:31:13
-(epstopdf)                    size: 10231 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/simulation/elevatio
-n_angle_max_doppler_0deg-eps-converted-to.pdf images/simulation/elevation_angle
-_max_doppler_0deg.eps>
-(epstopdf)             \includegraphics on input line 267.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/simulation/elevation_angle_max_doppler_0deg-eps-converted-to.pdf, id=11
-39, 562.1pt x 421.575pt>
-File: images/simulation/elevation_angle_max_doppler_0deg-eps-converted-to.pdf G
-raphic file (type pdf)
-
-<use images/simulation/elevation_angle_max_doppler_0deg-eps-converted-to.pdf>
-Package pdftex.def Info: images/simulation/elevation_angle_max_doppler_0deg-eps
--converted-to.pdf used on input line 267.
-(pdftex.def)             Requested size: 199.16928pt x 149.3739pt.
-Package epstopdf Info: Source file: <images/simulation/elevation_angle_max_dopp
-ler_90deg.eps>
-(epstopdf)                    date: 2016-10-14 16:26:03
-(epstopdf)                    size: 14910 bytes
-(epstopdf)             Output file: <images/simulation/elevation_angle_max_dopp
-ler_90deg-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-14 16:28:59
-(epstopdf)                    size: 10092 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/simulation/elevatio
-n_angle_max_doppler_90deg-eps-converted-to.pdf images/simulation/elevation_angl
-e_max_doppler_90deg.eps>
-(epstopdf)             \includegraphics on input line 270.
-Package epstopdf Info: Output file is already uptodate.
-
-<images/simulation/elevation_angle_max_doppler_90deg-eps-converted-to.pdf, id=1
-140, 562.1pt x 421.575pt>
-File: images/simulation/elevation_angle_max_doppler_90deg-eps-converted-to.pdf 
-Graphic file (type pdf)
-
-<use images/simulation/elevation_angle_max_doppler_90deg-eps-converted-to.pdf>
-Package pdftex.def Info: images/simulation/elevation_angle_max_doppler_90deg-ep
-s-converted-to.pdf used on input line 270.
-(pdftex.def)             Requested size: 199.16928pt x 149.3739pt.
-Package epstopdf Info: Source file: <images/simulation/elevation_angle_max_dopp
 ler_180deg.eps>
-(epstopdf)                    date: 2016-10-14 16:27:11
-(epstopdf)                    size: 15027 bytes
+(epstopdf)                    date: 2016-11-02 16:19:43
+(epstopdf)                    size: 15036 bytes
 (epstopdf)             Output file: <images/simulation/elevation_angle_max_dopp
 ler_180deg-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-14 16:28:59
-(epstopdf)                    size: 10237 bytes
+(epstopdf)                    date: 2016-11-02 16:19:53
+(epstopdf)                    size: 10413 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/simulation/elevatio
 n_angle_max_doppler_180deg-eps-converted-to.pdf images/simulation/elevation_ang
 le_max_doppler_180deg.eps>
-(epstopdf)             \includegraphics on input line 274.
+(epstopdf)             \includegraphics on input line 254.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/simulation/elevation_angle_max_doppler_180deg-eps-converted-to.pdf, id=
-1141, 562.1pt x 421.575pt>
+1137, 562.1pt x 421.575pt>
 File: images/simulation/elevation_angle_max_doppler_180deg-eps-converted-to.pdf
  Graphic file (type pdf)
 
 <use images/simulation/elevation_angle_max_doppler_180deg-eps-converted-to.pdf>
 Package pdftex.def Info: images/simulation/elevation_angle_max_doppler_180deg-e
-ps-converted-to.pdf used on input line 274.
+ps-converted-to.pdf used on input line 254.
+(pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
+Package epstopdf Info: Source file: <images/simulation/elevation_angle_max_dopp
+ler_0deg.eps>
+(epstopdf)                    date: 2016-11-14 14:35:43
+(epstopdf)                    size: 15032 bytes
+(epstopdf)             Output file: <images/simulation/elevation_angle_max_dopp
+ler_0deg-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-11-14 14:35:56
+(epstopdf)                    size: 10407 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/simulation/elevatio
+n_angle_max_doppler_0deg-eps-converted-to.pdf images/simulation/elevation_angle
+_max_doppler_0deg.eps>
+(epstopdf)             \includegraphics on input line 266.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/simulation/elevation_angle_max_doppler_0deg-eps-converted-to.pdf, id=11
+43, 562.1pt x 421.575pt>
+File: images/simulation/elevation_angle_max_doppler_0deg-eps-converted-to.pdf G
+raphic file (type pdf)
+
+<use images/simulation/elevation_angle_max_doppler_0deg-eps-converted-to.pdf>
+Package pdftex.def Info: images/simulation/elevation_angle_max_doppler_0deg-eps
+-converted-to.pdf used on input line 266.
+(pdftex.def)             Requested size: 199.16928pt x 149.3739pt.
+Package epstopdf Info: Source file: <images/simulation/elevation_angle_max_dopp
+ler_90deg.eps>
+(epstopdf)                    date: 2016-11-14 14:39:23
+(epstopdf)                    size: 14873 bytes
+(epstopdf)             Output file: <images/simulation/elevation_angle_max_dopp
+ler_90deg-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-11-14 14:39:36
+(epstopdf)                    size: 10327 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/simulation/elevatio
+n_angle_max_doppler_90deg-eps-converted-to.pdf images/simulation/elevation_angl
+e_max_doppler_90deg.eps>
+(epstopdf)             \includegraphics on input line 269.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/simulation/elevation_angle_max_doppler_90deg-eps-converted-to.pdf, id=1
+144, 562.1pt x 421.575pt>
+File: images/simulation/elevation_angle_max_doppler_90deg-eps-converted-to.pdf 
+Graphic file (type pdf)
+
+<use images/simulation/elevation_angle_max_doppler_90deg-eps-converted-to.pdf>
+Package pdftex.def Info: images/simulation/elevation_angle_max_doppler_90deg-ep
+s-converted-to.pdf used on input line 269.
+(pdftex.def)             Requested size: 199.16928pt x 149.3739pt.
+Package epstopdf Info: Source file: <images/simulation/elevation_angle_max_dopp
+ler_180deg.eps>
+(epstopdf)                    date: 2016-11-02 16:19:43
+(epstopdf)                    size: 15036 bytes
+(epstopdf)             Output file: <images/simulation/elevation_angle_max_dopp
+ler_180deg-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-11-02 16:19:53
+(epstopdf)                    size: 10413 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/simulation/elevatio
+n_angle_max_doppler_180deg-eps-converted-to.pdf images/simulation/elevation_ang
+le_max_doppler_180deg.eps>
+(epstopdf)             \includegraphics on input line 273.
+Package epstopdf Info: Output file is already uptodate.
+File: images/simulation/elevation_angle_max_doppler_180deg-eps-converted-to.pdf
+ Graphic file (type pdf)
+
+<use images/simulation/elevation_angle_max_doppler_180deg-eps-converted-to.pdf>
+Package pdftex.def Info: images/simulation/elevation_angle_max_doppler_180deg-e
+ps-converted-to.pdf used on input line 273.
 (pdftex.def)             Requested size: 199.16928pt x 149.3739pt.
 Package epstopdf Info: Source file: <images/simulation/elevation_angle_max_dopp
 ler_270deg.eps>
-(epstopdf)                    date: 2016-10-14 16:25:15
-(epstopdf)                    size: 14912 bytes
+(epstopdf)                    date: 2016-11-14 14:40:53
+(epstopdf)                    size: 14873 bytes
 (epstopdf)             Output file: <images/simulation/elevation_angle_max_dopp
 ler_270deg-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-14 16:29:00
-(epstopdf)                    size: 10096 bytes
+(epstopdf)                    date: 2016-11-14 14:41:04
+(epstopdf)                    size: 10332 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/simulation/elevatio
 n_angle_max_doppler_270deg-eps-converted-to.pdf images/simulation/elevation_ang
 le_max_doppler_270deg.eps>
-(epstopdf)             \includegraphics on input line 277.
+(epstopdf)             \includegraphics on input line 276.
 Package epstopdf Info: Output file is already uptodate.
 
 <images/simulation/elevation_angle_max_doppler_270deg-eps-converted-to.pdf, id=
-1142, 562.1pt x 421.575pt>
+1145, 562.1pt x 421.575pt>
 File: images/simulation/elevation_angle_max_doppler_270deg-eps-converted-to.pdf
  Graphic file (type pdf)
 
 <use images/simulation/elevation_angle_max_doppler_270deg-eps-converted-to.pdf>
 Package pdftex.def Info: images/simulation/elevation_angle_max_doppler_270deg-e
-ps-converted-to.pdf used on input line 277.
+ps-converted-to.pdf used on input line 276.
 (pdftex.def)             Requested size: 199.16928pt x 149.3739pt.
-) [53 <./images/simulation/range_elevation_rel-eps-converted-to.pdf>] [54 <./im
-ages/simulation/elevation_angle_max_doppler_135deg-eps-converted-to.pdf>]
-[55 <./images/simulation/elevation_angle_max_doppler_0deg-eps-converted-to.pdf>
+) [54 <./images/simulation/range_elevation_rel-eps-converted-to.pdf>] [55 <./im
+ages/simulation/elevation_angle_max_doppler_180deg-eps-converted-to.pdf>]
+[56 <./images/simulation/elevation_angle_max_doppler_0deg-eps-converted-to.pdf>
  <./images/simulation/elevation_angle_max_doppler_90deg-eps-converted-to.pdf> <
-./images/simulation/elevation_angle_max_doppler_180deg-eps-converted-to.pdf> <.
-/images/simulation/elevation_angle_max_doppler_270deg-eps-converted-to.pdf>]
+./images/simulation/elevation_angle_max_doppler_270deg-eps-converted-to.pdf>]
 \openout2 = `Results_new.aux'.
 
 
@@ -2517,7 +2505,7 @@ stimation_max_vs_absMin.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/results/Azimuth_angle_estimation_max_vs_absMin-eps-converted-to.pdf, id
-=1214, 562.1pt x 421.575pt>
+=1209, 562.1pt x 421.575pt>
 File: images/results/Azimuth_angle_estimation_max_vs_absMin-eps-converted-to.pd
 f Graphic file (type pdf)
 
@@ -2526,7 +2514,7 @@ f Graphic file (type pdf)
 Package pdftex.def Info: images/results/Azimuth_angle_estimation_max_vs_absMin-
 eps-converted-to.pdf used on input line 15.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
- [56
+ [57
 
 
 
@@ -2534,12 +2522,12 @@ eps-converted-to.pdf used on input line 15.
 ]
 Package epstopdf Info: Source file: <images/results/Azimuth_angle_estimation_di
 fference.eps>
-(epstopdf)                    date: 2016-09-23 15:45:12
-(epstopdf)                    size: 14581 bytes
+(epstopdf)                    date: 2016-11-14 14:51:34
+(epstopdf)                    size: 14588 bytes
 (epstopdf)             Output file: <images/results/Azimuth_angle_estimation_di
 fference-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-09-23 15:46:08
-(epstopdf)                    size: 9611 bytes
+(epstopdf)                    date: 2016-11-14 14:51:51
+(epstopdf)                    size: 9606 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/results/Azimuth_ang
 le_estimation_difference-eps-converted-to.pdf images/results/Azimuth_angle_esti
 mation_difference.eps>
@@ -2547,7 +2535,7 @@ mation_difference.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/results/Azimuth_angle_estimation_difference-eps-converted-to.pdf, id=12
-21, 562.1pt x 421.575pt>
+16, 562.1pt x 421.575pt>
 File: images/results/Azimuth_angle_estimation_difference-eps-converted-to.pdf G
 raphic file (type pdf)
 
@@ -2556,10 +2544,10 @@ Package pdftex.def Info: images/results/Azimuth_angle_estimation_difference-eps
 -converted-to.pdf used on input line 33.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
 
-Overfull \hbox (31.666pt too wide) in paragraph at lines 39--40
+Overfull \hbox (34.46487pt too wide) in paragraph at lines 39--40
 \OT1/cmr/m/n/10.95 cor-rect Doppler for each az-imuth, from the $\OML/cmm/m/it/
-10.95 MaxUpperEnvelope$ \OT1/cmr/m/n/10.95 and the $\OMS/cmsy/m/n/10.95 j\OML/c
-mm/m/it/10.95 MinLowerEnvelope\OMS/cmsy/m/n/10.95 j$\OT1/cmr/m/n/10.95 ,
+10.95 MaxDopplerProfile$ \OT1/cmr/m/n/10.95 and the $\OMS/cmsy/m/n/10.95 j\OML/
+cmm/m/it/10.95 MinDopplerProfile\OMS/cmsy/m/n/10.95 j$\OT1/cmr/m/n/10.95 ,
  []
 
 LaTeX Font Info:    Try loading font information for OML+pcr on input line 45.
@@ -2568,7 +2556,7 @@ File: omlpcr.fd
 )
 LaTeX Font Info:    Font shape `OML/pcr/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 45.
- [57 <./images/results/Azimuth_angle_estimation_max_vs_absMin-eps-converted-to.
+ [58 <./images/results/Azimuth_angle_estimation_max_vs_absMin-eps-converted-to.
 pdf>]
 Package epstopdf Info: Source file: <images/results/Correct_doppler.eps>
 (epstopdf)                    date: 2016-09-19 12:24:33
@@ -2582,7 +2570,7 @@ pler-eps-converted-to.pdf images/results/Correct_doppler.eps>
 (epstopdf)             \includegraphics on input line 55.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/results/Correct_doppler-eps-converted-to.pdf, id=1244, 562.1pt x 421.57
+<images/results/Correct_doppler-eps-converted-to.pdf, id=1239, 562.1pt x 421.57
 5pt>
 File: images/results/Correct_doppler-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -2590,7 +2578,7 @@ f)
 Package pdftex.def Info: images/results/Correct_doppler-eps-converted-to.pdf us
 ed on input line 55.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
- [58 <./images/results/Azimuth_angle_estimation_difference-eps-converted-to.pdf
+ [59 <./images/results/Azimuth_angle_estimation_difference-eps-converted-to.pdf
 > <./images/results/Correct_doppler-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/results/Correct_doppler_with_Minumu
 m.eps>
@@ -2606,7 +2594,7 @@ mum.eps>
 (epstopdf)             \includegraphics on input line 72.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/results/Correct_doppler_with_Minumum-eps-converted-to.pdf, id=1270, 562
+<images/results/Correct_doppler_with_Minumum-eps-converted-to.pdf, id=1265, 562
 .1pt x 421.575pt>
 File: images/results/Correct_doppler_with_Minumum-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -2634,7 +2622,7 @@ peaks.eps>
 (epstopdf)             \includegraphics on input line 90.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/results/Correct_doppler_inverse_peaks-eps-converted-to.pdf, id=1271, 56
+<images/results/Correct_doppler_inverse_peaks-eps-converted-to.pdf, id=1266, 56
 2.1pt x 421.575pt>
 File: images/results/Correct_doppler_inverse_peaks-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -2644,7 +2632,7 @@ Package pdftex.def Info: images/results/Correct_doppler_inverse_peaks-eps-conve
 rted-to.pdf used on input line 90.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
 
-[59 <./images/results/Correct_doppler_with_Minumum-eps-converted-to.pdf>]
+[60 <./images/results/Correct_doppler_with_Minumum-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/results/average_power_vs_Azimuth.ep
 s>
 (epstopdf)                    date: 2016-09-21 17:39:04
@@ -2659,7 +2647,7 @@ er_vs_Azimuth-eps-converted-to.pdf images/results/average_power_vs_Azimuth.eps>
 (epstopdf)             \includegraphics on input line 101.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/results/average_power_vs_Azimuth-eps-converted-to.pdf, id=1292, 562.1pt
+<images/results/average_power_vs_Azimuth-eps-converted-to.pdf, id=1288, 562.1pt
  x 421.575pt>
 File: images/results/average_power_vs_Azimuth-eps-converted-to.pdf Graphic file
  (type pdf)
@@ -2668,7 +2656,7 @@ File: images/results/average_power_vs_Azimuth-eps-converted-to.pdf Graphic file
 Package pdftex.def Info: images/results/average_power_vs_Azimuth-eps-converted-
 to.pdf used on input line 101.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
- [60 <./images/results/Correct_doppler_inverse_peaks-eps-converted-to.pdf>]
+ [61 <./images/results/Correct_doppler_inverse_peaks-eps-converted-to.pdf>]
 Underfull \hbox (badness 2050) in paragraph at lines 135--135
 []|\OT1/cmr/m/n/10.95 Power Dif-fer-ence
  []
@@ -2683,7 +2671,7 @@ Overfull \hbox (17.04143pt too wide) in paragraph at lines 133--143
  [] 
  []
 
-[61 <./images/results/average_power_vs_Azimuth-eps-converted-to.pdf>]
+[62 <./images/results/average_power_vs_Azimuth-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <images/results/Estimated_reflection_radius
 _Azimuth_range.eps>
 (epstopdf)                    date: 2016-09-23 15:02:40
@@ -2699,7 +2687,7 @@ flection_radius_Azimuth_range.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/results/Estimated_reflection_radius_Azimuth_range-eps-converted-to.pdf,
- id=1326, 562.1pt x 421.575pt>
+ id=1320, 562.1pt x 421.575pt>
 File: images/results/Estimated_reflection_radius_Azimuth_range-eps-converted-to
 .pdf Graphic file (type pdf)
 
@@ -2708,10 +2696,10 @@ pdf>
 Package pdftex.def Info: images/results/Estimated_reflection_radius_Azimuth_ran
 ge-eps-converted-to.pdf used on input line 166.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
- [62]
-Overfull \hbox (12.29233pt too wide) in paragraph at lines 189--190
+ [63]
+Overfull \hbox (14.2943pt too wide) in paragraph at lines 189--190
 []\OT1/cmr/m/n/10.95 Then to find the el-e-va-tion an-gle we look back at equa-
-tion [][]2.6[][] swap-ping $\OML/cmm/m/it/10.95 MaxUpperEnvelope$
+tion [][]2.6[][] swap-ping $\OML/cmm/m/it/10.95 MaxDopplerProfile$
  []
 
 Package epstopdf Info: Source file: <images/results/Elevation_angle_comparason_
@@ -2729,7 +2717,7 @@ le_comparason_Azimuth_range.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/results/Elevation_angle_comparason_Azimuth_range-eps-converted-to.pdf, 
-id=1338, 562.1pt x 421.575pt>
+id=1333, 562.1pt x 421.575pt>
 File: images/results/Elevation_angle_comparason_Azimuth_range-eps-converted-to.
 pdf Graphic file (type pdf)
 
@@ -2738,7 +2726,7 @@ df>
 Package pdftex.def Info: images/results/Elevation_angle_comparason_Azimuth_rang
 e-eps-converted-to.pdf used on input line 210.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
- [63 <./images/results/Estimated_reflection_radius_Azimuth_range-eps-converted-
+ [64 <./images/results/Estimated_reflection_radius_Azimuth_range-eps-converted-
 to.pdf>]
 Package epstopdf Info: Source file: <images/results/Elevation_angle_percent_err
 or_Azimuth_range.eps>
@@ -2755,7 +2743,7 @@ angle_percent_error_Azimuth_range.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/results/Elevation_angle_percent_error_Azimuth_range-eps-converted-to.pd
-f, id=1356, 562.1pt x 421.575pt>
+f, id=1351, 562.1pt x 421.575pt>
 File: images/results/Elevation_angle_percent_error_Azimuth_range-eps-converted-
 to.pdf Graphic file (type pdf)
 
@@ -2769,31 +2757,27 @@ Overfull \hbox (14.37814pt too wide) in paragraph at lines 230--240
  [] 
  []
 
-[64 <./images/results/Elevation_angle_comparason_Azimuth_range-eps-converted-to
+[65 <./images/results/Elevation_angle_comparason_Azimuth_range-eps-converted-to
 .pdf>]
-Package epstopdf Info: Source file: <images/results/Elevation_angle_envelopes_1
-80deg_Azimuth.eps>
-(epstopdf)                    date: 2016-09-23 14:43:03
-(epstopdf)                    size: 15030 bytes
-(epstopdf)             Output file: <images/results/Elevation_angle_envelopes_1
-80deg_Azimuth-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-09-23 14:43:10
-(epstopdf)                    size: 10243 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/results/Elevation_a
-ngle_envelopes_180deg_Azimuth-eps-converted-to.pdf images/results/Elevation_ang
-le_envelopes_180deg_Azimuth.eps>
+Package epstopdf Info: Source file: <images/simulation/elevation_angle_max_dopp
+ler_180deg.eps>
+(epstopdf)                    date: 2016-11-02 16:19:43
+(epstopdf)                    size: 15036 bytes
+(epstopdf)             Output file: <images/simulation/elevation_angle_max_dopp
+ler_180deg-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-11-02 16:19:53
+(epstopdf)                    size: 10413 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/simulation/elevatio
+n_angle_max_doppler_180deg-eps-converted-to.pdf images/simulation/elevation_ang
+le_max_doppler_180deg.eps>
 (epstopdf)             \includegraphics on input line 272.
 Package epstopdf Info: Output file is already uptodate.
+File: images/simulation/elevation_angle_max_doppler_180deg-eps-converted-to.pdf
+ Graphic file (type pdf)
 
-<images/results/Elevation_angle_envelopes_180deg_Azimuth-eps-converted-to.pdf, 
-id=1372, 562.1pt x 421.575pt>
-File: images/results/Elevation_angle_envelopes_180deg_Azimuth-eps-converted-to.
-pdf Graphic file (type pdf)
-
-<use images/results/Elevation_angle_envelopes_180deg_Azimuth-eps-converted-to.p
-df>
-Package pdftex.def Info: images/results/Elevation_angle_envelopes_180deg_Azimut
-h-eps-converted-to.pdf used on input line 272.
+<use images/simulation/elevation_angle_max_doppler_180deg-eps-converted-to.pdf>
+Package pdftex.def Info: images/simulation/elevation_angle_max_doppler_180deg-e
+ps-converted-to.pdf used on input line 272.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
 Package epstopdf Info: Source file: <images/results/Elevation_angle_comparason_
 180deg_Azimuth.eps>
@@ -2810,7 +2794,7 @@ gle_comparason_180deg_Azimuth.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/results/Elevation_angle_comparason_180deg_Azimuth-eps-converted-to.pdf,
- id=1373, 562.1pt x 421.575pt>
+ id=1367, 562.1pt x 421.575pt>
 File: images/results/Elevation_angle_comparason_180deg_Azimuth-eps-converted-to
 .pdf Graphic file (type pdf)
 
@@ -2819,10 +2803,9 @@ pdf>
 Package pdftex.def Info: images/results/Elevation_angle_comparason_180deg_Azimu
 th-eps-converted-to.pdf used on input line 281.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
- [65 <./images/results/Elevation_angle_percent_error_Azimuth_range-eps-converte
-d-to.pdf>] [66 <./images/results/Elevation_angle_envelopes_180deg_Azimuth-eps-c
-onverted-to.pdf> <./images/results/Elevation_angle_comparason_180deg_Azimuth-ep
-s-converted-to.pdf>]
+ [66 <./images/results/Elevation_angle_percent_error_Azimuth_range-eps-converte
+d-to.pdf>] [67 <./images/results/Elevation_angle_comparason_180deg_Azimuth-eps-
+converted-to.pdf>]
 Package epstopdf Info: Source file: <images/results/Elevation_angle_percent_err
 or_180deg_Azimuth.eps>
 (epstopdf)                    date: 2016-09-23 14:41:05
@@ -2838,7 +2821,7 @@ _angle_percent_error_180deg_Azimuth.eps>
 Package epstopdf Info: Output file is already uptodate.
 
 <images/results/Elevation_angle_percent_error_180deg_Azimuth-eps-converted-to.p
-df, id=1410, 562.1pt x 421.575pt>
+df, id=1396, 562.1pt x 421.575pt>
 File: images/results/Elevation_angle_percent_error_180deg_Azimuth-eps-converted
 -to.pdf Graphic file (type pdf)
 
@@ -2849,19 +2832,19 @@ imuth-eps-converted-to.pdf used on input line 292.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
 Package epstopdf Info: Source file: <images/results/difference_pitch_noCorrecti
 on.eps>
-(epstopdf)                    date: 2016-10-11 14:06:05
-(epstopdf)                    size: 14578 bytes
+(epstopdf)                    date: 2016-11-14 14:56:22
+(epstopdf)                    size: 14585 bytes
 (epstopdf)             Output file: <images/results/difference_pitch_noCorrecti
 on-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-10-11 14:14:25
-(epstopdf)                    size: 9594 bytes
+(epstopdf)                    date: 2016-11-14 14:56:30
+(epstopdf)                    size: 9588 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/results/difference_
 pitch_noCorrection-eps-converted-to.pdf images/results/difference_pitch_noCorre
 ction.eps>
 (epstopdf)             \includegraphics on input line 308.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/results/difference_pitch_noCorrection-eps-converted-to.pdf, id=1414, 56
+<images/results/difference_pitch_noCorrection-eps-converted-to.pdf, id=1400, 56
 2.1pt x 421.575pt>
 File: images/results/difference_pitch_noCorrection-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -2884,7 +2867,7 @@ rection.eps>
 (epstopdf)             \includegraphics on input line 316.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/results/correct_dop_pitch_noCorrection-eps-converted-to.pdf, id=1415, 5
+<images/results/correct_dop_pitch_noCorrection-eps-converted-to.pdf, id=1401, 5
 62.1pt x 421.575pt>
 File: images/results/correct_dop_pitch_noCorrection-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2894,10 +2877,10 @@ Package pdftex.def Info: images/results/correct_dop_pitch_noCorrection-eps-conv
 erted-to.pdf used on input line 316.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
 
-[67 <./images/results/Elevation_angle_percent_error_180deg_Azimuth-eps-converte
-d-to.pdf>] [68 <./images/results/difference_pitch_noCorrection-eps-converted-to
+[68 <./images/results/Elevation_angle_percent_error_180deg_Azimuth-eps-converte
+d-to.pdf>] [69 <./images/results/difference_pitch_noCorrection-eps-converted-to
 .pdf> <./images/results/correct_dop_pitch_noCorrection-eps-converted-to.pdf>])
-[69]
+[70]
 \openout2 = `Conclusion.aux'.
 
  (./Conclusion.tex
@@ -2905,12 +2888,12 @@ Chapter 6.
 ------------------------------------------------------------------------------
  6 Conclusion and Future Work
 ------------------------------------------------------------------------------
-[70
+[71
 
 
 
 
-]) [71]
+]) [72]
 \openout2 = `Ray_Tracing_Software.aux'.
 
  (./Ray_Tracing_Software.tex
@@ -2958,7 +2941,7 @@ Underfull \hbox (badness 7326) in paragraph at lines 26--26
 []|\OT1/cmr/m/n/10.95 number of ribs
  []
 
-[72
+[73
 
 
 
@@ -2993,19 +2976,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--53
 []|\OT1/cmr/m/n/10.95 azimuth
  []
 
-[73]) [74]
+[74]) [75]
 Appendix B.
 ------------------------------------------------------------------------------
  B Class Documentation
 ------------------------------------------------------------------------------
-[75
+[76
 
 
 ]
 \openout2 = `doxygen/latex/class_blade__surface.aux'.
 
  (./doxygen/latex/class_blade__surface.tex
-<doxygen/latex/class_blade__surface__coll__graph.pdf, id=1491, 211.79124pt x 47
+<doxygen/latex/class_blade__surface__coll__graph.pdf, id=1477, 211.79124pt x 47
 5.7775pt>
 File: doxygen/latex/class_blade__surface__coll__graph.pdf Graphic file (type pd
 f)
@@ -3013,14 +2996,14 @@ f)
 Package pdftex.def Info: doxygen/latex/class_blade__surface__coll__graph.pdf us
 ed on input line 10.
 (pdftex.def)             Requested size: 211.0pt x 474.01945pt.
- [76
+ [77
 
- <./doxygen/latex/class_blade__surface__coll__graph.pdf>]) [77]
+ <./doxygen/latex/class_blade__surface__coll__graph.pdf>]) [78]
 \openout2 = `doxygen/latex/class_bounding__box.aux'.
 
 
 (./doxygen/latex/class_bounding__box.tex
-<doxygen/latex/class_bounding__box__coll__graph.pdf, id=1553, 180.675pt x 398.4
+<doxygen/latex/class_bounding__box__coll__graph.pdf, id=1540, 180.675pt x 398.4
 8875pt>
 File: doxygen/latex/class_bounding__box__coll__graph.pdf Graphic file (type pdf
 )
@@ -3028,29 +3011,29 @@ File: doxygen/latex/class_bounding__box__coll__graph.pdf Graphic file (type pdf
 Package pdftex.def Info: doxygen/latex/class_bounding__box__coll__graph.pdf use
 d on input line 10.
 (pdftex.def)             Requested size: 180.0pt x 397.00414pt.
- [78
+ [79
 
 
- <./doxygen/latex/class_bounding__box__coll__graph.pdf>]) [79]
+ <./doxygen/latex/class_bounding__box__coll__graph.pdf>]) [80]
 \openout2 = `doxygen/latex/class_point3_d.aux'.
 
 
 (./doxygen/latex/class_point3_d.tex
-<doxygen/latex/class_point3_d__coll__graph.pdf, id=1596, 161.60374pt x 248.93pt
+<doxygen/latex/class_point3_d__coll__graph.pdf, id=1582, 161.60374pt x 248.93pt
 >
 File: doxygen/latex/class_point3_d__coll__graph.pdf Graphic file (type pdf)
  <use doxygen/latex/class_point3_d__coll__graph.pdf>
 Package pdftex.def Info: doxygen/latex/class_point3_d__coll__graph.pdf used on 
 input line 10.
 (pdftex.def)             Requested size: 161.0pt x 248.01398pt.
- [80
+ [81
 
 
- <./doxygen/latex/class_point3_d__coll__graph.pdf>]) [81]
+ <./doxygen/latex/class_point3_d__coll__graph.pdf>]) [82]
 \openout2 = `doxygen/latex/class_ray3_d.aux'.
 
  (./doxygen/latex/class_ray3_d.tex
-<doxygen/latex/class_ray3_d__coll__graph.pdf, id=1654, 254.9525pt x 398.48875pt
+<doxygen/latex/class_ray3_d__coll__graph.pdf, id=1640, 254.9525pt x 398.48875pt
 >
 File: doxygen/latex/class_ray3_d__coll__graph.pdf Graphic file (type pdf)
  <use doxygen/latex/class_ray3_d__coll__graph.pdf>
@@ -3063,128 +3046,128 @@ Overfull \hbox (11.83199pt too wide) in paragraph at lines 17--18
  const [][]Vec-tor3D[][] &di-rec-tion, const dou-ble power=1.0,
  []
 
-[82
+[83
 
 
- <./doxygen/latex/class_ray3_d__coll__graph.pdf>]) [83]
+ <./doxygen/latex/class_ray3_d__coll__graph.pdf>]) [84]
 \openout2 = `doxygen/latex/class_receiver.aux'.
 
 
 (./doxygen/latex/class_receiver.tex
-<doxygen/latex/class_receiver__coll__graph.pdf, id=1695, 195.73125pt x 464.7362
+<doxygen/latex/class_receiver__coll__graph.pdf, id=1682, 195.73125pt x 464.7362
 5pt>
 File: doxygen/latex/class_receiver__coll__graph.pdf Graphic file (type pdf)
  <use doxygen/latex/class_receiver__coll__graph.pdf>
 Package pdftex.def Info: doxygen/latex/class_receiver__coll__graph.pdf used on 
 input line 10.
 (pdftex.def)             Requested size: 195.0pt x 463.0261pt.
- [84
+ [85
 
 
- <./doxygen/latex/class_receiver__coll__graph.pdf>]) [85]
+ <./doxygen/latex/class_receiver__coll__graph.pdf>]) [86]
 \openout2 = `doxygen/latex/class_rib.aux'.
 
  (./doxygen/latex/class_rib.tex
-<doxygen/latex/class_rib__coll__graph.pdf, id=1745, 168.63pt x 204.765pt>
+<doxygen/latex/class_rib__coll__graph.pdf, id=1731, 168.63pt x 204.765pt>
 File: doxygen/latex/class_rib__coll__graph.pdf Graphic file (type pdf)
 
 <use doxygen/latex/class_rib__coll__graph.pdf>
 Package pdftex.def Info: doxygen/latex/class_rib__coll__graph.pdf used on input
  line 10.
 (pdftex.def)             Requested size: 168.0pt x 204.00523pt.
-) [86
+) [87
 
 
  <./doxygen/latex/class_rib__coll__graph.pdf>]
 \openout2 = `doxygen/latex/class_rotor.aux'.
 
  (./doxygen/latex/class_rotor.tex
-<doxygen/latex/class_rotor__coll__graph.pdf, id=1780, 196.735pt x 248.93pt>
+<doxygen/latex/class_rotor__coll__graph.pdf, id=1766, 196.735pt x 248.93pt>
 File: doxygen/latex/class_rotor__coll__graph.pdf Graphic file (type pdf)
 
 <use doxygen/latex/class_rotor__coll__graph.pdf>
 Package pdftex.def Info: doxygen/latex/class_rotor__coll__graph.pdf used on inp
 ut line 10.
 (pdftex.def)             Requested size: 196.0pt x 247.99878pt.
- [87
+ [88
 
 
- <./doxygen/latex/class_rotor__coll__graph.pdf>]) [88]
+ <./doxygen/latex/class_rotor__coll__graph.pdf>]) [89]
 \openout2 = `doxygen/latex/class_scene.aux'.
 
  (./doxygen/latex/class_scene.tex
-<doxygen/latex/class_scene__coll__graph.pdf, id=1827, 193.72375pt x 237.88875pt
+<doxygen/latex/class_scene__coll__graph.pdf, id=1813, 193.72375pt x 237.88875pt
 >
 File: doxygen/latex/class_scene__coll__graph.pdf Graphic file (type pdf)
  <use doxygen/latex/class_scene__coll__graph.pdf>
 Package pdftex.def Info: doxygen/latex/class_scene__coll__graph.pdf used on inp
 ut line 10.
 (pdftex.def)             Requested size: 193.0pt x 237.00246pt.
- [89
+ [90
 
 
- <./doxygen/latex/class_scene__coll__graph.pdf>]) [90]
+ <./doxygen/latex/class_scene__coll__graph.pdf>]) [91]
 \openout2 = `doxygen/latex/class_sphere.aux'.
 
  (./doxygen/latex/class_sphere.tex
-<doxygen/latex/class_sphere__coll__graph.pdf, id=1878, 161.60374pt x 387.4475pt
+<doxygen/latex/class_sphere__coll__graph.pdf, id=1864, 161.60374pt x 387.4475pt
 >
 File: doxygen/latex/class_sphere__coll__graph.pdf Graphic file (type pdf)
  <use doxygen/latex/class_sphere__coll__graph.pdf>
 Package pdftex.def Info: doxygen/latex/class_sphere__coll__graph.pdf used on in
 put line 10.
 (pdftex.def)             Requested size: 161.0pt x 386.02176pt.
- [91
+ [92
 
 
- <./doxygen/latex/class_sphere__coll__graph.pdf>]) [92]
+ <./doxygen/latex/class_sphere__coll__graph.pdf>]) [93]
 \openout2 = `doxygen/latex/class_transmitter.aux'.
 
  (./doxygen/latex/class_transmitter.tex
-<doxygen/latex/class_transmitter__coll__graph.pdf, id=1918, 177.66376pt x 442.6
+<doxygen/latex/class_transmitter__coll__graph.pdf, id=1904, 177.66376pt x 442.6
 5375pt>
 File: doxygen/latex/class_transmitter__coll__graph.pdf Graphic file (type pdf)
  <use doxygen/latex/class_transmitter__coll__graph.pdf>
 Package pdftex.def Info: doxygen/latex/class_transmitter__coll__graph.pdf used 
 on input line 10.
 (pdftex.def)             Requested size: 177.0pt x 441.01134pt.
- [93
+ [94
 
 
- <./doxygen/latex/class_transmitter__coll__graph.pdf>]) [94]
+ <./doxygen/latex/class_transmitter__coll__graph.pdf>]) [95]
 \openout2 = `doxygen/latex/class_triangle.aux'.
 
 
 (./doxygen/latex/class_triangle.tex
-<doxygen/latex/class_triangle__coll__graph.pdf, id=1965, 175.65625pt x 293.095p
+<doxygen/latex/class_triangle__coll__graph.pdf, id=1951, 175.65625pt x 293.095p
 t>
 File: doxygen/latex/class_triangle__coll__graph.pdf Graphic file (type pdf)
  <use doxygen/latex/class_triangle__coll__graph.pdf>
 Package pdftex.def Info: doxygen/latex/class_triangle__coll__graph.pdf used on 
 input line 10.
 (pdftex.def)             Requested size: 175.0pt x 292.02092pt.
- [95
+ [96
 
 
- <./doxygen/latex/class_triangle__coll__graph.pdf>]) [96]
+ <./doxygen/latex/class_triangle__coll__graph.pdf>]) [97]
 \openout2 = `doxygen/latex/class_vector3_d.aux'.
 
  (./doxygen/latex/class_vector3_d.tex
-<doxygen/latex/class_vector3_d__coll__graph.pdf, id=2025, 155.58125pt x 248.93p
+<doxygen/latex/class_vector3_d__coll__graph.pdf, id=2011, 155.58125pt x 248.93p
 t>
 File: doxygen/latex/class_vector3_d__coll__graph.pdf Graphic file (type pdf)
  <use doxygen/latex/class_vector3_d__coll__graph.pdf>
 Package pdftex.def Info: doxygen/latex/class_vector3_d__coll__graph.pdf used on
  input line 10.
 (pdftex.def)             Requested size: 155.0pt x 248.00258pt.
- [97
+ [98
 
 
- <./doxygen/latex/class_vector3_d__coll__graph.pdf>]) [98]
+ <./doxygen/latex/class_vector3_d__coll__graph.pdf>]) [99]
 ------------------------------------------------------------------------------
  Bibliography
 ------------------------------------------------------------------------------
-(./MSc. Thesis Template.bbl [99
+(./MSc. Thesis Template.bbl [100
 
 
 
@@ -3192,7 +3175,7 @@ Package pdftex.def Info: doxygen/latex/class_vector3_d__coll__graph.pdf used on
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
-[100]) [101]
+[101]) [102]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 320.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 320.
  (./MSc. Thesis Template.aux (./Introduction.aux) (./Background.aux) (./Radio_P
@@ -3217,10 +3200,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 320.
  ) 
 Here is how much of TeX's memory you used:
- 34192 strings out of 493089
- 663018 string characters out of 6134842
- 758353 words of memory out of 5000000
- 36496 multiletter control sequences out of 15000+600000
+ 34183 strings out of 493089
+ 662310 string characters out of 6134842
+ 758466 words of memory out of 5000000
+ 36488 multiletter control sequences out of 15000+600000
  17067 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,54p,10409b,2180s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3252,10 +3235,10 @@ e1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
 ublic/cm-super/sfrm1000.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
 lic/cm-super/sfrm1095.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/c
 ourier/ucrr8a.pfb>
-Output written on "MSc. Thesis Template.pdf" (102 pages, 14585373 bytes).
+Output written on "MSc. Thesis Template.pdf" (103 pages, 14635679 bytes).
 PDF statistics:
- 2293 PDF objects out of 2487 (max. 8388607)
- 1850 compressed objects within 19 object streams
- 472 named destinations out of 1000 (max. 500000)
- 869 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2280 PDF objects out of 2487 (max. 8388607)
+ 1842 compressed objects within 19 object streams
+ 473 named destinations out of 1000 (max. 500000)
+ 859 words of extra memory for PDF output out of 10000 (max. 10000000)
 

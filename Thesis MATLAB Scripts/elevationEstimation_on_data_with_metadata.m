@@ -4,11 +4,11 @@ clear;
 %--------------------------------------------------------------------------
 %Load Data
 %--------------------------------------------------------------------------
-files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/data_rangeFar_180deg/*.csv');
+files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/data_range_270deg_meta/*.csv');
 num_files = length(files);
 data = zeros(num_files,959006); %479000;
 for i=1:num_files
-     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/data_rangeFar_180deg/',files(i).name)));
+     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/data_range_270deg_meta/',files(i).name)));
 end
 
 %--------------------------------------------------------------------------
@@ -85,11 +85,12 @@ end
 
 figure;
 hold on
-plot((location_data(:,5)/(2*pi))*360,data_table(:,2))
+
 plot((location_data(:,5)/(2*pi))*360,data_table(:,1))
+plot((location_data(:,5)/(2*pi))*360,data_table(:,2))
 hold off
-legend('Max Upper Envelope', 'Min Lower Envelope');
-title('Max and Min Envelope Frequencies vs Transmitter Elevation Angle');
+legend('Max Doppler Profile', 'Min Doppler Profile');
+title('Max and Min Doppler Profile Frequencies vs Transmitter Elevation Angle');
 xlabel('Transmitter Elevation Angle (deg)');
 ylabel('Doppler Frequency (Hz)');
 

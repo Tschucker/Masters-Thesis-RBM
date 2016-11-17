@@ -87,6 +87,6 @@ plot(pitch,data_table(:,1))
 plot(pitch,data_table(:,2))
 hold off
 legend('Max Doppler Profile', 'Min Doppler Profile');
-title('Max and Min Envelope Frequencies vs Rotor Pitch');
+title('Max and Min Doppler Profile Frequencies vs Rotor Pitch');
 xlabel('Rotor Pitch (deg)');
 ylabel('Doppler Frequency (Hz)');

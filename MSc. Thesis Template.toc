@@ -19,55 +19,55 @@
 \contentsline {section}{\numberline {2.3}Thesis Scope}{17}{section.22}
 \contentsline {section}{\numberline {2.4}Geometric Models}{18}{section.23}
 \contentsline {subsection}{\numberline {2.4.1}2D Geometric Model}{18}{subsection.24}
-\contentsline {subsection}{\numberline {2.4.2}3D Geometric Model}{19}{subsection.28}
-\contentsline {subsubsection}{\numberline {2.4.2.1}Transmitter in-line with Receiver and Rotor Blade}{20}{subsubsection.29}
+\contentsline {subsection}{\numberline {2.4.2}3D Geometric Model}{20}{subsection.28}
+\contentsline {subsubsection}{\numberline {2.4.2.1}Transmitter in-line with Receiver and Rotor Blade}{21}{subsubsection.29}
 \contentsline {subsubsection}{\numberline {2.4.2.2}Approaching Model}{24}{subsubsection.38}
 \contentsline {subsubsection}{\numberline {2.4.2.3}Receding Model}{25}{subsubsection.42}
-\contentsline {chapter}{\numberline {3}Radio Propagation Simulation}{29}{chapter.46}
-\contentsline {section}{\numberline {3.1}Introduction}{29}{section.47}
-\contentsline {section}{\numberline {3.2}Radio Propagation Model}{29}{section.48}
-\contentsline {subsection}{\numberline {3.2.1}Free-Space Path Loss}{30}{subsection.49}
-\contentsline {subsection}{\numberline {3.2.2}Reflection}{30}{subsection.51}
-\contentsline {subsubsection}{\numberline {3.2.2.1}Specular Reflection}{30}{subsubsection.52}
-\contentsline {subsubsection}{\numberline {3.2.2.2}Reflection Loss}{30}{subsubsection.54}
-\contentsline {subsubsection}{\numberline {3.2.2.3}Diffuse Reflection}{31}{subsubsection.58}
-\contentsline {subsection}{\numberline {3.2.3}Fading}{31}{subsection.59}
-\contentsline {subsection}{\numberline {3.2.4}Doppler Effect}{32}{subsection.60}
-\contentsline {section}{\numberline {3.3}Scene Model}{33}{section.65}
-\contentsline {subsection}{\numberline {3.3.1}Rotor Blade}{33}{subsection.66}
-\contentsline {subsection}{\numberline {3.3.2}Transmitter}{35}{subsection.69}
-\contentsline {subsection}{\numberline {3.3.3}Receiver}{35}{subsection.71}
-\contentsline {section}{\numberline {3.4}Ray Tracing}{36}{section.72}
-\contentsline {subsection}{\numberline {3.4.1}Computation}{37}{subsection.73}
-\contentsline {subsection}{\numberline {3.4.2}Output}{38}{subsection.77}
-\contentsline {chapter}{\numberline {4}Received Signal Simulations}{40}{chapter.78}
-\contentsline {section}{\numberline {4.1}Introduction}{40}{section.79}
-\contentsline {section}{\numberline {4.2}Analysis Techniques}{40}{section.80}
-\contentsline {section}{\numberline {4.3}Receiver Position}{42}{section.83}
-\contentsline {section}{\numberline {4.4}Rotor Pitch}{45}{section.88}
-\contentsline {section}{\numberline {4.5}Transmitter Azimuth Angle}{48}{section.94}
-\contentsline {section}{\numberline {4.6}Transmitter Elevation Angle}{52}{section.101}
-\contentsline {chapter}{\numberline {5}Results}{56}{chapter.110}
-\contentsline {section}{\numberline {5.1}Introduction}{56}{section.111}
-\contentsline {section}{\numberline {5.2}Transmitter Azimuth Angle Estimation}{56}{section.112}
-\contentsline {section}{\numberline {5.3}Transmitter Elevation Angle Estimation}{62}{section.138}
-\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{70}{chapter.158}
-\contentsline {section}{\numberline {6.1}Summary}{70}{section.159}
-\contentsline {section}{\numberline {6.2}Future Work}{70}{section.160}
-\contentsline {chapter}{\numberline {A}Ray Tracing Software}{72}{appendix.161}
+\contentsline {chapter}{\numberline {3}Radio Propagation Simulation}{30}{chapter.46}
+\contentsline {section}{\numberline {3.1}Introduction}{30}{section.47}
+\contentsline {section}{\numberline {3.2}Radio Propagation Model}{30}{section.48}
+\contentsline {subsection}{\numberline {3.2.1}Free-Space Path Loss}{31}{subsection.49}
+\contentsline {subsection}{\numberline {3.2.2}Reflection}{31}{subsection.51}
+\contentsline {subsubsection}{\numberline {3.2.2.1}Specular Reflection}{31}{subsubsection.52}
+\contentsline {subsubsection}{\numberline {3.2.2.2}Reflection Loss}{31}{subsubsection.54}
+\contentsline {subsubsection}{\numberline {3.2.2.3}Diffuse Reflection}{32}{subsubsection.58}
+\contentsline {subsection}{\numberline {3.2.3}Fading}{32}{subsection.59}
+\contentsline {subsection}{\numberline {3.2.4}Doppler Effect}{33}{subsection.60}
+\contentsline {section}{\numberline {3.3}Scene Model}{34}{section.65}
+\contentsline {subsection}{\numberline {3.3.1}Rotor Blade}{34}{subsection.66}
+\contentsline {subsection}{\numberline {3.3.2}Transmitter}{36}{subsection.69}
+\contentsline {subsection}{\numberline {3.3.3}Receiver}{36}{subsection.71}
+\contentsline {section}{\numberline {3.4}Ray Tracing}{37}{section.72}
+\contentsline {subsection}{\numberline {3.4.1}Computation}{38}{subsection.73}
+\contentsline {subsection}{\numberline {3.4.2}Output}{40}{subsection.77}
+\contentsline {chapter}{\numberline {4}Received Signal Simulations}{41}{chapter.78}
+\contentsline {section}{\numberline {4.1}Introduction}{41}{section.79}
+\contentsline {section}{\numberline {4.2}Analysis Techniques}{41}{section.80}
+\contentsline {section}{\numberline {4.3}Receiver Position}{43}{section.83}
+\contentsline {section}{\numberline {4.4}Rotor Pitch}{46}{section.88}
+\contentsline {section}{\numberline {4.5}Transmitter Azimuth Angle}{49}{section.94}
+\contentsline {section}{\numberline {4.6}Transmitter Elevation Angle}{53}{section.101}
+\contentsline {chapter}{\numberline {5}Results}{57}{chapter.110}
+\contentsline {section}{\numberline {5.1}Introduction}{57}{section.111}
+\contentsline {section}{\numberline {5.2}Transmitter Azimuth Angle Estimation}{57}{section.112}
+\contentsline {section}{\numberline {5.3}Transmitter Elevation Angle Estimation}{63}{section.138}
+\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{71}{chapter.158}
+\contentsline {section}{\numberline {6.1}Summary}{71}{section.159}
+\contentsline {section}{\numberline {6.2}Future Work}{71}{section.160}
+\contentsline {chapter}{\numberline {A}Ray Tracing Software}{73}{appendix.161}
 \vspace {2em}
-\contentsline {chapter}{\numberline {B}Class Documentation}{75}{appendix.166}
-\contentsline {section}{\numberline {B.1}Blade\_surface Class Reference}{76}{section.167}
-\contentsline {section}{\numberline {B.2}Bounding\_box Class Reference}{78}{section.171}
-\contentsline {section}{\numberline {B.3}Point3D Class Reference}{80}{section.175}
-\contentsline {section}{\numberline {B.4}Ray3D Class Reference}{82}{section.179}
-\contentsline {section}{\numberline {B.5}Receiver Class Reference}{84}{section.183}
-\contentsline {section}{\numberline {B.6}Rib Class Reference}{86}{section.187}
-\contentsline {section}{\numberline {B.7}Rotor Class Reference}{87}{section.191}
-\contentsline {section}{\numberline {B.8}Scene Class Reference}{89}{section.195}
-\contentsline {section}{\numberline {B.9}Sphere Class Reference}{91}{section.198}
-\contentsline {section}{\numberline {B.10}Transmitter Class Reference}{93}{section.202}
-\contentsline {section}{\numberline {B.11}Triangle Class Reference}{95}{section.206}
-\contentsline {section}{\numberline {B.12}Vector3D Class Reference}{97}{section.209}
+\contentsline {chapter}{\numberline {B}Class Documentation}{76}{appendix.166}
+\contentsline {section}{\numberline {B.1}Blade\_surface Class Reference}{77}{section.167}
+\contentsline {section}{\numberline {B.2}Bounding\_box Class Reference}{79}{section.171}
+\contentsline {section}{\numberline {B.3}Point3D Class Reference}{81}{section.175}
+\contentsline {section}{\numberline {B.4}Ray3D Class Reference}{83}{section.179}
+\contentsline {section}{\numberline {B.5}Receiver Class Reference}{85}{section.183}
+\contentsline {section}{\numberline {B.6}Rib Class Reference}{87}{section.187}
+\contentsline {section}{\numberline {B.7}Rotor Class Reference}{88}{section.191}
+\contentsline {section}{\numberline {B.8}Scene Class Reference}{90}{section.195}
+\contentsline {section}{\numberline {B.9}Sphere Class Reference}{92}{section.198}
+\contentsline {section}{\numberline {B.10}Transmitter Class Reference}{94}{section.202}
+\contentsline {section}{\numberline {B.11}Triangle Class Reference}{96}{section.206}
+\contentsline {section}{\numberline {B.12}Vector3D Class Reference}{98}{section.209}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{99}{dummy.212}
+\contentsline {chapter}{Bibliography}{100}{dummy.212}
