@@ -108,25 +108,38 @@ Figure \ref{fig:ave_power}  shows the average power at each angle sample with th
 
 From there the minimum method and the peak method can be compared to see if they agree on the 90\textdegree \space location. If this is not the case one will be chosen and the helicopter can fly in that direction. The resulting Doppler can then be measured, based on the physical movement of the helicopter or if the resulting profile, to confirm the correct 90\textdegree \space location. 
 
+\textcolor{red}{EDITED}
+
+The defined algorithm is then applied to a set of deterministic signals with various elevation angles and helicopter altitudes. There are 41 samples that make up the helicopter rotation starting at 0\textdegree \space following a counter clock wise progression ending back at 0\textdegree. This sampling method includes the 90\textdegree \space point but since there are only 41 discrete points there is an inherent error in the estimation of:
+
+\begin{equation}
+	\theta_{E_{samp}} = \frac{360}{2 n_{samples}}
+	\label{eqn:samp_error}
+\end{equation}
+
+where $\theta_{E_{samp}}$ is the error, in degrees, on either side of the algorithm selected 90\textdegree \space point, $n_{samples}$ is the number of unique sample angles. Therefore in this example there would be 40 unique sample points and a  $\theta_{E_{samp}} = 4.5$\textdegree.
+
 %azimuth error table
 \begin{table}
 \begin{center}
     \begin{tabular}{ | l | l | l | l |}
     \hline
     Altitude & Elevation Angle & Azimuth Error in (deg) & Percent Error \\ \hline
-     200 & 76\textdegree & 0 & 0  \\ \hline
-     200 & 45\textdegree & 0 & 0  \\ \hline 
-     200 & 26.5\textdegree & 0 & 0  \\ \hline
-     500 & 78.7\textdegree & 0 & 0  \\ \hline
-     500 & 51.34\textdegree & 0 & 0  \\ \hline 
-     500 & 35.5\textdegree & 0 & 0  \\ \hline
+     200 & 76\textdegree & $\pm4.5$\textdegree & $\pm5\%$  \\ \hline
+     200 & 45\textdegree & $\pm4.5$\textdegree & $\pm5\%$  \\ \hline 
+     200 & 26.5\textdegree & $\pm4.5$\textdegree & $\pm5\%$  \\ \hline
+     500 & 78.7\textdegree & $\pm4.5$\textdegree & $\pm5\%$  \\ \hline
+     500 & 51.34\textdegree & $\pm4.5$\textdegree & $\pm5\%$  \\ \hline 
+     500 & 35.5\textdegree & $\pm4.5$\textdegree & $\pm5\%$  \\ \hline
     \end{tabular}
      \caption{Azimuth Error and Azimuth Percent Error of Different Elevation Angles During Azimuth Estimation}
     \label{tab:az_error_and_percent}
 \end{center}
 \end{table}
 
-From Table \ref{tab:az_error_and_percent} we can see that there is no error in the estimation of the 90\textdegree \space point over a variety of altitude and elevation angles that were tested. But because the algorithm could potentially pick the 270\textdegree \space we will analyze the difference in peak heights and the power difference to evaluate the estimation further.
+\textcolor{red}{EDITED}
+
+From Table \ref{tab:az_error_and_percent} we can see that the algorithm finds the exact 90\textdegree \space sample point over a variety of altitude and elevation angles of the deterministic signals. We analyze the difference in peak heights and the power difference to evaluate the estimation further due to the above accuracy.
 
 \begin{table}
 \begin{center}
@@ -145,7 +158,79 @@ From Table \ref{tab:az_error_and_percent} we can see that there is no error in t
 \end{center}
 \end{table}
 
-From Table \ref{tab:peaks_and_power} we can see that at the larger elevation angles the peak percent difference are significant to determine which is correctly the 90\textdegree \space value. Although from the frequency difference, at the large elevation angles, it is possible to confuse the estimation by just taking the minimum frequency. Therefore other values need to play a role such as the received power.
+From Table \ref{tab:peaks_and_power} we can see that at the larger elevation angles the peak percent difference are significant to determine which is correctly the 90\textdegree \space value. Although from the frequency difference, at the large elevation angles, it is possible to confuse the estimation by just taking the minimum frequency. Therefore other values need to play a role such as the received power in the following non-deterministic test signals.
+
+\textcolor{red}{EDITED}
+
+%alt 200
+%50 20db noise
+%200 12db noise
+%400 11.5db noise
+
+%alt 500
+%100 20db noise
+%400 12db noise
+%700 11.5db noise
+
+%azimuth error table
+\begin{table}
+\begin{center}
+    \begin{tabular}{ | l | l | l | l |}
+    \hline
+     Altitude & Elevation Angle & Azimuth Error in (deg) & Percent Error \\ \hline
+     200 & 76\textdegree & $\pm4.5$\textdegree & $\pm5\%$  \\ \hline
+     200 & 45\textdegree & $\pm4.5$\textdegree & $\pm5\%$  \\ \hline 
+     200 & 26.5\textdegree & $\pm$\textdegree & $\pm\%$  \\ \hline
+     500 & 78.7\textdegree & $\pm4.5$\textdegree & $\pm5\%$  \\ \hline
+     500 & 51.34\textdegree & $\pm4.5$\textdegree & $\pm5\%$  \\ \hline 
+     500 & 35.5\textdegree & $\pm$\textdegree & $\pm\%$  \\ \hline
+    \end{tabular}
+     \caption{Azimuth Error and Azimuth Percent Error of Different Elevation Angles 11.5dB Noise}
+    \label{tab:az_error_and_percent_11db}
+\end{center}
+\end{table}
+
+(text on trends in error with noise level at 11.5dB)
+
+%azimuth error table
+\begin{table}
+\begin{center}
+    \begin{tabular}{ | l | l | l | l |}
+    \hline
+     Altitude & Elevation Angle & Azimuth Error in (deg) & Percent Error \\ \hline
+     200 & 76\textdegree & $\pm4.5$\textdegree & $\pm5\%$  \\ \hline
+     200 & 45\textdegree & $\pm$\textdegree & $\pm\%$  \\ \hline 
+     200 & 26.5\textdegree & $\pm$\textdegree & $\pm\%$  \\ \hline
+     500 & 78.7\textdegree & $\pm4.5$\textdegree & $\pm5\%$  \\ \hline
+     500 & 51.34\textdegree & $\pm$\textdegree & $\pm\%$  \\ \hline 
+     500 & 35.5\textdegree & $\pm$\textdegree & $\pm\%$  \\ \hline
+    \end{tabular}
+     \caption{Azimuth Error and Azimuth Percent Error of Different Elevation Angles 12dB Noise}
+    \label{tab:az_error_and_percent_12db}
+\end{center}
+\end{table}
+
+(text on trends in error with noise level at 12dB)
+
+%azimuth error table
+\begin{table}
+\begin{center}
+    \begin{tabular}{ | l | l | l | l |}
+    \hline
+     Altitude & Elevation Angle & Azimuth Error in (deg) & Percent Error \\ \hline
+     200 & 76\textdegree & $\pm$\textdegree & $\pm\%$  \\ \hline
+     200 & 45\textdegree & $\pm$\textdegree & $\pm\%$  \\ \hline 
+     200 & 26.5\textdegree & $\pm$\textdegree & $\pm\%$  \\ \hline
+     500 & 78.7\textdegree & $\pm$\textdegree & $\pm\%$  \\ \hline
+     500 & 51.34\textdegree & $\pm$\textdegree & $\pm\%$  \\ \hline 
+     500 & 35.5\textdegree & $\pm$\textdegree & $\pm\%$  \\ \hline
+    \end{tabular}
+     \caption{Azimuth Error and Azimuth Percent Error of Different Elevation Angles 20dB Noise}
+    \label{tab:az_error_and_percent_20db}
+\end{center}
+\end{table}
+
+(text on trends in error with noise level at 20dB)
 
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -243,6 +328,68 @@ Figure \ref{fig:elevation_comparason_azimuth_range} shows the estimation of the 
 \end{table}
 
 From Table \ref{tab:elevation_error_percent} we can see elevation estimation error is extremely small for the given elevation angles. There is a trend that is evident in the data that as the elevation angle decreases the amount of error is increasing.
+
+\textcolor{red}{EDITED}
+
+% Elevation error table
+\begin{table}
+\begin{center}
+    \begin{tabular}{ | l | l | l | l |}
+    \hline
+    Altitude & Elevation Angle & Average Elevation Error in (deg) & Average Percent Error \\ \hline
+     200 & 76\textdegree & \textdegree & \%  \\ \hline
+     200 & 45\textdegree & \textdegree & \%  \\ \hline 
+     200 & 26.5\textdegree & \textdegree & \%  \\ \hline
+     500 & 78.7\textdegree & \textdegree & \% \\ \hline
+     500 & 51.34\textdegree & \textdegree & \%  \\ \hline 
+     500 & 35.5\textdegree & \textdegree & \%  \\ \hline
+    \end{tabular}
+    \caption{Average Elevation Error and Average Elevation Percent Error of Different Elevation Angles 11.5dB Noise}
+    \label{tab:elevation_error_percent_11.5db}
+\end{center}
+\end{table}
+
+(text on trends in error with noise level at 11.5dB)
+
+% Elevation error table
+\begin{table}
+\begin{center}
+    \begin{tabular}{ | l | l | l | l |}
+    \hline
+    Altitude & Elevation Angle & Average Elevation Error in (deg) & Average Percent Error \\ \hline
+     200 & 76\textdegree & \textdegree & \%  \\ \hline
+     200 & 45\textdegree & \textdegree & \%  \\ \hline 
+     200 & 26.5\textdegree & \textdegree & \%  \\ \hline
+     500 & 78.7\textdegree & \textdegree & \% \\ \hline
+     500 & 51.34\textdegree & \textdegree & \%  \\ \hline 
+     500 & 35.5\textdegree & \textdegree & \%  \\ \hline
+    \end{tabular}
+    \caption{Average Elevation Error and Average Elevation Percent Error of Different Elevation Angles 12dB Noise}
+    \label{tab:elevation_error_percent_12db}
+\end{center}
+\end{table}
+
+(text on trends in error with noise level at 12dB)
+
+% Elevation error table
+\begin{table}
+\begin{center}
+    \begin{tabular}{ | l | l | l | l |}
+    \hline
+    Altitude & Elevation Angle & Average Elevation Error in (deg) & Average Percent Error \\ \hline
+     200 & 76\textdegree & \textdegree & \%  \\ \hline
+     200 & 45\textdegree & \textdegree & \%  \\ \hline 
+     200 & 26.5\textdegree & \textdegree & \%  \\ \hline
+     500 & 78.7\textdegree & \textdegree & \% \\ \hline
+     500 & 51.34\textdegree & \textdegree & \%  \\ \hline 
+     500 & 35.5\textdegree & \textdegree & \%  \\ \hline
+    \end{tabular}
+    \caption{Average Elevation Error and Average Elevation Percent Error of Different Elevation Angles 20dB Noise}
+    \label{tab:elevation_error_percent_20db}
+\end{center}
+\end{table}
+
+(text on trends in error with noise level at 20dB)
 
 %-----------------------------------------------------
 % range limitations of this aproximation

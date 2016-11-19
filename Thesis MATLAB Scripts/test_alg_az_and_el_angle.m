@@ -4,11 +4,11 @@ clear;
 %--------------------------------------------------------------------------
 %Load Data
 %--------------------------------------------------------------------------
-files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rotate_degs_200m/*.csv');
+files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_500m/rotate_degs_700m/*.csv');
 num_files = length(files);
 data = zeros(num_files,479000); %959000;  479000
 for i=1:num_files
-     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rotate_degs_200m/',files(i).name)));
+     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_500m/rotate_degs_700m/',files(i).name)));
 end
 
 %--------------------------------------------------------------------------
@@ -16,10 +16,10 @@ end
 %--------------------------------------------------------------------------
 fs = 4000;
 RPM = 250;
-Altitude = 200;
+Altitude = 500;
 fc = 1e9;
 c = 3e8;
-tx_range = 200;
+tx_range = 700;
 pitch_corrected = 0;
 
 %--------------------------------------------------------------------------
@@ -93,8 +93,8 @@ for i=1:num_files
 end
 
 %fix estimation error on first envelope -----
-%data_table(1,1) = data_table(length(data_table),1);
-%data_table(1,2) = data_table(length(data_table),2);
+data_table(1,1) = data_table(length(data_table),1);
+data_table(1,2) = data_table(length(data_table),2);
 %important ----------------------------------
 
 

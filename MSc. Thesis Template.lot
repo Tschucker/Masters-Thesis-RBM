@@ -3,11 +3,17 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Azimuth Error and Azimuth Percent Error of Different Elevation Angles During Azimuth Estimation\relax }}{62}{table.caption.136}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Percent Peak, Power, and Frequency Difference of Different Elevation Angles During Azimuth Estimation\relax }}{63}{table.caption.137}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Average Elevation Error and Average Elevation Percent Error of Different Elevation Angles During Azimuth Estimation\relax }}{65}{table.caption.147}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Azimuth Error and Azimuth Percent Error of Different Elevation Angles During Azimuth Estimation\relax }}{63}{table.caption.137}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Percent Peak, Power, and Frequency Difference of Different Elevation Angles During Azimuth Estimation\relax }}{63}{table.caption.138}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Azimuth Error and Azimuth Percent Error of Different Elevation Angles 11.5dB Noise\relax }}{63}{table.caption.139}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Azimuth Error and Azimuth Percent Error of Different Elevation Angles 12dB Noise\relax }}{64}{table.caption.140}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Azimuth Error and Azimuth Percent Error of Different Elevation Angles 20dB Noise\relax }}{64}{table.caption.141}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Average Elevation Error and Average Elevation Percent Error of Different Elevation Angles During Azimuth Estimation\relax }}{67}{table.caption.151}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Average Elevation Error and Average Elevation Percent Error of Different Elevation Angles 11.5dB Noise\relax }}{68}{table.caption.152}
+\contentsline {table}{\numberline {5.8}{\ignorespaces Average Elevation Error and Average Elevation Percent Error of Different Elevation Angles 12dB Noise\relax }}{68}{table.caption.153}
+\contentsline {table}{\numberline {5.9}{\ignorespaces Average Elevation Error and Average Elevation Percent Error of Different Elevation Angles 20dB Noise\relax }}{68}{table.caption.154}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Simulation parameters\relax }}{74}{table.caption.162}
-\contentsline {table}{\numberline {A.2}{\ignorespaces Output file header with simulation parameter order\relax }}{75}{table.caption.163}
+\contentsline {table}{\numberline {A.1}{\ignorespaces Simulation parameters\relax }}{76}{table.caption.169}
+\contentsline {table}{\numberline {A.2}{\ignorespaces Output file header with simulation parameter order\relax }}{77}{table.caption.170}
 \addvspace {10\p@ }

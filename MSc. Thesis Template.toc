@@ -50,24 +50,24 @@
 \contentsline {chapter}{\numberline {5}Results}{57}{chapter.110}
 \contentsline {section}{\numberline {5.1}Introduction}{57}{section.111}
 \contentsline {section}{\numberline {5.2}Transmitter Azimuth Angle Estimation}{57}{section.112}
-\contentsline {section}{\numberline {5.3}Transmitter Elevation Angle Estimation}{63}{section.138}
-\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{71}{chapter.158}
-\contentsline {section}{\numberline {6.1}Summary}{71}{section.159}
-\contentsline {section}{\numberline {6.2}Future Work}{71}{section.160}
-\contentsline {chapter}{\numberline {A}Ray Tracing Software}{73}{appendix.161}
+\contentsline {section}{\numberline {5.3}Transmitter Elevation Angle Estimation}{64}{section.142}
+\contentsline {chapter}{\numberline {6}Conclusion and Future Work}{73}{chapter.165}
+\contentsline {section}{\numberline {6.1}Summary}{73}{section.166}
+\contentsline {section}{\numberline {6.2}Future Work}{73}{section.167}
+\contentsline {chapter}{\numberline {A}Ray Tracing Software}{75}{appendix.168}
 \vspace {2em}
-\contentsline {chapter}{\numberline {B}Class Documentation}{76}{appendix.166}
-\contentsline {section}{\numberline {B.1}Blade\_surface Class Reference}{77}{section.167}
-\contentsline {section}{\numberline {B.2}Bounding\_box Class Reference}{79}{section.171}
-\contentsline {section}{\numberline {B.3}Point3D Class Reference}{81}{section.175}
-\contentsline {section}{\numberline {B.4}Ray3D Class Reference}{83}{section.179}
-\contentsline {section}{\numberline {B.5}Receiver Class Reference}{85}{section.183}
-\contentsline {section}{\numberline {B.6}Rib Class Reference}{87}{section.187}
-\contentsline {section}{\numberline {B.7}Rotor Class Reference}{88}{section.191}
-\contentsline {section}{\numberline {B.8}Scene Class Reference}{90}{section.195}
-\contentsline {section}{\numberline {B.9}Sphere Class Reference}{92}{section.198}
-\contentsline {section}{\numberline {B.10}Transmitter Class Reference}{94}{section.202}
-\contentsline {section}{\numberline {B.11}Triangle Class Reference}{96}{section.206}
-\contentsline {section}{\numberline {B.12}Vector3D Class Reference}{98}{section.209}
+\contentsline {chapter}{\numberline {B}Class Documentation}{78}{appendix.173}
+\contentsline {section}{\numberline {B.1}Blade\_surface Class Reference}{79}{section.174}
+\contentsline {section}{\numberline {B.2}Bounding\_box Class Reference}{81}{section.178}
+\contentsline {section}{\numberline {B.3}Point3D Class Reference}{83}{section.182}
+\contentsline {section}{\numberline {B.4}Ray3D Class Reference}{85}{section.186}
+\contentsline {section}{\numberline {B.5}Receiver Class Reference}{87}{section.190}
+\contentsline {section}{\numberline {B.6}Rib Class Reference}{89}{section.194}
+\contentsline {section}{\numberline {B.7}Rotor Class Reference}{90}{section.198}
+\contentsline {section}{\numberline {B.8}Scene Class Reference}{92}{section.202}
+\contentsline {section}{\numberline {B.9}Sphere Class Reference}{94}{section.205}
+\contentsline {section}{\numberline {B.10}Transmitter Class Reference}{96}{section.209}
+\contentsline {section}{\numberline {B.11}Triangle Class Reference}{98}{section.213}
+\contentsline {section}{\numberline {B.12}Vector3D Class Reference}{100}{section.216}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{100}{dummy.212}
+\contentsline {chapter}{Bibliography}{102}{dummy.219}
