@@ -4,11 +4,11 @@ clear;
 %--------------------------------------------------------------------------
 %Load Data
 %--------------------------------------------------------------------------
-files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_500m/rotate_degs_700m/*.csv');
+files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rotate_degs_400m/*.csv');
 num_files = length(files);
 data = zeros(num_files,479000); %959000;  479000
 for i=1:num_files
-     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_500m/rotate_degs_700m/',files(i).name)));
+     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rotate_degs_400m/',files(i).name)));
 end
 
 %--------------------------------------------------------------------------
@@ -16,10 +16,10 @@ end
 %--------------------------------------------------------------------------
 fs = 4000;
 RPM = 250;
-Altitude = 500;
+Altitude = 200;
 fc = 1e9;
 c = 3e8;
-tx_range = 700;
+tx_range = 400;
 pitch_corrected = 0;
 
 %--------------------------------------------------------------------------
@@ -287,5 +287,6 @@ figure;
 plot(Azimuth,((test_alg_Elevation_angle_actual - atan(Altitude/tx_range))./atan(Altitude/tx_range))*100);
 title('Percent Error actual')
 
-AverageElevationError = (mean((test_alg_Elevation_angle_adj - atan(Altitude/tx_range)))/(2*pi))*360
-AverageElevationPercentError = mean(((test_alg_Elevation_angle_adj - atan(Altitude/tx_range))./atan(Altitude/tx_range))*100)
+AverageElevationError = (mean((abs(test_alg_Elevation_angle_adj) - atan(Altitude/tx_range)))/(2*pi))*360
+AverageElevationPercentError = mean(((abs(test_alg_Elevation_angle_adj) - atan(Altitude/tx_range))./atan(Altitude/tx_range))*100)
+close all;

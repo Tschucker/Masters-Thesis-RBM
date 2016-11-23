@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  19 NOV 2016 01:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  23 NOV 2016 01:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2001,11 +2001,11 @@ df used on input line 47.
 to.pdf>]
 Package epstopdf Info: Source file: <images/simulation/receiver_position_max_do
 ppler.eps>
-(epstopdf)                    date: 2016-11-14 15:01:56
+(epstopdf)                    date: 2016-11-14 14:01:56
 (epstopdf)                    size: 14828 bytes
 (epstopdf)             Output file: <images/simulation/receiver_position_max_do
 ppler-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-11-14 15:02:02
+(epstopdf)                    date: 2016-11-14 14:02:02
 (epstopdf)                    size: 9765 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/simulation/receiver
 _position_max_doppler-eps-converted-to.pdf images/simulation/receiver_position_
@@ -2090,11 +2090,11 @@ Package pdftex.def Info: images/simulation/pitch-eps-converted-to.pdf used on i
 nput line 96.
 (pdftex.def)             Requested size: 256.0748pt x 103.06209pt.
 Package epstopdf Info: Source file: <images/simulation/pitch_max_doppler.eps>
-(epstopdf)                    date: 2016-11-14 14:28:24
+(epstopdf)                    date: 2016-11-14 13:28:24
 (epstopdf)                    size: 13102 bytes
 (epstopdf)             Output file: <images/simulation/pitch_max_doppler-eps-co
 nverted-to.pdf>
-(epstopdf)                    date: 2016-11-14 14:28:34
+(epstopdf)                    date: 2016-11-14 13:28:34
 (epstopdf)                    size: 9494 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/simulation/pitch_ma
 x_doppler-eps-converted-to.pdf images/simulation/pitch_max_doppler.eps>
@@ -2111,11 +2111,11 @@ df used on input line 107.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
 Package epstopdf Info: Source file: <images/simulation/pitch_0txPos_max_doppler
 .eps>
-(epstopdf)                    date: 2016-11-14 14:30:08
+(epstopdf)                    date: 2016-11-14 13:30:08
 (epstopdf)                    size: 13569 bytes
 (epstopdf)             Output file: <images/simulation/pitch_0txPos_max_doppler
 -eps-converted-to.pdf>
-(epstopdf)                    date: 2016-11-14 14:30:16
+(epstopdf)                    date: 2016-11-14 13:30:16
 (epstopdf)                    size: 9554 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/simulation/pitch_0t
 xPos_max_doppler-eps-converted-to.pdf images/simulation/pitch_0txPos_max_dopple
@@ -2391,11 +2391,11 @@ ps-converted-to.pdf used on input line 254.
 (pdftex.def)             Requested size: 284.52756pt x 213.39221pt.
 Package epstopdf Info: Source file: <images/simulation/elevation_angle_max_dopp
 ler_0deg.eps>
-(epstopdf)                    date: 2016-11-14 14:35:43
+(epstopdf)                    date: 2016-11-14 13:35:43
 (epstopdf)                    size: 15032 bytes
 (epstopdf)             Output file: <images/simulation/elevation_angle_max_dopp
 ler_0deg-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-11-14 14:35:56
+(epstopdf)                    date: 2016-11-14 13:35:56
 (epstopdf)                    size: 10407 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/simulation/elevatio
 n_angle_max_doppler_0deg-eps-converted-to.pdf images/simulation/elevation_angle
@@ -2414,11 +2414,11 @@ Package pdftex.def Info: images/simulation/elevation_angle_max_doppler_0deg-eps
 (pdftex.def)             Requested size: 199.16928pt x 149.3739pt.
 Package epstopdf Info: Source file: <images/simulation/elevation_angle_max_dopp
 ler_90deg.eps>
-(epstopdf)                    date: 2016-11-14 14:39:23
+(epstopdf)                    date: 2016-11-14 13:39:23
 (epstopdf)                    size: 14873 bytes
 (epstopdf)             Output file: <images/simulation/elevation_angle_max_dopp
 ler_90deg-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-11-14 14:39:36
+(epstopdf)                    date: 2016-11-14 13:39:36
 (epstopdf)                    size: 10327 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/simulation/elevatio
 n_angle_max_doppler_90deg-eps-converted-to.pdf images/simulation/elevation_angl
@@ -2457,11 +2457,11 @@ ps-converted-to.pdf used on input line 273.
 (pdftex.def)             Requested size: 199.16928pt x 149.3739pt.
 Package epstopdf Info: Source file: <images/simulation/elevation_angle_max_dopp
 ler_270deg.eps>
-(epstopdf)                    date: 2016-11-14 14:40:53
+(epstopdf)                    date: 2016-11-14 13:40:53
 (epstopdf)                    size: 14873 bytes
 (epstopdf)             Output file: <images/simulation/elevation_angle_max_dopp
 ler_270deg-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-11-14 14:41:04
+(epstopdf)                    date: 2016-11-14 13:41:04
 (epstopdf)                    size: 10332 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/simulation/elevatio
 n_angle_max_doppler_270deg-eps-converted-to.pdf images/simulation/elevation_ang
@@ -2523,11 +2523,11 @@ eps-converted-to.pdf used on input line 15.
 ]
 Package epstopdf Info: Source file: <images/results/Azimuth_angle_estimation_di
 fference.eps>
-(epstopdf)                    date: 2016-11-14 14:51:34
+(epstopdf)                    date: 2016-11-14 13:51:34
 (epstopdf)                    size: 14588 bytes
 (epstopdf)             Output file: <images/results/Azimuth_angle_estimation_di
 fference-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-11-14 14:51:51
+(epstopdf)                    date: 2016-11-14 13:51:51
 (epstopdf)                    size: 9606 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/results/Azimuth_ang
 le_estimation_difference-eps-converted-to.pdf images/results/Azimuth_angle_esti
@@ -2850,11 +2850,11 @@ rted-to.pdf> <./images/results/Elevation_angle_percent_error_180deg_Azimuth-eps
 -converted-to.pdf>]
 Package epstopdf Info: Source file: <images/results/difference_pitch_noCorrecti
 on.eps>
-(epstopdf)                    date: 2016-11-14 14:56:22
+(epstopdf)                    date: 2016-11-14 13:56:22
 (epstopdf)                    size: 14585 bytes
 (epstopdf)             Output file: <images/results/difference_pitch_noCorrecti
 on-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-11-14 14:56:30
+(epstopdf)                    date: 2016-11-14 13:56:30
 (epstopdf)                    size: 9588 bytes
 (epstopdf)             Command: <repstopdf --outfile=images/results/difference_
 pitch_noCorrection-eps-converted-to.pdf images/results/difference_pitch_noCorre
@@ -3210,10 +3210,6 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 320.
 Package rerunfilecheck Info: File `"MSc. Thesis Template".out' has not changed.
 
 (rerunfilecheck)             Checksum: 34C7EB54427F4430D5A319298470506E;11376.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 320.
  ) 
 Here is how much of TeX's memory you used:
@@ -3252,7 +3248,7 @@ e1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
 ublic/cm-super/sfrm1000.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
 lic/cm-super/sfrm1095.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/c
 ourier/ucrr8a.pfb>
-Output written on "MSc. Thesis Template.pdf" (105 pages, 14642530 bytes).
+Output written on "MSc. Thesis Template.pdf" (105 pages, 14642728 bytes).
 PDF statistics:
  2309 PDF objects out of 2487 (max. 8388607)
  1869 compressed objects within 19 object streams
