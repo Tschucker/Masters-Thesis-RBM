@@ -70,7 +70,6 @@ A perfect diffuse reflection, also known as Lambertian reflection, will reflect 
 
 %multipath fading
 \subsection{Fading}
-\textcolor{red}{EDITED}
 
 The transmitted signal power experiences fading due to multiple signal paths in the environment. The resulting signal that the receiver sees is a superposition of the multiple copies of the transmitted signal. The difference in signal's attenuation, phase, and delay cause destructive and constructive interference at the receiver. In the ray tracing simulation the received signal is calculated by keeping track of the distance each ray travels as well as the reflections, then finding the superposition of those signals which will produce the constructive and destructive interference.
 
@@ -165,10 +164,9 @@ The sample is produced using superposition of all the rays that are acting on th
 The receiver is configurable which allows the user to set a desired center frequency along with the sampling rate of the simulated hardware. The sampling rate will determine several simulation parameters in the ray tracer due to the need to associate this rate with the change in the rotor position for the next frame. The consequence of this is that increasing the sample rate will produce higher resolution results but, will increase the computational overhead of the simulation.
 
 \section{Ray Tracing}
-\textcolor{red}{EDITED}
 
 %describe the core tracing engine and describe the flow of the program
-The ray tracing simulation is conducted in the Monte Carlo fashion acting on the previously described scene and propagation models. Ray tracing allows for the calculation of a particle or wave's path within an environment in order to produce photo realistic images. This method is established for creating images in \cite{Suffern2007}, \cite{Pharr2010} by tracing light throughout a virtual 3D environment of objects. Objects have physical characteristics that determine its shape along with how light rays interact with that object. The rays are then casted, in a distributed manner according to the light source, into the scene. The image is then built up by evaluating the color and luminance of the ray at each pixel. In the case of this simulation light is replaced with RF waves and are evaluated based on the propagation model described, and lights and cameras are replaced with transmitters and receivers respectively. The simulation is then performed over successive iterations as the objects move within the scene. Each iteration is a discrete element called a frame where each frame is updated to represent the change in the position of the rotor blade.
+The ray tracing simulation is conducted in the Monte Carlo fashion acting on the previously described scene and propagation models. Ray tracing allows for the calculation of a particle or wave's path within an environment in order to produce photo realistic images. This method is established for creating images in \cite{Suffern2007}, \cite{Pharr2010} by tracing light throughout a virtual 3D environment of objects. Objects have physical characteristics that determine its shape along with how light rays interact with that object. The rays are then casted in a distributed manner, according to the light source, into the scene. The image is then built up by evaluating the color and luminance of the ray at each pixel. In the case of this simulation light is replaced with RF waves and are evaluated based on the propagation model described, and lights and cameras are replaced with transmitters and receivers respectively. The simulation is then performed over successive iterations as the objects move within the scene. Each iteration is a discrete element called a frame where each frame is updated to represent the change in the position of the rotor blade.
 
 \subsection{Computation}
 %flow of the program

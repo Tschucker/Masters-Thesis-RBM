@@ -4,11 +4,11 @@ clear;
 %--------------------------------------------------------------------------
 %Load Data
 %--------------------------------------------------------------------------
-files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rotate_degs_400m/*.csv');
+files= dir('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_500m/rotate_degs_100m/*.csv');
 num_files = length(files);
 data = zeros(num_files,479000); %959000;  479000
 for i=1:num_files
-     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_200m/rotate_degs_400m/',files(i).name)));
+     data(i,:)=transpose(csvread(strcat('/Users/tschucker/Desktop/Thesis_data/Receiver_Off_Axis_7m/Altitude_500m/rotate_degs_100m/',files(i).name)));
 end
 
 %--------------------------------------------------------------------------
@@ -16,10 +16,10 @@ end
 %--------------------------------------------------------------------------
 fs = 4000;
 RPM = 250;
-Altitude = 200;
+Altitude = 500;
 fc = 1e9;
 c = 3e8;
-tx_range = 400;
+tx_range = 100;
 pitch_corrected = 0;
 
 %--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ hPhNoise = comm.PhaseNoise('Level',[-25 -40], ...
 ee = 1;
 
 for i=1:num_files
-    s_awgn = awgn(data(i,:),-11.5);
+    s_awgn = awgn(data(i,:),-20);
     s_pnoise = step(hPhNoise, data(i,:)');
     [s,f,t,p] = spectrogram(s_awgn,5000,500,5000,fs,'yaxis','centered');
     angle_b1 = 0:(2*pi)/length(t):2*pi;

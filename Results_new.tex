@@ -108,8 +108,6 @@ Figure \ref{fig:ave_power}  shows the average power at each angle sample with th
 
 From there the minimum method and the peak method can be compared to see if they agree on the 90\textdegree \space location. If this is not the case one will be chosen and the helicopter can fly in that direction. The resulting Doppler can then be measured, based on the physical movement of the helicopter or if the resulting profile, to confirm the correct 90\textdegree \space location. 
 
-\textcolor{red}{EDITED}
-
 The defined algorithm is then applied to a set of deterministic signals with various elevation angles and helicopter altitudes. There are 41 samples that make up the helicopter rotation starting at 0\textdegree \space following a counter clock wise progression ending back at 0\textdegree. This sampling method includes the 90\textdegree \space point but since there are only 41 discrete points there is an inherent error in the estimation of:
 
 \begin{equation}
@@ -117,7 +115,7 @@ The defined algorithm is then applied to a set of deterministic signals with var
 	\label{eqn:samp_error}
 \end{equation}
 
-where $\theta_{E_{samp}}$ is the error, in degrees, on either side of the algorithm selected 90\textdegree \space point, $n_{samples}$ is the number of unique sample angles. Therefore in this example there would be 40 unique sample points and a  $\theta_{E_{samp}} = 4.5$\textdegree.
+where $\theta_{E_{samp}}$ is the error, in degrees, on either side of the selected 90\textdegree \space point, $n_{samples}$ is the number of unique sample angles. Therefore in this example there would be 40 unique sample points and a  $\theta_{E_{samp}} = 4.5$\textdegree.
 
 %azimuth error table
 \begin{table}
@@ -136,8 +134,6 @@ where $\theta_{E_{samp}}$ is the error, in degrees, on either side of the algori
     \label{tab:az_error_and_percent}
 \end{center}
 \end{table}
-
-\textcolor{red}{EDITED}
 
 From Table \ref{tab:az_error_and_percent} we can see that the algorithm finds the exact 90\textdegree \space sample point over a variety of altitude and elevation angles of the deterministic signals. We analyze the difference in peak heights and the power difference to evaluate the estimation further due to the above accuracy.
 
@@ -160,17 +156,7 @@ From Table \ref{tab:az_error_and_percent} we can see that the algorithm finds th
 
 From Table \ref{tab:peaks_and_power} we can see that at the larger elevation angles the peak percent difference are significant to determine which is correctly the 90\textdegree \space value. Although from the frequency difference, at the large elevation angles, it is possible to confuse the estimation by just taking the minimum frequency. Therefore other values need to play a role such as the received power in the following non-deterministic test signals.
 
-\textcolor{red}{EDITED}
-
-%alt 200
-%50 20db noise
-%200 12db noise
-%400 11.5db noise
-
-%alt 500
-%100 20db noise
-%400 12db noise
-%700 11.5db noise
+Adding various levels of Gaussian noise to the received signal degrades the performance of the azimuth estimation. The estimation technique is resilient to noise, showing no change in performance until a certain level of noise is achieved. For the simulated altitudes and elevation angles, for the chosen simulation parameters, there is a noticeable degradation in performance of the estimation at small elevation angles starting at 11.5dB of noise.
 
 %azimuth error table
 \begin{table}
@@ -190,7 +176,7 @@ From Table \ref{tab:peaks_and_power} we can see that at the larger elevation ang
 \end{center}
 \end{table}
 
-(text on trends in error with noise level at 11.5dB)
+Table \ref{tab:az_error_and_percent_11db} shows that the performance has not changed for the higher elevation angles, while the smallest elevation angle azimuth estimations show significant error increase. Increasing the level of noise to 12dB starts to affect the azimuth estimation of the 45\textdegree \space and 51.34\textdegree \space elevation angle simulations shown in Table \ref{tab:az_error_and_percent_12db}. Increasing the noise from 11.5dB to 12dB does not show an increased error in elevation angles of 26.5\textdegree \space and 35.5\textdegree.
 
 %azimuth error table
 \begin{table}
@@ -210,7 +196,7 @@ From Table \ref{tab:peaks_and_power} we can see that at the larger elevation ang
 \end{center}
 \end{table}
 
-(text on trends in error with noise level at 12dB)
+In order for additional noise to start affecting the simulated elevation angles of 76\textdegree \space and 78.7\textdegree \space,  the added noise is raised to 20dB. Table \ref{tab:az_error_and_percent_20db} shows the azimuth estimation error for 20dB of added noise, where all the elevation angle simulations show an increased azimuth estimation error where elevation angles of 26.5\textdegree \space and 35.5\textdegree are affected the most.
 
 %azimuth error table
 \begin{table}
@@ -230,7 +216,7 @@ From Table \ref{tab:peaks_and_power} we can see that at the larger elevation ang
 \end{center}
 \end{table}
 
-(text on trends in error with noise level at 20dB)
+The azimuth estimation does very well under 10dB of noise, after that point it starts to degrade with decreasing elevation angle as well as increasing level of noise. The reason why estimation error start to show at 10dB of added noise can be traced back to the fact that the Doppler profile is estimated using a power threshold on the short time Fourier transform. This means that the added noise level must increase close to or beyond the threshold to start affecting the Doppler profile and the subsequent azimuth estimation.
 
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -327,75 +313,13 @@ Figure \ref{fig:elevation_comparason_azimuth_range} shows the estimation of the 
 \end{center}
 \end{table}
 
-From Table \ref{tab:elevation_error_percent} we can see elevation estimation error is extremely small for the given elevation angles. There is a trend that is evident in the data that as the elevation angle decreases the amount of error is increasing.
-
-\textcolor{red}{EDITED}
-
-% Elevation error table
-\begin{table}
-\begin{center}
-    \begin{tabular}{ | l | l | l | l |}
-    \hline
-    Altitude & Elevation Angle & Average Elevation Error in (deg) & Average Percent Error \\ \hline
-     200 & 76\textdegree &0.5533\textdegree & 0.7284\%  \\ \hline
-     200 & 45\textdegree & -0.2647\textdegree & -0.5882\%  \\ \hline 
-     200 & 26.5\textdegree & \textdegree & \%  \\ \hline
-     500 & 78.7\textdegree & 0.7923\textdegree & 1.0069\% \\ \hline
-     500 & 51.34\textdegree & -0.3978\textdegree & -0.7747\%  \\ \hline 
-     500 & 35.5\textdegree & -3.9893\textdegree & -11.2255\%  \\ \hline
-    \end{tabular}
-    \caption{Average Elevation Error and Average Elevation Percent Error of Different Elevation Angles 11.5dB Noise}
-    \label{tab:elevation_error_percent_11.5db}
-\end{center}
-\end{table}
-
-(text on trends in error with noise level at 11.5dB)
-
-% Elevation error table
-\begin{table}
-\begin{center}
-    \begin{tabular}{ | l | l | l | l |}
-    \hline
-    Altitude & Elevation Angle & Average Elevation Error in (deg) & Average Percent Error \\ \hline
-     200 & 76\textdegree & 0.6966\textdegree & 0.9170\%  \\ \hline
-     200 & 45\textdegree & -2.3497\textdegree & -5.2215\%  \\ \hline 
-     200 & 26.5\textdegree & \textdegree & \%  \\ \hline
-     500 & 78.7\textdegree & 0.8916\textdegree & 1.1331\% \\ \hline
-     500 & 51.34\textdegree & -4.8613\textdegree & -9.4687\%  \\ \hline 
-     500 & 35.5\textdegree & 7.8398\textdegree & 22.0606\%  \\ \hline
-    \end{tabular}
-    \caption{Average Elevation Error and Average Elevation Percent Error of Different Elevation Angles 12dB Noise}
-    \label{tab:elevation_error_percent_12db}
-\end{center}
-\end{table}
-
-(text on trends in error with noise level at 12dB)
-
-% Elevation error table
-\begin{table}
-\begin{center}
-    \begin{tabular}{ | l | l | l | l |}
-    \hline
-    Altitude & Elevation Angle & Average Elevation Error in (deg) & Average Percent Error \\ \hline
-     200 & 76\textdegree & -9.6248\textdegree & -12.6703\%  \\ \hline
-     200 & 45\textdegree & 7.8795\textdegree & 17.5099\%  \\ \hline 
-     200 & 26.5\textdegree & \textdegree & \%  \\ \hline
-     500 & 78.7\textdegree & 1.3260\textdegree & 1.6851\% \\ \hline
-     500 & 51.34\textdegree & 4.5056\textdegree & 8.7760\%  \\ \hline 
-     500 & 35.5\textdegree & 20.8592\textdegree & 58.6959\%  \\ \hline
-    \end{tabular}
-    \caption{Average Elevation Error and Average Elevation Percent Error of Different Elevation Angles 20dB Noise}
-    \label{tab:elevation_error_percent_20db}
-\end{center}
-\end{table}
-
-(text on trends in error with noise level at 20dB)
+From Table \ref{tab:elevation_error_percent} we can see elevation estimation error is extremely small for the given elevation angles. There is a trend that as the elevation angle decreases the amount of error is increasing.
 
 %-----------------------------------------------------
 % range limitations of this aproximation
 %-----------------------------------------------------
 
-The error in elevation is caused by a limitation on the estimation. Where the Doppler shift is limited by the maximum amount Doppler that the blade rotation can produce shown in equation \ref{eqn:v_radial} by replacing $v_r$ with $v_rMax$ which is:
+The error in elevation, on the deterministic signal, is caused by a limitation on the estimation. Where the Doppler shift is limited by the maximum amount Doppler that the blade rotation can produce shown in equation \ref{eqn:v_radial} by replacing $v_r$ with $v_rMax$ which is:
 
 %radial velocity
 \begin{equation}
@@ -445,10 +369,78 @@ Using the estimation method described above, Figure \ref{fig:angle_comparason_18
 Figure \ref{fig:percent_error_elevation_180deg} shows the percent error with respect to the elevation angle. The estimation starts to become unusable around 18\textdegree \space or 20\textdegree \space where the percent error starts to shoot past acceptable ranges.
 
 %------------------------------
+%Noise considerations
+%------------------------------
+
+The elevation estimation technique is then tested on the received signals with added noise at the same levels that were previously added for azimuth estimation tests. Starting at 11.5dB of noise, Table \ref{tab:elevation_error_percent_11.5db} shows that the error in estimation is significantly increased at elevation angles of 26.5\textdegree \space and 35.5\textdegree. The other elevation angle estimation errors stay relatively similar to estimation under deterministic signals except for 78.7\textdegree which has increased, but not to the same degree as the elevation angles of 26.5\textdegree \space and 35.5\textdegree.  
+
+% Elevation error table
+\begin{table}
+\begin{center}
+    \begin{tabular}{ | l | l | l | l |}
+    \hline
+    Altitude & Elevation Angle & Average Elevation Error in (deg) & Average Percent Error \\ \hline
+     200 & 76\textdegree &0.5533\textdegree & 0.7284\%  \\ \hline
+     200 & 45\textdegree & -0.2647\textdegree & -0.5882\%  \\ \hline 
+     200 & 26.5\textdegree & 1.9321\textdegree & 7.2731\%  \\ \hline
+     500 & 78.7\textdegree & 0.7923\textdegree & 1.0069\% \\ \hline
+     500 & 51.34\textdegree & -0.3978\textdegree & -0.7747\%  \\ \hline 
+     500 & 35.5\textdegree & -3.9893\textdegree & -11.2255\%  \\ \hline
+    \end{tabular}
+    \caption{Average Elevation Error and Average Elevation Percent Error of Different Elevation Angles 11.5dB Noise}
+    \label{tab:elevation_error_percent_11.5db}
+\end{center}
+\end{table}
+
+Increasing the noise level to 12dB the error in elevation estimation almost doubles for elevation angles of 26.5\textdegree \space and 35.5\textdegree \space shown in Table \ref{tab:elevation_error_percent_12db}. The increased noise also affects the estimation of elevation angles 45\textdegree \space and 51.34\textdegree, increasing the error from -0.5882\% to -5.2215\% and -0.7747\% to -9.4687\% respectively.
+
+% Elevation error table
+\begin{table}
+\begin{center}
+    \begin{tabular}{ | l | l | l | l |}
+    \hline
+    Altitude & Elevation Angle & Average Elevation Error in (deg) & Average Percent Error \\ \hline
+     200 & 76\textdegree & 0.6966\textdegree & 0.9170\%  \\ \hline
+     200 & 45\textdegree & -2.3497\textdegree & -5.2215\%  \\ \hline 
+     200 & 26.5\textdegree & 3.9078\textdegree & 14.7102\%  \\ \hline
+     500 & 78.7\textdegree & 0.8916\textdegree & 1.1331\% \\ \hline
+     500 & 51.34\textdegree & -4.8613\textdegree & -9.4687\%  \\ \hline 
+     500 & 35.5\textdegree & 7.8398\textdegree & 22.0606\%  \\ \hline
+    \end{tabular}
+    \caption{Average Elevation Error and Average Elevation Percent Error of Different Elevation Angles 12dB Noise}
+    \label{tab:elevation_error_percent_12db}
+\end{center}
+\end{table}
+
+At the noise level of 20dB the estimation of elevation angle 76\textdegree \space experiences an error of -12.6703\%. While the elevation angle of 78.7\textdegree \space error increases from 1.1331\% to 1.6851\% shown in Table \ref{tab:elevation_error_percent_20db}. 
+
+% Elevation error table
+\begin{table}
+\begin{center}
+    \begin{tabular}{ | l | l | l | l |}
+    \hline
+    Altitude & Elevation Angle & Average Elevation Error in (deg) & Average Percent Error \\ \hline
+     200 & 76\textdegree & -9.6248\textdegree & -12.6703\%  \\ \hline
+     200 & 45\textdegree & 7.8795\textdegree & 17.5099\%  \\ \hline 
+     200 & 26.5\textdegree & 16.7304\textdegree & 62.9791\%  \\ \hline
+     500 & 78.7\textdegree & 1.3260\textdegree & 1.6851\% \\ \hline
+     500 & 51.34\textdegree & 4.5056\textdegree & 8.7760\%  \\ \hline 
+     500 & 35.5\textdegree & 20.8592\textdegree & 58.6959\%  \\ \hline
+    \end{tabular}
+    \caption{Average Elevation Error and Average Elevation Percent Error of Different Elevation Angles 20dB Noise}
+    \label{tab:elevation_error_percent_20db}
+\end{center}
+\end{table}
+
+From the Table \ref{tab:elevation_error_percent_12db} to Table \ref{tab:elevation_error_percent_20db} the other estimation errors have now increased as well. The increased errors make elevation angles of 26.5\textdegree \space and 35.5\textdegree \space unresolvable. This means that as the noise level increases the other elevation angles will start to exhibit increasing errors in estimated elevation angle to the point where any elevation angle cannot be accurately estimated. 
+
+The elevation angle estimation is more susceptible to noise than the azimuth estimation because it uses the maximum value found in the Doppler profile to find elevation angle from equation \ref{eqn:elevation_angle_only}. Therefor when noise is added the doppler profiles maximum value will fluctuate causing errors in elevation angle estimation.
+
+%------------------------------
 %pitch considerations
 %------------------------------
 
-If we now consider a pitched blade the above method for estimating azimuth and elevation becomes inaccurate due to the increased Doppler between 90\textdegree \space and 270\textdegree \space and the decreased Doppler on the other side. To correct this error we need to correct both the difference calculation and the correct Doppler data accordingly. The uncorrected data is shown in Figure \ref{fig:diff_pitch_noCorrection} and \ref{fig:dop_pitch_noCorrection} with percent azimuth error of 20\% and percent elevation error of 35\%.
+If we now consider a pitched blade, on the deterministic signal, the derived method for estimating azimuth and elevation becomes inaccurate due to the increased Doppler between 90\textdegree \space and 270\textdegree \space and the decreased Doppler on the other side. To correct this error we need to correct both the difference calculation and the correct Doppler data accordingly. The uncorrected data is shown in Figure \ref{fig:diff_pitch_noCorrection} and \ref{fig:dop_pitch_noCorrection} with percent azimuth error of 20\% and percent elevation error of 35\%.
 
 \begin{figure}
 	\begin{center}
